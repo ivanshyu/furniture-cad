@@ -1,0 +1,1108 @@
+{
+  "checks": [
+    {
+      "id": "P001",
+      "name": "POST_00_upper",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        30.0,
+        40.0,
+        1105.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P002",
+      "name": "POST_00_shoe",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        40.0,
+        40.0,
+        22.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P003",
+      "name": "POST_00_core",
+      "material": "楓木",
+      "dimensions_mm": [
+        16.0,
+        16.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P004",
+      "name": "POST_00_corner_0_0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        12.0,
+        12.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P005",
+      "name": "POST_00_corner_0_28.0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        12.0,
+        12.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P006",
+      "name": "POST_00_corner_28.0_0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        12.0,
+        12.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P007",
+      "name": "POST_00_corner_28.0_28.0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        12.0,
+        12.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P008",
+      "name": "POST_00_maple_x0",
+      "material": "楓木",
+      "dimensions_mm": [
+        12.0,
+        16.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P009",
+      "name": "POST_00_maple_x28.0",
+      "material": "楓木",
+      "dimensions_mm": [
+        12.0,
+        16.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P010",
+      "name": "POST_00_maple_y0",
+      "material": "楓木",
+      "dimensions_mm": [
+        16.0,
+        12.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P011",
+      "name": "POST_00_maple_y28.0",
+      "material": "楓木",
+      "dimensions_mm": [
+        16.0,
+        12.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P012",
+      "name": "POST_01_upper",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        30.0,
+        40.0,
+        1105.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P013",
+      "name": "POST_01_shoe",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        40.0,
+        40.0,
+        22.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P014",
+      "name": "POST_01_core",
+      "material": "楓木",
+      "dimensions_mm": [
+        16.0,
+        16.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P015",
+      "name": "POST_01_corner_0_0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        12.0,
+        12.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P016",
+      "name": "POST_01_corner_0_28.0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        12.0,
+        12.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P017",
+      "name": "POST_01_corner_28.0_0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        12.0,
+        12.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P018",
+      "name": "POST_01_corner_28.0_28.0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        12.0,
+        12.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P019",
+      "name": "POST_01_maple_x0",
+      "material": "楓木",
+      "dimensions_mm": [
+        12.0,
+        16.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P020",
+      "name": "POST_01_maple_x28.0",
+      "material": "楓木",
+      "dimensions_mm": [
+        12.0,
+        16.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P021",
+      "name": "POST_01_maple_y0",
+      "material": "楓木",
+      "dimensions_mm": [
+        16.0,
+        12.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P022",
+      "name": "POST_01_maple_y28.0",
+      "material": "楓木",
+      "dimensions_mm": [
+        16.0,
+        12.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P023",
+      "name": "POST_10_upper",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        30.0,
+        40.0,
+        1105.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P024",
+      "name": "POST_10_shoe",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        40.0,
+        40.0,
+        22.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P025",
+      "name": "POST_10_core",
+      "material": "楓木",
+      "dimensions_mm": [
+        16.0,
+        16.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P026",
+      "name": "POST_10_corner_0_0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        12.0,
+        12.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P027",
+      "name": "POST_10_corner_0_28.0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        12.0,
+        12.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P028",
+      "name": "POST_10_corner_28.0_0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        12.0,
+        12.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P029",
+      "name": "POST_10_corner_28.0_28.0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        12.0,
+        12.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P030",
+      "name": "POST_10_maple_x0",
+      "material": "楓木",
+      "dimensions_mm": [
+        12.0,
+        16.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P031",
+      "name": "POST_10_maple_x28.0",
+      "material": "楓木",
+      "dimensions_mm": [
+        12.0,
+        16.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P032",
+      "name": "POST_10_maple_y0",
+      "material": "楓木",
+      "dimensions_mm": [
+        16.0,
+        12.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P033",
+      "name": "POST_10_maple_y28.0",
+      "material": "楓木",
+      "dimensions_mm": [
+        16.0,
+        12.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P034",
+      "name": "POST_11_upper",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        30.0,
+        40.0,
+        1105.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P035",
+      "name": "POST_11_shoe",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        40.0,
+        40.0,
+        22.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P036",
+      "name": "POST_11_core",
+      "material": "楓木",
+      "dimensions_mm": [
+        16.0,
+        16.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P037",
+      "name": "POST_11_corner_0_0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        12.0,
+        12.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P038",
+      "name": "POST_11_corner_0_28.0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        12.0,
+        12.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P039",
+      "name": "POST_11_corner_28.0_0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        12.0,
+        12.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P040",
+      "name": "POST_11_corner_28.0_28.0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        12.0,
+        12.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P041",
+      "name": "POST_11_maple_x0",
+      "material": "楓木",
+      "dimensions_mm": [
+        12.0,
+        16.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P042",
+      "name": "POST_11_maple_x28.0",
+      "material": "楓木",
+      "dimensions_mm": [
+        12.0,
+        16.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P043",
+      "name": "POST_11_maple_y0",
+      "material": "楓木",
+      "dimensions_mm": [
+        16.0,
+        12.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P044",
+      "name": "POST_11_maple_y28.0",
+      "material": "楓木",
+      "dimensions_mm": [
+        16.0,
+        12.0,
+        278.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P045",
+      "name": "RAIL_FB_300_0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        625.0,
+        25.0,
+        25.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P046",
+      "name": "RAIL_FB_300_345.0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        625.0,
+        25.0,
+        25.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P047",
+      "name": "RAIL_SIDE_300_0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        25.0,
+        290.0,
+        25.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P048",
+      "name": "RAIL_SIDE_300_660.0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        25.0,
+        290.0,
+        25.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P049",
+      "name": "RAIL_FB_1405.0_0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        685.0,
+        25.0,
+        25.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P050",
+      "name": "RAIL_FB_1405.0_345.0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        685.0,
+        25.0,
+        25.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P051",
+      "name": "RAIL_SIDE_1405.0_0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        25.0,
+        320.0,
+        25.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P052",
+      "name": "RAIL_SIDE_1405.0_660.0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        25.0,
+        320.0,
+        25.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P053",
+      "name": "Cabinet floor - continuous notched panel",
+      "material": "楓木",
+      "dimensions_mm": [
+        635.0,
+        320.0,
+        20.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P054",
+      "name": "TOP_maple_25.0",
+      "material": "楓木",
+      "dimensions_mm": [
+        305.0,
+        320.0,
+        25.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P055",
+      "name": "TOP_maple_355.0",
+      "material": "楓木",
+      "dimensions_mm": [
+        305.0,
+        320.0,
+        25.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P056",
+      "name": "TOP_centre_walnut",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        25.0,
+        320.0,
+        25.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P057",
+      "name": "SIDE_stretcher_5.0_170.0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        25.0,
+        240.0,
+        22.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P058",
+      "name": "SIDE_stretcher_655.0_170.0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        25.0,
+        240.0,
+        22.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P059",
+      "name": "SIDE_stretcher_5.0_230.0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        25.0,
+        240.0,
+        22.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P060",
+      "name": "SIDE_stretcher_655.0_230.0",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        25.0,
+        240.0,
+        22.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P061",
+      "name": "ADDED_FRONT_stretcher",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        595.0,
+        25.0,
+        22.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P062",
+      "name": "ADDED_REAR_stretcher",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        595.0,
+        25.0,
+        22.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P063",
+      "name": "SHELF_665.0",
+      "material": "楓木",
+      "dimensions_mm": [
+        625.0,
+        290.0,
+        20.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P064",
+      "name": "SHELF_1025.0",
+      "material": "楓木",
+      "dimensions_mm": [
+        625.0,
+        290.0,
+        20.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P065",
+      "name": "BACK_8mm_ASSUMED",
+      "material": "楓木",
+      "dimensions_mm": [
+        625.0,
+        8.0,
+        1080.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P066",
+      "name": "DOOR0_walnut_L",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        22.0,
+        32.0,
+        1110.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P067",
+      "name": "DOOR0_walnut_R",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        22.0,
+        32.0,
+        1110.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P068",
+      "name": "DOOR0_walnut_B",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        286.0,
+        32.0,
+        22.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P069",
+      "name": "DOOR0_walnut_T",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        286.0,
+        32.0,
+        22.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P070",
+      "name": "DOOR0_maple9_L",
+      "material": "楓木",
+      "dimensions_mm": [
+        9.0,
+        12.0,
+        1066.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P071",
+      "name": "DOOR0_maple9_R",
+      "material": "楓木",
+      "dimensions_mm": [
+        9.0,
+        12.0,
+        1066.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P072",
+      "name": "DOOR0_maple9_B",
+      "material": "楓木",
+      "dimensions_mm": [
+        268.0,
+        12.0,
+        9.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P073",
+      "name": "DOOR0_maple9_T",
+      "material": "楓木",
+      "dimensions_mm": [
+        268.0,
+        12.0,
+        9.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P074",
+      "name": "DOOR0_GLASS",
+      "material": "長虹玻璃",
+      "dimensions_mm": [
+        268.0,
+        4.6,
+        1048.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P075",
+      "name": "HANDLE0_oval",
+      "material": "金屬",
+      "dimensions_mm": [
+        24.0,
+        24.0,
+        39.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P076",
+      "name": "HANDLE0_neck_ASSUMED",
+      "material": "金屬",
+      "dimensions_mm": [
+        7.0,
+        14.0,
+        7.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P077",
+      "name": "HANDLE0_base_ASSUMED",
+      "material": "金屬",
+      "dimensions_mm": [
+        17.5,
+        2.0,
+        17.5
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P078",
+      "name": "DOOR1_walnut_L",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        22.0,
+        32.0,
+        1110.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P079",
+      "name": "DOOR1_walnut_R",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        22.0,
+        32.0,
+        1110.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P080",
+      "name": "DOOR1_walnut_B",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        286.0,
+        32.0,
+        22.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P081",
+      "name": "DOOR1_walnut_T",
+      "material": "胡桃木",
+      "dimensions_mm": [
+        286.0,
+        32.0,
+        22.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P082",
+      "name": "DOOR1_maple9_L",
+      "material": "楓木",
+      "dimensions_mm": [
+        9.0,
+        12.0,
+        1066.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P083",
+      "name": "DOOR1_maple9_R",
+      "material": "楓木",
+      "dimensions_mm": [
+        9.0,
+        12.0,
+        1066.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P084",
+      "name": "DOOR1_maple9_B",
+      "material": "楓木",
+      "dimensions_mm": [
+        268.0,
+        12.0,
+        9.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P085",
+      "name": "DOOR1_maple9_T",
+      "material": "楓木",
+      "dimensions_mm": [
+        268.0,
+        12.0,
+        9.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P086",
+      "name": "DOOR1_GLASS",
+      "material": "長虹玻璃",
+      "dimensions_mm": [
+        268.0,
+        4.6,
+        1048.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P087",
+      "name": "HANDLE1_oval",
+      "material": "金屬",
+      "dimensions_mm": [
+        24.0,
+        24.0,
+        39.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P088",
+      "name": "HANDLE1_neck_ASSUMED",
+      "material": "金屬",
+      "dimensions_mm": [
+        7.0,
+        14.0,
+        7.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P089",
+      "name": "HANDLE1_base_ASSUMED",
+      "material": "金屬",
+      "dimensions_mm": [
+        17.5,
+        2.0,
+        17.5
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P090",
+      "name": "SIDE0_bead_V40.0",
+      "material": "楓木",
+      "dimensions_mm": [
+        12.0,
+        9.0,
+        1080.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P091",
+      "name": "SIDE0_bead_V321.0",
+      "material": "楓木",
+      "dimensions_mm": [
+        12.0,
+        9.0,
+        1080.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P092",
+      "name": "SIDE0_bead_H325.0",
+      "material": "楓木",
+      "dimensions_mm": [
+        12.0,
+        272.0,
+        9.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P093",
+      "name": "SIDE0_bead_H1396.0",
+      "material": "楓木",
+      "dimensions_mm": [
+        12.0,
+        272.0,
+        9.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P094",
+      "name": "SIDE0_GLASS",
+      "material": "長虹玻璃",
+      "dimensions_mm": [
+        4.6,
+        272.0,
+        1062.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P095",
+      "name": "SIDE1_bead_V40.0",
+      "material": "楓木",
+      "dimensions_mm": [
+        12.0,
+        9.0,
+        1080.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P096",
+      "name": "SIDE1_bead_V321.0",
+      "material": "楓木",
+      "dimensions_mm": [
+        12.0,
+        9.0,
+        1080.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P097",
+      "name": "SIDE1_bead_H325.0",
+      "material": "楓木",
+      "dimensions_mm": [
+        12.0,
+        272.0,
+        9.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P098",
+      "name": "SIDE1_bead_H1396.0",
+      "material": "楓木",
+      "dimensions_mm": [
+        12.0,
+        272.0,
+        9.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "P099",
+      "name": "SIDE1_GLASS",
+      "material": "長虹玻璃",
+      "dimensions_mm": [
+        4.6,
+        272.0,
+        1062.0
+      ],
+      "status": "PASS"
+    }
+  ],
+  "group_mesh_counts": {
+    "立柱與雙色腳": 44,
+    "底框與底板": 5,
+    "頂部": 7,
+    "腳間橫條": 6,
+    "層板": 2,
+    "背板": 1,
+    "左門與把手": 12,
+    "右門與把手": 12,
+    "側玻璃與飾條": 10
+  },
+  "handle_assemblies": 2,
+  "handle_meshes": 6,
+  "source_sha256": "bc25153eafc2fbe7aa6b5150006557a10c7cf76704e3c9b63579b2b9178a9398",
+  "limitation": "Checks prove agreement between D16 model, exported DXF and CSV; not independent validation of manufacturing dimensions or source calibration."
+}

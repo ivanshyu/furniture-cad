@@ -1,0 +1,19 @@
+# Local tools and generated caches
+.tools/
+__pycache__/
+*.pyc
+*.log
+*.blend1
+*.bak
+# Keep earlier design versions local
+scripts/curiosity_d0*.py
+scripts/curiosity_d1[0-5]*.py
+scripts/d15_*.py
+03_Cabinets/CB001_Curiosity_Low_Maple_Walnut/*
+!03_Cabinets/CB001_Curiosity_Low_Maple_Walnut/README.md
+!03_Cabinets/CB001_Curiosity_Low_Maple_Walnut/models/
+!03_Cabinets/CB001_Curiosity_Low_Maple_Walnut/reference/
+03_Cabinets/CB001_Curiosity_Low_Maple_Walnut/models/*
+!03_Cabinets/CB001_Curiosity_Low_Maple_Walnut/models/D16/
+03_Cabinets/CB001_Curiosity_Low_Maple_Walnut/reference/*
+!03_Cabinets/CB001_Curiosity_Low_Maple_Walnut/reference/original_drawings/

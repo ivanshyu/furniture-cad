@@ -1,0 +1,30 @@
+{
+  "persp": {
+    "output": "persp_ai.png",
+    "generation_file": "exec-4071a3bb-a029-4f4c-8653-d23e96842728.png"
+  },
+  "front": {
+    "output": "front_ai.png",
+    "generation_file": "exec-6988c03e-5994-45ca-818a-e3b0a29e2a9f.png"
+  },
+  "side": {
+    "output": "side_ai.png",
+    "generation_file": "exec-6c286cdf-8ebf-4d22-b11b-f720abbccf30.png"
+  },
+  "top": {
+    "output": "top_ai.png",
+    "generation_file": "exec-87e5d475-b343-4093-9b21-c301c0e282fc.png"
+  },
+  "detail": {
+    "output": "detail_ai.png",
+    "generation_file": "exec-a502229d-796c-4737-8a48-f3c0dc37579e.png"
+  },
+  "handles": {
+    "output": "handles_ai.png",
+    "generation_file": "exec-8d23e28f-a450-4510-8242-74762f9e70e1.png"
+  },
+  "bottom": {
+    "output": "bottom_ai.png",
+    "generation_file": "exec-c9970bcb-f6bb-46a9-a241-e984c9ed3740.png"
+  }
+}

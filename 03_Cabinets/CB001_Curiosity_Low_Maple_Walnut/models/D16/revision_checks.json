@@ -1,0 +1,12 @@
+{
+  "part_count": 99,
+  "retained_parts_max_delta_mm": 0,
+  "post_mm": [
+    30,
+    40,
+    1105
+  ],
+  "original_door_frame_mm": 32,
+  "D16_door_frame_mm": 31,
+  "door_thickness_mm": 32
+}

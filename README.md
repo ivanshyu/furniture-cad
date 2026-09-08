@@ -34,3 +34,9 @@ WORKFLOW.md
 5. 依 `00_Project_Rules/MATURITY_GATES.md` 升級成熟度。
 
 所有尺寸預設使用 **mm**。正式文件中的每項關鍵尺寸都必須附有證據狀態。
+
+## CB001 D16
+
+[公開展示頁](https://ivanshyu.github.io/furniture-cad/CB001_D16_viewer.html) · [D16原始檔與重建說明](03_Cabinets/CB001_Curiosity_Low_Maple_Walnut/README.md)
+
+原版DWG/DXF及D16模型、腳本都在main。docs由`python scripts/publish_d16.py`產生，Pages來源為main/docs。D16以前的方案、暫存與工具不納入同步。

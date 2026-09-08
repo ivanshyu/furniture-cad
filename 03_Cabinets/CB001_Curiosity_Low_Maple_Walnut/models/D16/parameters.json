@@ -1,0 +1,49 @@
+{
+  "width": 685.0,
+  "height": 1430.0,
+  "depth": 370.0,
+  "leg_height": 300.0,
+  "post": 30.0,
+  "rail": 25.0,
+  "leg_edge": 12.0,
+  "foot": 22.0,
+  "door_walnut": 22.0,
+  "maple_bead": 9.0,
+  "perimeter_gap": 2.0,
+  "meeting_gap": 5.0,
+  "shelf_thickness": 20.0,
+  "shelf_levels": [
+    665.0,
+    1025.0
+  ],
+  "stretcher_levels": [
+    170.0,
+    230.0
+  ],
+  "stretcher_height": 22.0,
+  "reed_pitch": 6.0,
+  "door_projection": 34.66,
+  "door_thickness": 32.0,
+  "door_rear_clearance": 2.66,
+  "door_width": 330.0,
+  "door_height": 1110.0,
+  "door_bottom": 310.0,
+  "door_x": [
+    10.0,
+    345.0
+  ],
+  "closed_depth": 404.66,
+  "leg_section": 40.0,
+  "leg_x": [
+    5.0,
+    640.0
+  ],
+  "leg_y": [
+    19.062534625,
+    299.062534625
+  ],
+  "leg_front_setback": 19.062534625,
+  "leg_rear_setback": 30.937465375,
+  "post_x": 30.0,
+  "post_y": 40.0
+}
