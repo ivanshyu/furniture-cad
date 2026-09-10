@@ -1,0 +1,36 @@
+{
+  "mode": "built-in image_gen / CAD sketch-to-render",
+  "output": "perspective_ai_square_v1.png",
+  "prompt": "ai_prompt_square_v1.txt",
+  "reference": "perspective_cad.png",
+  "cad_camera": {
+    "position": [
+      0,
+      -4,
+      1.2999999999999998
+    ],
+    "target": [
+      0,
+      0,
+      0.275
+    ],
+    "up": [
+      0,
+      0,
+      1
+    ],
+    "span": 0.8450000000000001,
+    "projection": "perspective"
+  },
+  "prompt_sources": [
+    "models/D06/gallery/ai_prompt.txt (material and camera-lock guidance)",
+    "studies/S05_Rectangular_Grip_Studies/prompts.json (top-only grip vocabulary)"
+  ],
+  "sha256": {
+    "perspective_cad.png": "8f290a257e1a6c2515f8086b72d51a24d2873cebe6acb53533caeeae9d7d8851",
+    "perspective_ai_square_v1.png": "3112e5d4e3f9027b19050cf98af3e207ef3ee2f45bee0dcf94c5b94f03a136c9",
+    "ai_prompt_square_v1.txt": "870c6d6a922c2fd079fc4af85c7902962fc2acb427561584d92c3d5a2f48a600"
+  },
+  "geometry_sha256": "faab199a5d938b7176ebc58b9740e2f792811891bbd2697be21bf0d4929bec53",
+  "visual_review": "Square-cornered upper frame, pale fine-grain maple, lower unperforated, low frontal framing retained visually. AI microgeometry and camera not numerically certified; CAD remains authority."
+}

@@ -1,0 +1,30 @@
+{
+  "stage": "L0 visual variants; S04 baseline unchanged",
+  "tool": "built-in image_gen",
+  "input": "../S04_Compact_X_Solid_Maple/compact_x_solid_maple_concept.png",
+  "input_sha256": "2e2d3c6cbf629cb040384669841b15c8a0c738c18be399095d7ece7d43b5fec0",
+  "variants": {
+    "top_only": {
+      "file": "top_only_concept.png",
+      "sha256": "3fbee58361bcf6ffc18b71bcff9b892cbe1878189a10582cf96561a1a9557ea0",
+      "prompt_key": "top_only",
+      "prompt_sha256": "5160ed05052557140bf3f9bbf869e126fed8536a96a6039fd903a19a92f6deb8",
+      "generation_file": "exec-a80f6d8c-3bd2-4dcf-a92e-3d02999387ab.png",
+      "qa": "Visually inspected: one upper hole and intact lower panel"
+    },
+    "both": {
+      "file": "both_concept.png",
+      "sha256": "55ee44d57a48c7b79b80fd3d3d0b1878dd8ac40cf5933dfbba72b557a0e7e335",
+      "prompt_key": "both",
+      "prompt_sha256": "6ab16ef6225140390d79cfd744884f9b626a174c1927f23d4935b14c0ad473b0",
+      "generation_file": "exec-0043afd3-132b-4c1d-8a54-406cdc5d3170.png",
+      "qa": "Visually inspected: two centred framed apertures; lower aperture size may differ from upper in AI"
+    }
+  },
+  "cautions": [
+    "110x30mm clear opening and 5mm trim are prompt assumptions, not approved dimensions.",
+    "AI can drift in camera, opening proportions and clear gap; do not measure image.",
+    "Lower opening is centred over highest X crossing: apparent white void in image does not demonstrate actual finger clearance.",
+    "A grip-sized aperture is not an approved whole-table lifting handle; fastening, strength and edge comfort unverified."
+  ]
+}

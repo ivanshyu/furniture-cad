@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1100" viewBox="0 0 1400 1100"><rect width="1400" height="1100" fill="#faf7f1"/><style>text{font-family:Arial,sans-serif;fill:#382e25;font-size:17px}.title{font-size:28px}.dim{stroke:#82715e;stroke-width:1;fill:none}.maple{fill:#e5d6b5;stroke:#382e25;stroke-width:1.2}.walnut{fill:#63432e;stroke:#382e25;stroke-width:1}</style>
+<text x="35" y="45" class="title">TB001 / D07 — DIMENSION STUDY</text>
+<text x="35" y="77" class="">2026-09-10 | mm | ASSUMED dimensions | L1 / NOT FOR PRODUCTION | separate views, not to printed scale</text>
+<circle cx="260" cy="335" r="195.0" class="maple"/>
+<rect x="223.1" y="317.6" width="73.8" height="34.8" rx="0.0" class="walnut" fill="#63432e"/>
+<rect x="231.5" y="326.0" width="57.0" height="18.0" rx="0.0" class="" fill="#faf7f1"/>
+<path class="dim" d="M65.0,119v12 M455.0,119v12 M65.0,125H455.0"/>
+<text x="220.0" y="115" class="">Ø650</text>
+<text x="70" y="565" class="">UPPER PLAN / solid maple / no circular edging</text>
+<path class="maple" d="M616.0,693.8V285.28527517380013 A54.0,54.0 0 0 1 656.5,233.0 H683.5 A54.0,54.0 0 0 1 724.0,285.28527517380013 V693.8Z"/>
+<rect x="655.6" y="454.4" width="28.8" height="239.4" class="walnut"/>
+<rect x="659.2" y="458.0" width="21.6" height="235.8" fill="#faf7f1"/>
+<rect x="616.0" y="693.8" width="108.0" height="16.2" class="walnut"/>
+<rect x="661.9" y="458.0" width="16.2" height="12.6" class="walnut"/>
+<rect x="661.9" y="483.2" width="16.2" height="12.6" class="walnut"/>
+<rect x="661.9" y="508.4" width="16.2" height="12.6" class="walnut"/>
+<path class="dim" d="M616.0,739v12 M724.0,739v12 M616.0,745H724.0"/>
+<text x="630.0" y="735" class="">120</text>
+<path class="dim" d="M754,233.0h12 M754,710h12 M760,233.0V710"/>
+<text x="770" y="471.5" class="">530</text>
+<text x="560" y="785" class="">LOCAL LEG / thickness 20</text>
+<text x="560" y="812" class="">Crown R60 / bearing flat 30</text>
+<text x="560" y="839" class="">Slot clear 24 / trim 4 / shoe H18</text>
+<rect x="851.25" y="242.5" width="357.50000000000006" height="17.0" class="maple"/>
+<rect x="906.25" y="455.0" width="247.50000000000003" height="17.0" class="maple"/>
+<rect x="898" y="472.0" width="264" height="11.9" class="walnut"/>
+<rect x="898" y="495.8" width="264" height="11.9" class="walnut"/>
+<rect x="898" y="519.6" width="264" height="11.9" class="walnut"/>
+<path class="dim" d="M1224,242.5h12 M1224,710h12 M1230,242.5V710"/>
+<text x="1240" y="476.25" class="">550</text>
+<text x="920" y="760" class="">LEVELS / horizontal width schematic</text>
+<text x="920" y="790" class="">Upper underside 530 / shelf top 300</text>
+<text x="920" y="818" class="">X tops: 280 / 252 / 224</text>
+<text x="920" y="846" class="">X height 14 / clear gap 14 / stack 70</text>
+<rect x="101.25" y="652.5" width="307.5" height="145.0" rx="0.0" class="walnut"/>
+<rect x="136.25" y="687.5" width="237.5" height="75.0" rx="0.0" fill="#faf7f1"/>
+<path class="dim" d="M136.25,644v12 M373.75,644v12 M136.25,650H373.75"/>
+<text x="215.0" y="640" class="">95 clear</text>
+<path class="dim" d="M409,687.5h12 M409,762.5h12 M415,687.5V762.5"/>
+<text x="425" y="725.0" class="">30</text>
+<text x="60" y="830" class="">GRIP / inner R0 / four solid walnut strips</text>
+<text x="60" y="860" class="">Net 95 × 30 / outer 123 × 58 / through 20</text>
+<text x="40" y="910" class="">Grip trim 14 = X bar height 14 / shelf diameter 450 / clear height 230</text>
+<text x="40" y="945" class="">Design relations confirmed; numeric sizing is provisional. Grip requires a full-size hand-fit trial.</text>
+<text x="40" y="980" class="">Top/shelf retention, foot joints, wood movement, pin sizing and load testing remain unresolved.</text>
+<text x="40" y="1015" class="">Native BRep: TB001_D07.FCStd / STEP. No veneer; lower shelf unperforated. Not a rated carrying handle.</text>
+</svg>

@@ -1,0 +1,40 @@
+{
+  "revision": "D07",
+  "units": "mm",
+  "maturity": "L1 / engineering draft — NOT FOR PRODUCTION",
+  "dimension_status": "ASSUMED unless explicitly identified as user-required relation",
+  "top_diameter": 600,
+  "overall_height": 600,
+  "top_thickness": 20,
+  "shelf_diameter": 420,
+  "shelf_top": 320,
+  "shelf_thickness": 20,
+  "leg_radius": 225,
+  "leg_width": 120,
+  "leg_thickness": 20,
+  "crown_bearing_width": 30,
+  "shoe_height": 18,
+  "shoe_depth": 24,
+  "slot_clear_width": 24,
+  "slot_trim": 4,
+  "grip_clear_length": 95,
+  "grip_clear_width": 30,
+  "grip_corner_radius": 3,
+  "grip_trim": 4,
+  "x_height": 14,
+  "x_width": 18,
+  "x_projection": 8,
+  "cross_pin_diameter": 6,
+  "requirements": [
+    "Four arched maple blade legs",
+    "Open-bottom rectangular leg slots with walnut shoes",
+    "Three horizontal walnut X frames; clear gap equals bar height",
+    "Two solid maple circular surfaces; no walnut circular edging or veneer",
+    "Small walnut-framed grip ONLY in upper surface; lower surface unperforated"
+  ],
+  "unverified": [
+    "95 × 30 grip requires physical four-finger trial",
+    "All dimensions and structural sizing",
+    "Tabletop and shelf retention, wood movement, foot joinery, pin fit and load capacity"
+  ]
+}

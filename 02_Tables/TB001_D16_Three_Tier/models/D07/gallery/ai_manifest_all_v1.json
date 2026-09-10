@@ -1,0 +1,165 @@
+{
+  "mode": "built-in image_gen / per-view CAD sketch-to-render",
+  "geometry_sha256": "faab199a5d938b7176ebc58b9740e2f792811891bbd2697be21bf0d4929bec53",
+  "prompts_sha256": "457adf3d2e511c31817e8b8942c91381c9d1f0701f7a6a792ea179253ffe0d31",
+  "views": {
+    "perspective": {
+      "camera": {
+        "position": [
+          0,
+          -4,
+          1.2999999999999998
+        ],
+        "target": [
+          0,
+          0,
+          0.275
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "span": 0.8450000000000001,
+        "projection": "perspective"
+      },
+      "input": "perspective_cad.png",
+      "output": "perspective_ai_square_v1.png",
+      "input_sha256": "8f290a257e1a6c2515f8086b72d51a24d2873cebe6acb53533caeeae9d7d8851",
+      "output_sha256": "3112e5d4e3f9027b19050cf98af3e207ef3ee2f45bee0dcf94c5b94f03a136c9",
+      "prompt_sha256": "870c6d6a922c2fd079fc4af85c7902962fc2acb427561584d92c3d5a2f48a600",
+      "visual_review": "Reviewed against corresponding CAD: intended framing, material vocabulary and component selection retained. AI contours, holes and joints not metrologically verified."
+    },
+    "front": {
+      "camera": {
+        "position": [
+          0,
+          -2,
+          0.275
+        ],
+        "target": [
+          0,
+          0,
+          0.275
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "span": 0.8450000000000001
+      },
+      "input": "front_cad.png",
+      "output": "front_ai_square_v1.png",
+      "input_sha256": "5fc2ccaa46242b6668960afc7e5f848b80a9c771d6c29e09062385afc34a43df",
+      "output_sha256": "f09f76648e3e05fbc5ee5b2be3316604970e4d42bad4bb0077657669eeff0e7e",
+      "prompt_sha256": "f846d974b51056535a90d32d76caaf63eeb300ed4fbeee3c10d19f40ce860781",
+      "visual_review": "Reviewed against corresponding CAD: intended framing, material vocabulary and component selection retained. AI contours, holes and joints not metrologically verified."
+    },
+    "top": {
+      "camera": {
+        "position": [
+          0,
+          0,
+          3
+        ],
+        "target": [
+          0,
+          0,
+          0.275
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "span": 0.8450000000000001
+      },
+      "input": "top_cad.png",
+      "output": "top_ai_square_v1.png",
+      "input_sha256": "7f92df62859ca65ff93e33a0f244c0f70f0b11397b8d65f0bedd79b2b96f3ffb",
+      "output_sha256": "51f7d4de7a5862082348264a629672a6eec538af7435bf65e058d6c786890001",
+      "prompt_sha256": "cfc3f76a55b17148ec79011ca90c58adb4497c9b36c96cf593f1e367397aad25",
+      "visual_review": "Reviewed against corresponding CAD: intended framing, material vocabulary and component selection retained. AI contours, holes and joints not metrologically verified."
+    },
+    "structure": {
+      "camera": {
+        "position": [
+          0,
+          -4,
+          1.2999999999999998
+        ],
+        "target": [
+          0,
+          0,
+          0.275
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "span": 0.8450000000000001,
+        "projection": "perspective"
+      },
+      "input": "structure_cad.png",
+      "output": "structure_ai_square_v1.png",
+      "input_sha256": "2fea5ad6747b31c9ebe28ce675942e4a0c530c235a5b16c412ce5af30752f93b",
+      "output_sha256": "da475a11923860d40e3d1df88d0b6bbf810f61273ed6c194520a6b176b0d5789",
+      "prompt_sha256": "302282eb41fb7628e89bcb186f28080aebae8840e556e1e55d405e30878c19e3",
+      "visual_review": "Reviewed against corresponding CAD: intended framing, material vocabulary and component selection retained. AI contours, holes and joints not metrologically verified."
+    },
+    "grip": {
+      "camera": {
+        "position": [
+          0.12,
+          -0.22,
+          1.0
+        ],
+        "target": [
+          0,
+          0,
+          0.54
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "span": 0.22
+      },
+      "input": "grip_cad.png",
+      "output": "grip_ai_square_v1.png",
+      "input_sha256": "6509ecfb8870cde0ec80c5907a3f53a2df3e5c1073b3de691151d2c830c67058",
+      "output_sha256": "d3a97807eb3c03b452e25c406e87833fc367d86de2bee00ad407c9227b93a2c3",
+      "prompt_sha256": "afd544ed5137b44a505e5b7e6d8f7492ff5bf3ec9984aa035419e85ef0cc57dd",
+      "visual_review": "Reviewed against corresponding CAD: intended framing, material vocabulary and component selection retained. AI contours, holes and joints not metrologically verified."
+    },
+    "x_detail": {
+      "camera": {
+        "position": [
+          0.6,
+          -0.95,
+          1.0
+        ],
+        "target": [
+          0,
+          0,
+          0.245
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "span": 0.6708000000000001
+      },
+      "input": "x_detail_cad.png",
+      "output": "x_detail_ai_square_v1.png",
+      "input_sha256": "136da9e06f18d1ee9254dae1fd4853f83a110ea08ab36b04f7489a16e5a633b6",
+      "output_sha256": "77b1e4aa70d612c4c8d6e48095becae3adeaa6c0dc522fe665ca85cb689c723d",
+      "prompt_sha256": "ebf20f0db07fd0ae62d8334c8db07c5824c65aac7ee23a7c01b47fa52950ff89",
+      "visual_review": "Reviewed against corresponding CAD: intended framing, material vocabulary and component selection retained. AI contours, holes and joints not metrologically verified."
+    }
+  }
+}

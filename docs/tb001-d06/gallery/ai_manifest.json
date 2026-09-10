@@ -1,0 +1,66 @@
+{
+  "revision": "D06 Light Rhythm",
+  "line_count": 2,
+  "materials": "maple veneer plywood, maple leg cores, walnut strips and cheeks",
+  "tool": "built-in image_gen",
+  "geometry_sha256": "f05a5ebc126596b286c4755b27b8a56674fe9fd27baaead42cee6c4fe4b33217",
+  "cad_manifest_sha256": "46fc706d70dfb520438e232ff072c8c36e8c29b4d6825f6fd45c3255d0ba0a44",
+  "shared_prompt_sha256": "16d4f342de8d75021dcc671a0926ee21d203b5fa02ed1d8954e9cb4526ac227b",
+  "qa": "Six views visually inspected. Material reference only; CAD governs geometry. Prior three-line/oak images rejected and not published.",
+  "views": {
+    "persp": {
+      "input": "persp_cad.png",
+      "input_sha256": "ad639c0c568349c8a1120911e670c09888f3d3de126e6571bc43b328f3fa4c8f",
+      "output": "persp_ai.png",
+      "output_sha256": "d0f60eea6c9c06437f3aeb833e2a0853c881b54c64d4f26475d9d159dc9f9507",
+      "prompt_sha256": "8f6b3dc862455383199a0cc3dd4558fc804d276ca0d5406807ad854b04ffc03e",
+      "generation_file": "exec-9ebe846c-e288-4623-b1bf-1fc4e6879481.png",
+      "qa": "Creamy fine-grain maple and two side members visible; AI subtly softens chamfers and grain seams."
+    },
+    "front": {
+      "input": "front_cad.png",
+      "input_sha256": "09163bf2cd63166417878689ae29e9894ad03bed2bc209f876bdf8c8e55a9dcb",
+      "output": "front_ai.png",
+      "output_sha256": "82d9c4485311dd4e32b258f5c497ab5e6af4f48c874d5dc35c0933afea1186d4",
+      "prompt_sha256": "06e097db1184f5b7941ce500e348266f36db25267ae3e2dc307a0881fe3f4d7a",
+      "generation_file": "exec-cb895597-56c4-4461-adbd-595d682d2848.png",
+      "qa": "Front elevation and two projecting rail ends preserved; AI rounds tiny corners."
+    },
+    "side": {
+      "input": "side_cad.png",
+      "input_sha256": "3caf390e77172534aef07b94c0ce4fae9dff46b57adb65d78afdc5673a1b771b",
+      "output": "side_ai.png",
+      "output_sha256": "bcbd931c4aa4f9616d47da9f5f493a23f1a9fad2412e9209e4d32dd55874628c",
+      "prompt_sha256": "ceebb8de5b3caf43e7ddb71f18dbce1f6e7411342d16e7b977dbc1bf66ce0144",
+      "generation_file": "exec-9dda3492-fd06-4929-9bf1-655e160a37da.png",
+      "qa": "Two members and one gap preserved; gap and end projection can drift in AI."
+    },
+    "top": {
+      "input": "top_cad.png",
+      "input_sha256": "fd15793713dc91e2f92bf56744cc83bb912f7ef61853714ac6b9876c9d6d0069",
+      "output": "top_ai.png",
+      "output_sha256": "f3581141c1456ac56b1d9511323f3261beb5fa5d624cd34fe6d7f54e1c7b7c3d",
+      "prompt_sha256": "e4fe07039b539b0aa638174b8518fd31744c39d7a5cf5d1cfdb36573f1dc173a",
+      "generation_file": "exec-6febc383-4c58-4906-80fc-b1c2e83f6a7e.png",
+      "qa": "Maple fine grain corrected. AI can make perimeter appear raised or flush; CAD specifies raised pale panel over lower walnut edge."
+    },
+    "detail": {
+      "input": "detail_cad.png",
+      "input_sha256": "b2a4097bb2721ef15effc4d3b8f61ee1ac2b0bdb67efa8df4811858b1272ed95",
+      "output": "detail_ai.png",
+      "output_sha256": "950b7b72ff46b4205954f32358d632780d57aabdd93a5f0744a45e14102a53cd",
+      "prompt_sha256": "b1e8d12b21cd983e3ff4795915075e901a0f5015b1c3fc255924bc89a2e374ee",
+      "generation_file": "exec-8a447dd3-b3c8-4ec6-8ad1-110b6afff39f.png",
+      "qa": "Two proud rail ends and maple core visible. AI exaggerates end block rounding/projection; do not infer joint dimensions."
+    },
+    "bottom": {
+      "input": "bottom_cad.png",
+      "input_sha256": "823585ab0b8c734f11a2ccba606a6ceed15ee074ecb89d99de19fe3e74457d44",
+      "output": "bottom_ai.png",
+      "output_sha256": "2bd5cdeedd5f471dd67082f960f89172cdf3752f7e3b17a0f8c546a8f9cd2099",
+      "prompt_sha256": "6d28a49e269624ad2dfcf56ec2f883e3933da579f0efe45ed9aa5514089d78f5",
+      "generation_file": "exec-f8864063-e020-4768-8a0a-3ee6ae4a5fba.png",
+      "qa": "Pale plywood undersides and transverse supports visible; local thickness and shadows are interpretive."
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "status": "Appearance baseline candidate; user expects only small refinements. NOT production approval.",
+  "evidence": "Latest user request",
+  "requirements": {
+    "support_count": 4,
+    "support_material": "SOLID_MAPLE",
+    "outer_support_profile": "arch crown",
+    "slot": "narrow rectangle down to walnut shoe; no maple bottom sill",
+    "slot_trim": "solid walnut strips",
+    "foot_shoe": "horizontal walnut strip at each of four legs",
+    "tabletop_count": 2,
+    "tabletop_plan": "circular",
+    "both_tabletops_material": "SOLID_MAPLE, edge-glued solid maple permitted",
+    "walnut_circular_lipping": false,
+    "veneer": false,
+    "horizontal_x_count": 3,
+    "beams_per_x": 2,
+    "highest_x": "direct bearing under second circular tabletop",
+    "stack_location": "immediately below second tabletop; clear volume beneath"
+  },
+  "symbolic_geometry": {
+    "h": "walnut beam vertical height, mm value TO VERIFY",
+    "clear_gap": "h",
+    "vertical_pitch": "2*h",
+    "total_three_x_stack_height": "5*h",
+    "s": "second tabletop underside Z, mm value TO VERIFY",
+    "x_bottom_z_top_to_bottom": [
+      "s-h",
+      "s-3*h",
+      "s-5*h"
+    ],
+    "assumption": "Each centre crossing is flush half-lapped so one X assembly has overall height h; connection not yet designed"
+  },
+  "not_frozen": [
+    "diameters",
+    "overall height",
+    "beam height and width",
+    "tabletop thickness",
+    "leg width and thickness",
+    "slot height and width",
+    "footprint and overhang",
+    "joint tolerances",
+    "wood movement attachments",
+    "rated load"
+  ],
+  "cad_status": "No new CAD yet; D06 is an older, different concept."
+}

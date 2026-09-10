@@ -1,0 +1,192 @@
+{
+  "mode": "built-in image_gen, individual CAD references",
+  "variant": "lower520_full_thickness_double_bands",
+  "geometry_sha256": "a8c19ef4d1ce3a4840367b430e3b5c4f076c603b7838e881dc228da78a91f528",
+  "prompts_sha256": "cd7adf37043398c6e0a5d78d0b5bac9ff8f5565e4c6d1dfc898c1ce151093e9f",
+  "views": {
+    "perspective": {
+      "camera": {
+        "position": [
+          0,
+          -4,
+          1.2999999999999998
+        ],
+        "target": [
+          0,
+          0,
+          0.275
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "span": 0.8450000000000001,
+        "projection": "perspective"
+      },
+      "input": "perspective_cad.png",
+      "output": "perspective_ai_square_v1.png",
+      "input_sha256": "740f353d7f2c5c507981d1f945a243e04dc1e69495ea14269c534d57209781a6",
+      "output_sha256": "71b84a66512503533c57ced543a1524cc27895c353b279c1dc5497d013c75f78",
+      "prompt_sha256": "0323838651f775bd419efb1167d84e0d07b2252ca69d145029f45c8403eb867d",
+      "visual_review": "Reviewed against own CAD. Camera intent, component selection, double walnut bands where visible, maple palette and square grip retained visually; microgeometry not certified. Underside rail spacing appears less distinct under shading: refer to CAD."
+    },
+    "front": {
+      "camera": {
+        "position": [
+          0,
+          -2,
+          0.275
+        ],
+        "target": [
+          0,
+          0,
+          0.275
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "span": 0.8450000000000001
+      },
+      "input": "front_cad.png",
+      "output": "front_ai_square_v1.png",
+      "input_sha256": "5812d73a520790e112356e28138fe56791e557e3b562b79b67194638708017c6",
+      "output_sha256": "2e82dc87af016e4ad29aeeb9dff118b06868a18aba9b228740b3441f22849106",
+      "prompt_sha256": "1710f07691f122aca5d27d0b5d7b86ac1e5dbb4530418a9e53a51422471551fc",
+      "visual_review": "Reviewed against own CAD. Camera intent, component selection, double walnut bands where visible, maple palette and square grip retained visually; microgeometry not certified. Underside rail spacing appears less distinct under shading: refer to CAD."
+    },
+    "top": {
+      "camera": {
+        "position": [
+          0,
+          0,
+          3
+        ],
+        "target": [
+          0,
+          0,
+          0.275
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "span": 0.8450000000000001
+      },
+      "input": "top_cad.png",
+      "output": "top_ai_square_v1.png",
+      "input_sha256": "7f92df62859ca65ff93e33a0f244c0f70f0b11397b8d65f0bedd79b2b96f3ffb",
+      "output_sha256": "712b452b94b35140c3b215cbf0effe53afcefdf9a63cde620be999ad7670e590",
+      "prompt_sha256": "f63c123254f1a49b1678f3df2524e7961dd04053f867712e2990f0607b25f657",
+      "visual_review": "Reviewed against own CAD. Camera intent, component selection, double walnut bands where visible, maple palette and square grip retained visually; microgeometry not certified. Underside rail spacing appears less distinct under shading: refer to CAD."
+    },
+    "structure": {
+      "camera": {
+        "position": [
+          0,
+          -4,
+          1.2999999999999998
+        ],
+        "target": [
+          0,
+          0,
+          0.275
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "span": 0.8450000000000001,
+        "projection": "perspective"
+      },
+      "input": "structure_cad.png",
+      "output": "structure_ai_square_v1.png",
+      "input_sha256": "ce35a37758d001787d6d220a1eb25d01918772f730f904b01a41979743f72c60",
+      "output_sha256": "bdfb01621a4ea0a63915660ac661fb7210d4acf4405f944174349e8ec2034314",
+      "prompt_sha256": "86919728b20a260b7e091df1816692bce26e64cfd905e8c3bdd275ee04fbb53c",
+      "visual_review": "Reviewed against own CAD. Camera intent, component selection, double walnut bands where visible, maple palette and square grip retained visually; microgeometry not certified. Underside rail spacing appears less distinct under shading: refer to CAD."
+    },
+    "grip": {
+      "camera": {
+        "position": [
+          0.12,
+          -0.22,
+          1.0
+        ],
+        "target": [
+          0,
+          0,
+          0.54
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "span": 0.22
+      },
+      "input": "grip_cad.png",
+      "output": "grip_ai_square_v1.png",
+      "input_sha256": "6509ecfb8870cde0ec80c5907a3f53a2df3e5c1073b3de691151d2c830c67058",
+      "output_sha256": "e94575c895ba79094b93ef48a1f356e22db91fb9988afb0c74d13324908bfaa3",
+      "prompt_sha256": "1897c859de73fe64301f111cf2c09eeb6bfbba84f5b4fe0ca2bc6d0fb0bd40b4",
+      "visual_review": "Reviewed against own CAD. Camera intent, component selection, double walnut bands where visible, maple palette and square grip retained visually; microgeometry not certified. Underside rail spacing appears less distinct under shading: refer to CAD."
+    },
+    "side": {
+      "camera": {
+        "position": [
+          -2,
+          0,
+          0.275
+        ],
+        "target": [
+          0,
+          0,
+          0.275
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "span": 0.845
+      },
+      "input": "side_cad.png",
+      "output": "side_ai_square_v1.png",
+      "input_sha256": "bbb86ac48ed7b55f41d40955d41c3467e9eca8066324be90a409af0af53c835a",
+      "output_sha256": "16cb809b838fd5ceb1dca844099f02f363a0e9c1b576b6d8da237a056a047a54",
+      "prompt_sha256": "cc07cc5f12ababfd5ce718a154d461928714e5e1eae1d65b27b12403db6f5104",
+      "visual_review": "Reviewed against own CAD. Camera intent, component selection, double walnut bands where visible, maple palette and square grip retained visually; microgeometry not certified. Underside rail spacing appears less distinct under shading: refer to CAD."
+    },
+    "bottom": {
+      "camera": {
+        "position": [
+          0.9,
+          -1.5,
+          -1.2
+        ],
+        "target": [
+          0,
+          0,
+          0.275
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "span": 0.845
+      },
+      "input": "bottom_cad.png",
+      "output": "bottom_ai_square_v1.png",
+      "input_sha256": "e264c09c202c743869187adf26842a3e7a0738db1e953512e4bea00f01a39d1d",
+      "output_sha256": "06c38eacc57d5e1219bb4e4a5a48a246eb62fce81ef97edb8b6c6733fc5eae53",
+      "prompt_sha256": "9d517bf506ddf7b6aa5047c99ea4a9b465280f4faa81582fb2e2a0c18240ccf1",
+      "visual_review": "Reviewed against own CAD. Camera intent, component selection, double walnut bands where visible, maple palette and square grip retained visually; microgeometry not certified. Underside rail spacing appears less distinct under shading: refer to CAD."
+    }
+  }
+}

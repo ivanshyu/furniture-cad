@@ -27,11 +27,18 @@ def render(spec):
     for part in DATA['parts']:
         world=np.array(part['vertices_mm'])/1000
         coords=(world-target)@matrix
+        if spec.get('projection')=='perspective':
+            distance=np.linalg.norm(np.array(spec['position'])-target)
+            depth=distance-coords[:,2]
+            if np.any(depth<=0):raise ValueError('Perspective vertex behind camera')
+            coords[:,:2]*=(distance/depth)[:,None]
+            coords[:,2]=1/depth  # reciprocal depth interpolates in screen space
         coords[:,0]=coords[:,0]*scale+width/2;coords[:,1]=-coords[:,1]*scale+height/2
         rgb=np.array([int(COLORS[part['material']][i:i+2],16) for i in (0,2,4)])
         for face in part['faces']:
             n=normalize(np.cross(world[face[1]]-world[face[0]],world[face[2]]-world[face[0]]))
-            if np.dot(n,toward)<=1e-8:continue
+            viewdir=normalize(np.array(spec['position'])-world[face[0]]) if spec.get('projection')=='perspective' else toward
+            if np.dot(n,viewdir)<=1e-8:continue
             shade=np.clip(rgb*(.69+.34*max(0,np.dot(n,light))),0,255).astype(np.uint8)
             for j in range(1,len(face)-1):
                 tri=coords[[face[0],face[j],face[j+1]]];a,b,c=tri

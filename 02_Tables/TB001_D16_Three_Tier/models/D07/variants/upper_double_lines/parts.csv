@@ -1,0 +1,61 @@
+ID,Part,Material,Role,Global AABB mm — NOT blank size,Volume mm3,Grain
+P01,Upper circular maple top with grip recess,MAPLE,upper_top,650.00 × 649.80 × 20.00,6493934.48,X; solid edge-glued maple
+P02,Grip mitred strip north,WALNUT,grip_trim,123.00 × 14.00 × 20.00,30520.0,Along strip; solid walnut
+P03,Grip mitred strip south,WALNUT,grip_trim,123.00 × 14.00 × 20.00,30520.0,Along strip; solid walnut
+P04,Grip mitred strip east,WALNUT,grip_trim,14.00 × 58.00 × 20.00,12320.0,Along strip; solid walnut
+P05,Grip mitred strip west,WALNUT,grip_trim,14.00 × 58.00 × 20.00,12320.0,Along strip; solid walnut
+P06,Lower circular maple shelf — no opening,MAPLE,lower_top,520.00 × 519.84 × 20.00,4247433.27,X; solid edge-glued maple
+P07,Arched blade 45 / maple segment 1,MAPLE,leg,98.99 × 98.99 × 335.91,628468.18,Vertical Z; segment joints TO VERIFY
+P08,Arched blade 45 / maple segment 2,MAPLE,leg,98.99 × 98.99 × 14.00,33600.0,Vertical Z; segment joints TO VERIFY
+P09,Arched blade 45 / maple segment 3,MAPLE,leg,98.99 × 98.99 × 134.09,294732.78,Vertical Z; segment joints TO VERIFY
+P10,Slot jamb 45 / -1,WALNUT,slot_trim,16.97 × 16.97 × 262.00,20620.71,Vertical Z
+P11,Slot jamb 45 / 1,WALNUT,slot_trim,16.97 × 16.97 × 262.00,20620.71,Vertical Z
+P12,Slot lintel 45,WALNUT,slot_trim,36.77 × 36.77 × 4.00,2560.0,Tangential
+P13,Foot shoe 45,WALNUT,foot,101.82 × 101.82 × 18.00,51840.0,Tangential; shoe-to-leg joint unresolved
+P14,Arched blade 135 / maple segment 1,MAPLE,leg,98.99 × 98.99 × 335.91,628468.18,Vertical Z; segment joints TO VERIFY
+P15,Arched blade 135 / maple segment 2,MAPLE,leg,98.99 × 98.99 × 14.00,33600.0,Vertical Z; segment joints TO VERIFY
+P16,Arched blade 135 / maple segment 3,MAPLE,leg,98.99 × 98.99 × 134.09,294732.78,Vertical Z; segment joints TO VERIFY
+P17,Slot jamb 135 / -1,WALNUT,slot_trim,16.97 × 16.97 × 262.00,20620.71,Vertical Z
+P18,Slot jamb 135 / 1,WALNUT,slot_trim,16.97 × 16.97 × 262.00,20620.71,Vertical Z
+P19,Slot lintel 135,WALNUT,slot_trim,36.77 × 36.77 × 4.00,2560.0,Tangential
+P20,Foot shoe 135,WALNUT,foot,101.82 × 101.82 × 18.00,51840.0,Tangential; shoe-to-leg joint unresolved
+P21,Arched blade 225 / maple segment 1,MAPLE,leg,98.99 × 98.99 × 335.91,628468.18,Vertical Z; segment joints TO VERIFY
+P22,Arched blade 225 / maple segment 2,MAPLE,leg,98.99 × 98.99 × 14.00,33600.0,Vertical Z; segment joints TO VERIFY
+P23,Arched blade 225 / maple segment 3,MAPLE,leg,98.99 × 98.99 × 134.09,294732.78,Vertical Z; segment joints TO VERIFY
+P24,Slot jamb 225 / -1,WALNUT,slot_trim,16.97 × 16.97 × 262.00,20620.71,Vertical Z
+P25,Slot jamb 225 / 1,WALNUT,slot_trim,16.97 × 16.97 × 262.00,20620.71,Vertical Z
+P26,Slot lintel 225,WALNUT,slot_trim,36.77 × 36.77 × 4.00,2560.0,Tangential
+P27,Foot shoe 225,WALNUT,foot,101.82 × 101.82 × 18.00,51840.0,Tangential; shoe-to-leg joint unresolved
+P28,Arched blade 315 / maple segment 1,MAPLE,leg,98.99 × 98.99 × 335.91,628468.18,Vertical Z; segment joints TO VERIFY
+P29,Arched blade 315 / maple segment 2,MAPLE,leg,98.99 × 98.99 × 14.00,33600.0,Vertical Z; segment joints TO VERIFY
+P30,Arched blade 315 / maple segment 3,MAPLE,leg,98.99 × 98.99 × 134.09,294732.78,Vertical Z; segment joints TO VERIFY
+P31,Slot jamb 315 / -1,WALNUT,slot_trim,16.97 × 16.97 × 262.00,20620.71,Vertical Z
+P32,Slot jamb 315 / 1,WALNUT,slot_trim,16.97 × 16.97 × 262.00,20620.71,Vertical Z
+P33,Slot lintel 315,WALNUT,slot_trim,36.77 × 36.77 × 4.00,2560.0,Tangential
+P34,Foot shoe 315,WALNUT,foot,101.82 × 101.82 × 18.00,51840.0,Tangential; shoe-to-leg joint unresolved
+P35,X level 1 beam 1,WALNUT,x_rail,427.09 × 427.09 × 14.00,144386.12,Along beam; half-lap centre; drilled ends
+P36,X level 1 beam 2,WALNUT,x_rail,427.09 × 427.09 × 14.00,144386.12,Along beam; half-lap centre; drilled ends
+P37,X level 2 beam 1,WALNUT,x_rail,427.09 × 427.09 × 14.00,144386.12,Along beam; half-lap centre; drilled ends
+P38,X level 2 beam 2,WALNUT,x_rail,427.09 × 427.09 × 14.00,144386.12,Along beam; half-lap centre; drilled ends
+P39,X level 3 beam 1,WALNUT,x_rail,427.09 × 427.09 × 14.00,144386.12,Along beam; half-lap centre; drilled ends
+P40,X level 3 beam 2,WALNUT,x_rail,427.09 × 427.09 × 14.00,144386.12,Along beam; half-lap centre; drilled ends
+P41,Upper transition band 45 / 1,WALNUT,upper_accent,98.99 × 98.99 × 14.00,33600.0,"Tangential; full-thickness structural splice, joints NOT DESIGNED"
+P42,Upper transition band 45 / 2,WALNUT,upper_accent,98.99 × 98.99 × 14.00,33600.0,"Tangential; full-thickness structural splice, joints NOT DESIGNED"
+P43,Upper transition band 135 / 1,WALNUT,upper_accent,98.99 × 98.99 × 14.00,33600.0,"Tangential; full-thickness structural splice, joints NOT DESIGNED"
+P44,Upper transition band 135 / 2,WALNUT,upper_accent,98.99 × 98.99 × 14.00,33600.0,"Tangential; full-thickness structural splice, joints NOT DESIGNED"
+P45,Upper transition band 225 / 1,WALNUT,upper_accent,98.99 × 98.99 × 14.00,33600.0,"Tangential; full-thickness structural splice, joints NOT DESIGNED"
+P46,Upper transition band 225 / 2,WALNUT,upper_accent,98.99 × 98.99 × 14.00,33600.0,"Tangential; full-thickness structural splice, joints NOT DESIGNED"
+P47,Upper transition band 315 / 1,WALNUT,upper_accent,98.99 × 98.99 × 14.00,33600.0,"Tangential; full-thickness structural splice, joints NOT DESIGNED"
+P48,Upper transition band 315 / 2,WALNUT,upper_accent,98.99 × 98.99 × 14.00,33600.0,"Tangential; full-thickness structural splice, joints NOT DESIGNED"
+P49,Cross pin 45 / level 1,WALNUT,cross_pin,89.09 × 89.09 × 6.00,3392.92,Along pin; strength / fit TO VERIFY
+P50,Cross pin 45 / level 2,WALNUT,cross_pin,89.09 × 89.09 × 6.00,3392.92,Along pin; strength / fit TO VERIFY
+P51,Cross pin 45 / level 3,WALNUT,cross_pin,89.09 × 89.09 × 6.00,3392.92,Along pin; strength / fit TO VERIFY
+P52,Cross pin 135 / level 1,WALNUT,cross_pin,89.09 × 89.09 × 6.00,3392.92,Along pin; strength / fit TO VERIFY
+P53,Cross pin 135 / level 2,WALNUT,cross_pin,89.09 × 89.09 × 6.00,3392.92,Along pin; strength / fit TO VERIFY
+P54,Cross pin 135 / level 3,WALNUT,cross_pin,89.09 × 89.09 × 6.00,3392.92,Along pin; strength / fit TO VERIFY
+P55,Cross pin 225 / level 1,WALNUT,cross_pin,89.09 × 89.09 × 6.00,3392.92,Along pin; strength / fit TO VERIFY
+P56,Cross pin 225 / level 2,WALNUT,cross_pin,89.09 × 89.09 × 6.00,3392.92,Along pin; strength / fit TO VERIFY
+P57,Cross pin 225 / level 3,WALNUT,cross_pin,89.09 × 89.09 × 6.00,3392.92,Along pin; strength / fit TO VERIFY
+P58,Cross pin 315 / level 1,WALNUT,cross_pin,89.09 × 89.09 × 6.00,3392.92,Along pin; strength / fit TO VERIFY
+P59,Cross pin 315 / level 2,WALNUT,cross_pin,89.09 × 89.09 × 6.00,3392.92,Along pin; strength / fit TO VERIFY
+P60,Cross pin 315 / level 3,WALNUT,cross_pin,89.09 × 89.09 × 6.00,3392.92,Along pin; strength / fit TO VERIFY

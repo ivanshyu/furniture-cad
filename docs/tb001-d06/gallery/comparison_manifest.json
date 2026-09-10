@@ -1,0 +1,155 @@
+{
+  "geometry_sha256": "f05a5ebc126596b286c4755b27b8a56674fe9fd27baaead42cee6c4fe4b33217",
+  "variants": {
+    "2": {
+      "geometry": "../comparison_2_geometry.json",
+      "sha256": "1547d17175edb738d26f00acc48f1042f6ec864ecd6c5f3feff7b0ffaa39f182",
+      "checks": {
+        "part_count": 94,
+        "d05_raised_panels_unchanged": 3,
+        "d04_leg_section_mm": [
+          8,
+          14,
+          8
+        ],
+        "bounds_mm": [
+          [
+            0,
+            600
+          ],
+          [
+            0,
+            480
+          ],
+          [
+            0,
+            600
+          ]
+        ],
+        "positive_volume_overlap": [],
+        "closed_consistently_wound_meshes": true,
+        "load_paths": {
+          "Lower": {
+            "panel": "P073",
+            "cross_bearers": [
+              "P044",
+              "P046"
+            ],
+            "side_bearers": [
+              "P034",
+              "P039"
+            ],
+            "path": "plywood deck -> two transverse bearers -> half-laps -> through side bearers -> maple core slot shoulders -> laminated legs -> feet",
+            "verified": "positive-area bearing contact, NOT strength or joint sizing"
+          },
+          "Middle": {
+            "panel": "P083",
+            "cross_bearers": [
+              "P058",
+              "P060"
+            ],
+            "side_bearers": [
+              "P048",
+              "P053"
+            ],
+            "path": "plywood deck -> two transverse bearers -> half-laps -> through side bearers -> maple core slot shoulders -> laminated legs -> feet",
+            "verified": "positive-area bearing contact, NOT strength or joint sizing"
+          }
+        },
+        "dark_deck_material_mm3": {
+          "previous_solid_bases": 5320576.0,
+          "new_perimeter_only": 1041408.0000000005,
+          "volume_reduction_percent": 80.4,
+          "note": "net model volume only, not purchase quantity or total cost"
+        },
+        "surface_heights_mm": [
+          92,
+          338,
+          600
+        ],
+        "maturity": "L1",
+        "engineering_verified": false,
+        "note": "Nominal slots/half-laps and positive-area bearing are modelled. Adhesives, mechanical retention, tolerances, plywood specification, strength and racking remain unverified."
+      }
+    },
+    "1": {
+      "geometry": "../comparison_1_geometry.json",
+      "sha256": "ed259b41c090ddbb4e283ee39dae368370a74caa29b615b0f23e32e84475baf4",
+      "checks": {
+        "part_count": 82,
+        "d05_raised_panels_unchanged": 3,
+        "d04_leg_section_mm": [
+          8,
+          14,
+          8
+        ],
+        "bounds_mm": [
+          [
+            0,
+            600
+          ],
+          [
+            0,
+            480
+          ],
+          [
+            0,
+            600
+          ]
+        ],
+        "positive_volume_overlap": [],
+        "closed_consistently_wound_meshes": true,
+        "load_paths": {
+          "Lower": {
+            "panel": "P061",
+            "cross_bearers": [
+              "P034",
+              "P036"
+            ],
+            "side_bearers": [
+              "P025",
+              "P029"
+            ],
+            "path": "plywood deck -> two transverse bearers -> half-laps -> through side bearers -> maple core slot shoulders -> laminated legs -> feet",
+            "verified": "positive-area bearing contact, NOT strength or joint sizing"
+          },
+          "Middle": {
+            "panel": "P071",
+            "cross_bearers": [
+              "P046",
+              "P048"
+            ],
+            "side_bearers": [
+              "P037",
+              "P041"
+            ],
+            "path": "plywood deck -> two transverse bearers -> half-laps -> through side bearers -> maple core slot shoulders -> laminated legs -> feet",
+            "verified": "positive-area bearing contact, NOT strength or joint sizing"
+          }
+        },
+        "dark_deck_material_mm3": {
+          "previous_solid_bases": 5320576.0,
+          "new_perimeter_only": 1041408.0000000005,
+          "volume_reduction_percent": 80.4,
+          "note": "net model volume only, not purchase quantity or total cost"
+        },
+        "surface_heights_mm": [
+          92,
+          338,
+          600
+        ],
+        "maturity": "L1",
+        "engineering_verified": false,
+        "note": "Nominal slots/half-laps and positive-area bearing are modelled. Adhesives, mechanical retention, tolerances, plywood specification, strength and racking remain unverified."
+      }
+    }
+  },
+  "assets": {
+    "supports_cad.png": "c8bfb8cb57ea0a9265d7b83ec95a936b5ef4a515e3333b1e2906cf98aa5f5be3",
+    "line_comparison_cad.png": "c9214be2f2fac0f8636863226aa60b58febd766d90eaeecac078617c0b3b9832",
+    "compare_1_persp_cad.png": "4f3642d4ccc8ea43d3360368c55b68a26fea091534e5d1cca64a3ed03db0a937",
+    "compare_1_side_cad.png": "4545b47062b4217c477d3dc15ff1c3d2a7928d6387e01f63e01005f9a2fb96ad",
+    "compare_2_persp_cad.png": "ad639c0c568349c8a1120911e670c09888f3d3de126e6571bc43b328f3fa4c8f",
+    "compare_2_side_cad.png": "3caf390e77172534aef07b94c0ce4fae9dff46b57adb65d78afdc5673a1b771b"
+  }
+}

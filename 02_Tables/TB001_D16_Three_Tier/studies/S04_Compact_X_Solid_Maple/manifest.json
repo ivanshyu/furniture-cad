@@ -1,0 +1,29 @@
+{
+  "stage": "L0 AI appearance baseline candidate, not engineering release",
+  "tool": "built-in image_gen",
+  "first_pass": {
+    "input": "../S03_Four_Legs_Triple_X/four_legs_triple_x_concept.png",
+    "input_sha256": "8cb652ccda6b441b4f847820d6438f29a0dee3e440789d9b945ead7ea9ce80b9",
+    "prompt": "prompt.txt",
+    "prompt_sha256": "0cd49c53a7e50489c69692af827bc3c4b9a0d6e75236a6f6b3368a3463b28985",
+    "output": "reference/spacing_initial.png",
+    "output_sha256": "3a36241605993ddf256805582d6be16f5b0187c559088556f0c734cc2a4944f9",
+    "reason_for_refinement": "Initial visible gaps were too tight relative to beam heights"
+  },
+  "refinement": {
+    "input": "reference/spacing_initial.png",
+    "input_sha256": "3a36241605993ddf256805582d6be16f5b0187c559088556f0c734cc2a4944f9",
+    "prompt": "spacing_refinement_prompt.txt",
+    "prompt_sha256": "939e70e37b0b4574cec6b91d17859b449df25d3153745d40ea048089f5318a3a",
+    "output": "compact_x_solid_maple_concept.png",
+    "output_sha256": "2e2d3c6cbf629cb040384669841b15c8a0c738c18be399095d7ece7d43b5fec0",
+    "generation_file": "exec-b0fd474b-8e66-4688-89b6-2fe327d07066.png"
+  },
+  "visual_qa": [
+    "Both circular tabletop edges now pale maple, no walnut circular band",
+    "Three beam ends in near slots form a compact stack under second shelf; space below is open",
+    "Four maple legs, open-bottom slots and four walnut shoes preserved",
+    "AI spacing is approximate; exact 1:1 clear-gap/beam-height rule lives in design_constraints.json, not inferred from pixels",
+    "No strength, joinery or wood-movement validation has occurred"
+  ]
+}

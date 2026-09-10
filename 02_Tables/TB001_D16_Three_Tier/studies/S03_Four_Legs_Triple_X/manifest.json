@@ -1,0 +1,29 @@
+{
+  "stage": "L0 AI appearance study, not CAD or manufacturing release",
+  "tool": "built-in image_gen",
+  "input": "../S02_Round_Arch_Maple/round_arch_concept.png",
+  "input_sha256": "e3ca737d0fe032a96bd775e18f0bf5416a916f71e25eb93fccb9d06f4b1075d8",
+  "prompt": "prompt.txt",
+  "prompt_sha256": "0392cd8f0133b2753a044828d0c851855d4a93def1bf4f1065ec98d2b9eeb15f",
+  "output": "four_legs_triple_x_concept.png",
+  "output_sha256": "8cb652ccda6b441b4f847820d6438f29a0dee3e440789d9b945ead7ea9ce80b9",
+  "generation_file": "exec-5e7a8ecb-69ca-47d1-a916-2487613d9268.png",
+  "user_requirements": [
+    "Four maple arch-crown blade supports",
+    "Narrow slots continue down to bottom walnut foot shoes; no maple sill",
+    "Three horizontal X assemblies, each pairing opposing slots",
+    "Highest X bears second circular tabletop"
+  ],
+  "interpretation": [
+    "Four supports at corners of an inset square; each beam follows a diagonal",
+    "Three Xs are stacked horizontal planes, not elevation cross-bracing",
+    "Two tabletops total; existing two-leg S02 no longer current study"
+  ],
+  "visual_qa": [
+    "Four separate legs and four walnut shoes visible",
+    "Slots visually extend to walnut shoes with no pale bottom sill",
+    "Two exposed lower X centres visible, upper X partly occluded by smaller disc",
+    "Some rail exits are occluded; exact six-beam routing and flush half-laps cannot be verified from generated pixels",
+    "Aperture half-height, section dimensions, bearing, stability and connections require CAD/prototype validation"
+  ]
+}

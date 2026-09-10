@@ -1,0 +1,54 @@
+{
+  "status": "PASS — geometry only, not structural certification",
+  "solid_count": 60,
+  "all_solids_valid": true,
+  "native_readback_valid": true,
+  "grip_bore_empty": true,
+  "lower_full_disk_volume_verified": true,
+  "positive_volume_collisions": [],
+  "step_readback_solid_count": 60,
+  "step_volume_delta_mm3": -4.218891263008118e-06,
+  "upper_bearing_area_mm2": {
+    "P07": 0,
+    "P08": 0,
+    "P09": 600.000000000052,
+    "P14": 0,
+    "P15": 0,
+    "P16": 600.000000000052,
+    "P21": 0,
+    "P22": 0,
+    "P23": 600.0000000000522,
+    "P28": 0,
+    "P29": 0,
+    "P30": 600.000000000052
+  },
+  "lower_bearing_area_mm2": {
+    "P35": 9034.130433125632,
+    "P36": 9358.130433122446
+  },
+  "x_bottom_z_top_to_bottom_mm": [
+    266,
+    238,
+    210
+  ],
+  "x_height_mm": 14,
+  "x_clear_gap_mm": 14,
+  "x_stack_height_mm": 70,
+  "grip_net_mm": [
+    95,
+    30
+  ],
+  "grip_corner_radius_mm": 0,
+  "lower_has_grip": false,
+  "shelf_to_leg_radial_clearance_mm": 5.0,
+  "not_checked": [
+    "strength",
+    "tipping",
+    "carrying",
+    "wood movement",
+    "glue joint strength",
+    "pin tolerances",
+    "positive top/shelf retention",
+    "foot joinery"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "status": "L0 visual exploration only, not a new CAD revision",
+  "tool": "built-in image_gen",
+  "inputs": [
+    {
+      "file": "reference/user_side_table.jpg",
+      "sha256": "df84adf10c24e6ae245a5886b4a09a4bec1d5f6ae36979e2270666b345060365",
+      "role": "User-provided visual reference; rights retained by source"
+    },
+    {
+      "file": "reference/D06_material_reference.png",
+      "sha256": "d0f60eea6c9c06437f3aeb833e2a0853c881b54c64d4f26475d9d159dc9f9507",
+      "role": "D06 prior AI material reference, NOT CAD geometry"
+    }
+  ],
+  "prompt": "prompt.txt",
+  "prompt_sha256": "ce6923163cdd448a37f5bd2ed960f509d97ba448038e211b9302b04f9019fda5",
+  "output": "ABC_concepts.png",
+  "output_sha256": "2a1f0ab0c7cdd0224776f1f7973300c04eec1304ac972fcfbd7c6aba1bb18ac1",
+  "generation_file": "exec-83e6811e-d721-430d-9a16-002c37e1295a.png",
+  "visual_qa": [
+    "Three distinct concepts, same general scale, creamy maple and fine walnut edges.",
+    "A is more like full side panels than the intended strongly inset narrow blade supports; inward shift remains to be developed.",
+    "AI simplified original raised tray steps; these are not exact retained D05/D06 surfaces.",
+    "B is elliptical, not a true circle.",
+    "C arch apertures soften upper side mass, but lower side mass remains.",
+    "No structural verification or fabrication dimensions; apparent shelf connections are not joinery drawings."
+  ]
+}
