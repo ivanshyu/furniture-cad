@@ -1,0 +1,14 @@
+{
+  "revision": "D03",
+  "width": 600, "depth": 480, "height": 600,
+  "surface_levels": [140, 350, 600],
+  "top_thickness": 24, "top_border": 30, "top_centre_strip": 28,
+  "post_x": 30, "post_y": 40, "setback": 20,
+  "foot_height": 22, "walnut_cheek": 8,
+  "shelf_frame_thickness": 24, "shelf_thickness": 18,
+  "panel_gap": 1, "apron_height": 28, "apron_thickness": 16,
+  "shelf_centre_strip": 24,
+  "side_bar_depth": 14, "side_bar_height": 12,
+  "side_bar_offsets": [36, 72], "foot_stretcher_z": 62,
+  "bar_extension": 20, "panel_extension": 20
+}

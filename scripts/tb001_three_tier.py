@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""D16-inspired TB001 D02. Dependency-free, mm source / metre GLB.
+"""D16-inspired TB001 D03. Dependency-free, mm source / metre GLB.
 
 Generates exterior design geometry, not joinery or a production cut list.
 Run from any directory: python3 scripts/tb001_three_tier.py
@@ -12,7 +12,7 @@ import struct
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / '02_Tables/TB001_D16_Three_Tier/models/D02'
+OUT = ROOT / '02_Tables/TB001_D16_Three_Tier/models/D03'
 P = json.loads((OUT / 'parameters.json').read_text())
 PARTS = []
 COLORS = {'WALNUT': '#63432e', 'MAPLE': '#d9bd89'}
@@ -28,50 +28,40 @@ def box(name, group, material, x, y, z, w, d, h):
                       vertices_mm=vertices, faces=FACES))
 
 
-def lined_panel(name, group, x, y, z, w, d, t, centre):
-    """Tessellated appearance panel: maple margin, fine walnut ring, centre line."""
-    margin,line=P['inset_margin'],P['inset_line']
-    for offset,width,mat in [(0,margin,'MAPLE'),(margin,line,'WALNUT')]:
-        for yy in [y+offset,y+d-offset-width]:
-            box(name+' border',group,mat,x+offset,yy,z,w-2*offset,width,t)
-        for xx in [x+offset,x+w-offset-width]:
-            box(name+' border',group,mat,xx,y+offset+width,z,width,d-2*(offset+width),t)
-    pad=margin+line
-    box(name+' centre line',group,'WALNUT',x+(w-centre)/2,y+pad,z,centre,d-2*pad,t)
-    for xx in [x+pad,x+(w+centre)/2]:
-        box(name+' maple field',group,'MAPLE',xx,y+pad,z,(w-centre)/2-pad,d-2*pad,t)
-
-
 def build():
     w,d,h = P['width'],P['depth'],P['height']
     sx,sy,s = P['post_x'],P['post_y'],P['setback']
-    e,foot,tt = P['leg_edge'],P['foot_height'],P['top_thickness']
-    # Nonoverlapping 3x3 cross-section: maple body and dark corner strips.
+    e,foot,tt = P['walnut_cheek'],P['foot_height'],P['top_thickness']
+    rail_levels=[P['foot_stretcher_z']]+[level+offset for level in P['surface_levels'][:2] for offset in P['side_bar_offsets']]
+    # Two continuous walnut cheeks and one maple core, with real through slots.
+    assert sx-2*e == P['side_bar_depth']
     for i,x in enumerate([s,w-s-sx]):
         for j,y in enumerate([s,d-s-sy]):
             name=f'Leg {i+1}{j+1}'
             box(name+' foot','Legs','WALNUT',x,y,0,sx,sy,foot)
-            xx=[(0,e),(e,sx-2*e),(sx-e,e)]
-            yy=[(0,e),(e,sy-2*e),(sy-e,e)]
-            for a,(dx,ww) in enumerate(xx):
-                for b,(dy,dd) in enumerate(yy):
-                    mat='WALNUT' if a!=1 and b!=1 else 'MAPLE'
-                    box(f'{name} segment {a}{b}','Legs',mat,x+dx,y+dy,foot,ww,dd,h-tt-foot)
+            for dx in [0,sx-e]:
+                box(name+' walnut cheek','Legs','WALNUT',x+dx,y,foot,e,sy,h-tt-foot)
+            start=foot
+            for end in sorted(rail_levels)+[h-tt]:
+                box(name+' maple core','Legs','MAPLE',x+e,y,start,sx-2*e,sy,end-start)
+                start=end+P['side_bar_height']
     for label,level in zip(['Lower','Middle'],P['surface_levels'][:2]):
         t=P['shelf_frame_thickness']; st=P['shelf_thickness']; g=P['panel_gap']
         for y in [s,d-s-sy]:
             box(label+' front/back rail',label,'WALNUT',s+sx,y,level-t,w-2*(s+sx),sy,t)
+        centre=P['shelf_centre_strip'];cy=(d-centre)/2
         for x in [s,w-s-sx]:
-            box(label+' side rail',label,'WALNUT',x,s+sy,level-t,sx,d-2*(s+sy),t)
-        lined_panel(label+' panel',label,s+sx+g,s+sy+g,level-st,
-            w-2*(s+sx+g),d-2*(s+sy+g),st,P['shelf_centre_strip'])
-        for x in [s+(sx-P['side_bar_depth'])/2,w-s-(sx+P['side_bar_depth'])/2]:
-            for offset in P['side_bar_offsets']:
-                box(label+' side parallel bar','Side lines','WALNUT',x,s+sy,level+offset,
-                    P['side_bar_depth'],d-2*(s+sy),P['side_bar_height'])
-    for x in [s+(sx-P['side_bar_depth'])/2,w-s-(sx+P['side_bar_depth'])/2]:
-        box('Foot side stretcher','Side lines','WALNUT',x,s+sy,P['foot_stretcher_z'],
-            P['side_bar_depth'],d-2*(s+sy),P['side_bar_height'])
+            for yy in [s+sy,cy+centre]:
+                box(label+' split side rail',label,'WALNUT',x,yy,level-t,sx,cy-s-sy,t)
+        box(label+' projecting crossbar',label,'WALNUT',s-P['panel_extension'],cy,level-t,
+            w-2*s+2*P['panel_extension'],centre,t)
+        for yy in [s+sy+g,cy+centre+g]:
+            box(label+' plain maple panel',label,'MAPLE',s+sx+g,yy,level-st,
+                w-2*(s+sx+g),cy-s-sy-2*g,st)
+    for x in [s+e,w-s-sx+e]:
+        for z in rail_levels:
+            box('Through side bar with exposed ends','Side lines','WALNUT',x,s-P['bar_extension'],z,
+                P['side_bar_depth'],d-2*s+2*P['bar_extension'],P['side_bar_height'])
     # Top aprons terminate between the posts and meet the top underside.
     a,at=P['apron_height'],P['apron_thickness']
     for y in [s,d-s-at]:
@@ -80,16 +70,19 @@ def build():
         box('Top side apron','Top','WALNUT',x,s+sy,h-tt-a,at,d-2*(s+sy),a)
     b,c,g=P['top_border'],P['top_centre_strip'],P['panel_gap']
     for y in [0,d-b]:
-        box('Top front/back border','Top','WALNUT',0,y,h-tt,w,b,tt)
+        box('Top projecting front/back border','Top','WALNUT',-P['panel_extension'],y,h-tt,w+2*P['panel_extension'],b,tt)
     for x in [0,w-b]:
-        box('Top side border','Top','WALNUT',x,b,h-tt,b,d-2*b,tt)
-    lined_panel('Top panel','Top',b+g,b+g,h-tt,w-2*(b+g),d-2*(b+g),tt,c)
+        for yy in [b,(d+c)/2]:
+            box('Top split side border','Top','WALNUT',x,yy,h-tt,b,(d-c)/2-b,tt)
+    box('Top projecting crossbar','Top','WALNUT',-P['panel_extension'],(d-c)/2,h-tt,w+2*P['panel_extension'],c,tt)
+    for yy in [b+g,(d+c)/2+g]:
+        box('Top plain maple panel','Top','MAPLE',b+g,yy,h-tt,w-2*(b+g),(d-c)/2-b-2*g,tt)
 
 
 def verify():
     vertices=[v for part in PARTS for v in part['vertices_mm']]
     bounds=[[min(v[k] for v in vertices),max(v[k] for v in vertices)] for k in range(3)]
-    assert bounds == [[0,P['width']],[0,P['depth']],[0,P['height']]],bounds
+    assert bounds == [[-P['panel_extension'],P['width']+P['panel_extension']],[0,P['depth']],[0,P['height']]],bounds
     collisions=[]
     for a,b in itertools.combinations(PARTS,2):
         overlap=[min(a['origin_mm'][k]+a['size_mm'][k],b['origin_mm'][k]+b['size_mm'][k])-
@@ -108,7 +101,7 @@ def verify():
                 clear_opening_front_mm=[P['surface_levels'][1]-P['shelf_frame_thickness']-P['surface_levels'][0],
                     P['height']-P['top_thickness']-P['apron_height']-P['surface_levels'][1]],
                 maturity='L1',engineering_verified=False,
-                note='Visual segments are not purchasing or cut-list quantities. Joinery and shelf retention unmodelled.')
+                note='600 mm panel body; 640 mm maximum width including projecting bars. Maple core slots modelled nominally; joinery tolerances and shelf retention unverified.')
 
 
 def glb():
@@ -134,12 +127,12 @@ def glb():
         meshes.append(dict(name=part['id']+' '+part['name'],primitives=[dict(attributes=attrs,material=list(COLORS).index(part['material']))]))
         nodes.append(dict(mesh=len(meshes)-1,name=part['id']+' '+part['name']))
     materials=[dict(name=n,pbrMetallicRoughness=dict(baseColorFactor=[int(c[i:i+2],16)/255 for i in (1,3,5)]+[1],metallicFactor=0,roughnessFactor=.55)) for n,c in COLORS.items()]
-    data=dict(asset=dict(version='2.0',generator='TB001 D02'),scene=0,scenes=[dict(nodes=list(range(len(nodes))))],nodes=nodes,meshes=meshes,materials=materials,buffers=[dict(byteLength=len(binary))],bufferViews=views,accessors=accessors)
+    data=dict(asset=dict(version='2.0',generator='TB001 D03'),scene=0,scenes=[dict(nodes=list(range(len(nodes))))],nodes=nodes,meshes=meshes,materials=materials,buffers=[dict(byteLength=len(binary))],bufferViews=views,accessors=accessors)
     js=json.dumps(data,separators=(',',':')).encode();js+=b' '*((-len(js))%4)
     out=struct.pack('<III',0x46546c67,2,28+len(js)+len(binary))+struct.pack('<II',len(js),0x4e4f534a)+js+struct.pack('<II',len(binary),0x004e4942)+binary
-    (OUT/'TB001_D02.glb').write_bytes(out)
+    (OUT/'TB001_D03.glb').write_bytes(out)
     # Read back container and accessors rather than trusting export alone.
-    blob=(OUT/'TB001_D02.glb').read_bytes();assert struct.unpack_from('<I',blob,8)[0]==len(blob)
+    blob=(OUT/'TB001_D03.glb').read_bytes();assert struct.unpack_from('<I',blob,8)[0]==len(blob)
     size=struct.unpack_from('<I',blob,12)[0];parsed=json.loads(blob[20:20+size])
     assert len(parsed['meshes'])==len(PARTS)
     for view in parsed['bufferViews']:assert view['byteOffset']+view['byteLength']<=len(binary)
@@ -158,9 +151,9 @@ def svg():
     content=['<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1000" viewBox="0 0 1560 1000">',
         '<rect width="1560" height="1000" fill="#f4f0e8"/>',
         '<g font-family="Arial, PingFang TC, sans-serif" fill="#372c23">',
-        '<text x="52" y="54" font-size="13" letter-spacing="4">TB001 / D02 · LINE STUDY</text>',
+        '<text x="52" y="54" font-size="13" letter-spacing="4">TB001 / D03 · THROUGH LINES</text>',
         '<text x="52" y="102" font-size="34">D16 三層邊几</text>',
-        '<text x="725" y="94" font-size="23">W 600 × D 480 × H 600 mm</text>']
+        '<text x="725" y="94" font-size="23">含出頭 W 640 × D 480 × H 600 mm</text>']
     for mode,x,y,w,h,label in panels:
         allp=[project(v,mode) for part in PARTS for v in part['vertices_mm']]
         minx,maxx=min(v[0] for v in allp),max(v[0] for v in allp)
@@ -195,16 +188,16 @@ def svg():
             xx=ox-18;top=oy;bottom=oy+600*scale
             content.append(f'<path d="M{xx+5},{top}h-10 M{xx},{top}V{bottom} M{xx+5},{bottom}h-10" fill="none" stroke="#8c7964"/>')
             content.append(f'<text x="{xx-7}" y="{(top+bottom)/2}" font-size="12" text-anchor="end">600</text>')
-            content.append(f'<text x="{ox+w*0.35}" y="{bottom+24}" font-size="13">{600 if mode=="front" else 480} mm</text>')
+            content.append(f'<text x="{ox+w*0.35}" y="{bottom+24}" font-size="13">{640 if mode=="front" else 480} mm</text>')
         if mode=='front':
             for level in P['surface_levels']:
                 yy=oy+(600-level)*scale
-                content.append(f'<text x="{ox+600*scale+12}" y="{yy+4}" font-size="12">{level}</text>')
+                content.append(f'<text x="{ox+640*scale+12}" y="{yy+4}" font-size="12">{level}</text>')
     content.extend(['<text x="1180" y="615" font-size="19">胡桃木框 × 楓木面</text>',
         '<text x="1180" y="654" font-size="15">桌面 + 中層 + 下層</text>',
         '<text x="1180" y="686" font-size="15">離地 600 / 350 / 140 mm</text>',
-        '<text x="1180" y="718" font-size="15">30 × 40 mm 雙色細腳</text>',
-        '<text x="1180" y="750" font-size="15">雙框細線 × 平行側桿 × 中央長線</text>',
+        '<text x="1180" y="718" font-size="15">8 / 14 / 8 mm 三明治腳</text>',
+        '<text x="1180" y="750" font-size="15">橫桿出頭 20 mm · 純楓木面</text>',
         '<path d="M52 886H1508" stroke="#cdbfae"/>',
         '<text x="52" y="924" font-size="14">L1 外觀幾何方案 · 同一模型正交投影 · 單位 mm · 非生產圖／非開料尺寸</text>',
         '<text x="52" y="955" font-size="13" fill="#756655">寬深按使用者公分需求換算；高度、層位及截面為本輪設計。榫接、面板托持及實木活動量待工程化。</text>',
@@ -214,14 +207,14 @@ def svg():
 
 def main():
     build();checks=verify()
-    data=dict(revision='D02',units='mm',parameters=P,parts=PARTS)
+    data=dict(revision='D03',units='mm',parameters=P,parts=PARTS)
     (OUT/'geometry_mm.json').write_text(json.dumps(data,separators=(',',':')))
     with (OUT/'parts_dimensions.csv').open('w',newline='') as f:
         writer=csv.writer(f,lineterminator='\n');writer.writerow(['id','name','group','material','x_mm','y_mm','z_mm','width_mm','depth_mm','height_mm','status'])
         for part in PARTS:writer.writerow([part['id'],part['name'],part['group'],part['material'],*part['origin_mm'],*part['size_mm'],'CONCEPT exterior, not cut list'])
     glb();svg()
     template=(ROOT/'scripts/tb001_viewer.html').read_text()
-    (OUT/'TB001_D02_viewer.html').write_text(template.replace('__DATA__',json.dumps(data,separators=(',',':'))))
+    (OUT/'TB001_D03_viewer.html').write_text(template.replace('__DATA__',json.dumps(data,separators=(',',':'))))
     (OUT/'model_checks.json').write_text(json.dumps(checks,indent=2))
     print(json.dumps(checks,indent=2))
 

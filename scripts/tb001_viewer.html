@@ -5,15 +5,15 @@
 *{box-sizing:border-box}body{margin:0;background:#f4f0e8;color:#382e25;font:15px system-ui}header{padding:28px 36px;border-bottom:1px solid #d6cbbd}small{letter-spacing:2px;color:#82715e}h1{font-size:30px;margin:8px 0}p{line-height:1.7;margin:8px 0}main{display:grid;grid-template-columns:1fr 310px}#view{height:72vh;min-height:480px;position:relative}canvas{display:block}#fallback{width:100%;height:100%;object-fit:contain}#status{position:absolute;bottom:15px;left:20px;pointer-events:none;color:#776754;font-size:12px}aside{padding:26px;border-left:1px solid #d6cbbd;background:#faf7f1}button,select{padding:10px;border:1px solid #cbbca8;border-radius:6px;background:#fffdf8;color:inherit;font:inherit;cursor:pointer}nav{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:22px}button:hover{background:#e6dccb}label{display:block;margin:15px 0}input[type=range],select{width:100%}.metric{font-size:22px;margin:5px 0 22px}.rule{border-top:1px solid #d6cbbd;padding-top:18px;margin-top:22px}a{color:#715032}footer{padding:18px 36px;border-top:1px solid #d6cbbd;font-size:13px}.dot{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px}#partInfo{min-height:60px;font-size:13px}details{padding:20px 36px}details img{width:100%;max-height:850px}#loadError{display:none}@media(max-width:800px){main{grid-template-columns:1fr}#view{height:55vh;min-height:350px}aside{border-left:0}header{padding:20px}h1{font-size:25px}}
 </style>
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
-</head><body><header><small>TB001 / D02 · D16 DESIGN FAMILY</small><h1>D16 三層邊几 · 線條版</h1><p>深色雙框、板面中央長線，加上兩側成對細桿，讓三層之間多一些線條與留白。</p></header>
+</head><body><header><small>TB001 / D03 · D16 DESIGN FAMILY</small><h1>D16 三層邊几 · 出頭橫條</h1><p>三明治直腳、貫穿側桿與外伸 2 cm 的橫條。楓木面板取消細嵌線，讓結構自己形成線條。</p></header>
 <main><div id="view"><img id="fallback" src="preview.svg" alt="三層邊几正面、側面、俯視及立體預覽"><span id="status">載入互動模型…</span></div>
-<aside><small>整體尺寸 · 寬 × 深 × 高</small><div class="metric">60 × 48 × 60 cm</div><nav><button data-view="persp">立體</button><button data-view="front">正面</button><button data-view="side">側面</button><button data-view="top">俯視</button></nav>
+<aside><small>含出頭最大尺寸 · 寬 × 深 × 高</small><div class="metric">64 × 48 × 60 cm</div><p>主面板寬 60 cm；橫條左右各伸出 2 cm。<br>腳：胡桃木 8／楓木 14／胡桃木 8 mm。</p><nav><button data-view="persp">立體</button><button data-view="front">正面</button><button data-view="side">側面</button><button data-view="top">俯視</button></nav>
 <p><span class="dot" style="background:#63432e"></span>胡桃木框與角條<br><span class="dot" style="background:#d9bd89"></span>楓木面板與腳身</p>
 <p>桌面離地 60 cm<br>中層離地 35 cm<br>下層離地 14 cm</p>
 <div class="rule"><label>分層展開 <input id="explode" type="range" min="0" max="1" step=".01" value="0"></label>
 <label>零件檢視 <select id="parts"><option value="">全部部件</option></select></label><div id="partInfo">拖曳旋轉 · 滾輪縮放 · 右鍵平移<br>可點選模型查看分件外形尺寸。</div></div>
 <p id="loadError">互動元件未載入；仍可查看下方尺寸圖，或下載 GLB。</p>
-<div class="rule"><a href="TB001_D02.glb" download>下載 3D 模型 GLB</a><br><a href="parts_dimensions.csv" download>分件外形尺寸 CSV</a><br><a href="preview.svg" target="_blank">開啟尺寸預覽</a></div></aside></main>
+<div class="rule"><a href="TB001_D03.glb" download>下載 3D 模型 GLB</a><br><a href="parts_dimensions.csv" download>分件外形尺寸 CSV</a><br><a href="preview.svg" target="_blank">開啟尺寸預覽</a></div></aside></main>
 <details><summary>查看立體與三視圖尺寸板</summary><img src="preview.svg" alt="尺寸預覽"></details>
 <footer>L1 外觀設計方案。三層包含桌面；榫接、面板托持與木材活動量待確認，尚未驗證承重。互動元件首次載入需要網路。</footer>
 <script type="module">
@@ -36,6 +36,6 @@ document.querySelector('#explode').oninput=e=>{const v=Number(e.target.value);ob
 function choose(value){select.value=value;objects.forEach((o,i)=>{o.material.emissive.setHex(String(i)===value?0x5a3613:0);});const p=data.parts[Number(value)];document.querySelector('#partInfo').textContent=value===''?'拖曳旋轉 · 滾輪縮放 · 右鍵平移':p.id+' / '+p.name+' · '+p.material+' · '+p.size_mm.join(' × ')+' mm（外形）';}
 select.onchange=()=>choose(select.value);let down;renderer.domElement.onpointerdown=e=>down=[e.clientX,e.clientY];renderer.domElement.addEventListener('pointerup',e=>{if(!down||Math.hypot(e.clientX-down[0],e.clientY-down[1])>4)return;const r=renderer.domElement.getBoundingClientRect();const ray=new THREE.Raycaster();ray.setFromCamera(new THREE.Vector2((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1),camera);const hit=ray.intersectObjects(objects)[0];choose(hit?String(hit.object.userData.index):'');});
 new ResizeObserver(resize).observe(host);resize();view('persp');renderer.setAnimationLoop(()=>{controls.update();renderer.render(scene,camera);});
-document.querySelector('#status').textContent='同一套尺寸幾何 · '+objects.length+' 個視覺分件';window.tb001Check={partCount:objects.length,ready:true,boundsMM:[600,480,600]};
+document.querySelector('#status').textContent='同一套尺寸幾何 · '+objects.length+' 個視覺分件';window.tb001Check={partCount:objects.length,ready:true,boundsMM:[640,480,600]};
 }catch(error){document.querySelector('#status').textContent='顯示靜態尺寸預覽';document.querySelector('#loadError').style.display='block';console.error(error);}
 </script></body></html>

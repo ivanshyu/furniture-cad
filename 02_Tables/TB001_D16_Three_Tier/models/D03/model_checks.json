@@ -1,0 +1,31 @@
+{
+  "bounds_mm": [
+    [
+      -20,
+      620
+    ],
+    [
+      0,
+      480
+    ],
+    [
+      0,
+      600
+    ]
+  ],
+  "part_count": 77,
+  "positive_volume_overlap": [],
+  "closed_consistently_wound_meshes": true,
+  "surface_heights_mm": [
+    140,
+    350,
+    600
+  ],
+  "clear_opening_front_mm": [
+    186,
+    198
+  ],
+  "maturity": "L1",
+  "engineering_verified": false,
+  "note": "600 mm panel body; 640 mm maximum width including projecting bars. Maple core slots modelled nominally; joinery tolerances and shelf retention unverified."
+}
