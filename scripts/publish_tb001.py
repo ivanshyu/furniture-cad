@@ -11,6 +11,13 @@ def validate_gallery(source):
     g=source/'gallery';m=json.loads((g/'ai_manifest.json').read_text())
     assert m['geometry_sha256']==digest(source/'geometry_mm.json'),'Regenerate AI after geometry changes'
     assert m['cad_manifest_sha256']==digest(g/'cad_manifest.json'),'CAD camera manifest changed'
+    assert m['shared_prompt_sha256']==digest(g/'ai_prompt.txt'),'Shared prompt changed'
+    comparison=json.loads((g/'comparison_manifest.json').read_text())
+    assert comparison['geometry_sha256']==m['geometry_sha256'],'Comparison is stale'
+    for name,sha in comparison['assets'].items():
+        assert digest(g/name)==sha,f'Comparison asset changed {name}'
+    for entry in comparison['variants'].values():
+        assert digest(g/entry['geometry'])==entry['sha256'],'Comparison geometry changed'
     prompts=json.loads((g/'prompts.json').read_text())
     views=json.loads((source/'views.json').read_text())
     cad=json.loads((g/'cad_manifest.json').read_text())
@@ -27,9 +34,9 @@ def validate_gallery(source):
 def main():
     m=validate_gallery(SOURCE)
     DESTINATION.mkdir(parents=True,exist_ok=True)
-    for src,dst in [('TB001_D06_viewer.html','index.html'),('preview.svg','preview.svg'),('preview.svg.png','preview.svg.png'),('TB001_D06.glb','TB001_D06.glb'),('parts_dimensions.csv','parts_dimensions.csv')]:
+    for src,dst in [('TB001_D06_viewer.html','index.html'),('preview.svg','preview.svg'),('preview.svg.png','preview.svg.png'),('TB001_D06.glb','TB001_D06.glb'),('parts_dimensions.csv','parts_dimensions.csv'),('construction.html','construction.html'),('comparison_1_geometry.json','comparison_1_geometry.json'),('comparison_2_geometry.json','comparison_2_geometry.json')]:
         shutil.copy2(SOURCE/src,DESTINATION/dst)
     g=DESTINATION/'gallery';g.mkdir(exist_ok=True)
-    for name in ['ai_prompt.txt','prompts.json','ai_manifest.json','cad_manifest.json']+[f'{v}_{kind}.png' for v in m['views'] for kind in ['cad','ai']]:shutil.copy2(SOURCE/'gallery'/name,g/name)
+    for name in ['ai_prompt.txt','prompts.json','ai_manifest.json','cad_manifest.json','comparison_manifest.json','supports_cad.png','line_comparison_cad.png']+[f'compare_{n}_{v}_cad.png' for n in [1,2] for v in ['persp','side']]+[f'{v}_{kind}.png' for v in m['views'] for kind in ['cad','ai']]:shutil.copy2(SOURCE/'gallery'/name,g/name)
     print('Built D06 and complete six-view gallery.')
 if __name__=='__main__':main()

@@ -13,7 +13,7 @@ ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'02_Tables/TB001_D16_Three_Tier/models/D06'
 G=OUT/'gallery';G.mkdir(exist_ok=True)
 DATA=json.loads((OUT/'geometry_mm.json').read_text());VIEWS=json.loads((OUT/'views.json').read_text())
-COLORS={'SMOKED_OAK':'594638','NATURAL_OAK':'c8aa7d'}
+COLORS={'WALNUT':'63432e','MAPLE':'e5d6b5'}
 def normalize(v):return v/np.linalg.norm(v)
 
 def render(spec):
@@ -54,8 +54,8 @@ def main():
     fontpath='/System/Library/Fonts/Supplemental/Arial.ttf'
     font=ImageFont.truetype(fontpath,25);small=ImageFont.truetype(fontpath,18)
     sheet=Image.new('RGB',(1800,1420),'#f4f0e8');draw=ImageDraw.Draw(sheet)
-    draw.text((35,24),'TB001 / D06  —  QUIET FRAME / FINE LINES',font=font,fill='#382e25')
-    draw.text((35,60),'D05 unchanged + 2 fine side lines | W600 x D480 x H600 mm | L1 — NOT FOR PRODUCTION',font=small,fill='#776754')
+    draw.text((35,24),'TB001 / D06  —  QUIET FRAME / LIGHT RHYTHM',font=font,fill='#382e25')
+    draw.text((35,60),'D04 legs / maple trays / 2 projecting lines / real bearing | W600 x D480 x H600 mm | L1 — NOT FOR PRODUCTION',font=small,fill='#776754')
     for i,(name,spec) in enumerate(VIEWS.items()):
         im=render(spec);path=G/f'{name}_cad.png';im.save(path)
         manifest['views'][name]={'camera':spec,'cad':path.name,'cad_sha256':hashlib.sha256(path.read_bytes()).hexdigest()}

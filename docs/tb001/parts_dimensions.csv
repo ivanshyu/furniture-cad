@@ -1,18 +1,95 @@
 id,name,group,material,x_mm,y_mm,z_mm,width_mm,depth_mm,height_mm,status
-P001,Tapered leg 11,Legs,SMOKED_OAK,14,14,0,34,38,576,L1 exterior only; not cut list
-P002,Tapered leg 12,Legs,SMOKED_OAK,14,428,0,34,38,576,L1 exterior only; not cut list
-P003,Tapered leg 21,Legs,SMOKED_OAK,552,14,0,34,38,576,L1 exterior only; not cut list
-P004,Tapered leg 22,Legs,SMOKED_OAK,552,428,0,34,38,576,L1 exterior only; not cut list
-P005,Lower smoked-oak tray base,Lower,SMOKED_OAK,48,52,74,504,376,8,L1 exterior only; not cut list
-P006,Lower natural-oak inset,Lower,NATURAL_OAK,66,70,82,468,340,10,L1 exterior only; not cut list
-P007,Middle smoked-oak tray base,Middle,SMOKED_OAK,48,52,320,504,376,8,L1 exterior only; not cut list
-P008,Middle natural-oak inset,Middle,NATURAL_OAK,66,70,328,468,340,10,L1 exterior only; not cut list
-P009,Single rear stretcher,Structure,SMOKED_OAK,48,438.0,222,504,18,22,L1 exterior only; not cut list
-P010,Front/back apron,Top,SMOKED_OAK,48,24.0,552,504,18,24,L1 exterior only; not cut list
-P011,Front/back apron,Top,SMOKED_OAK,48,438.0,552,504,18,24,L1 exterior only; not cut list
-P012,Side apron,Top,SMOKED_OAK,22.0,52,552,18,376,24,L1 exterior only; not cut list
-P013,Side apron,Top,SMOKED_OAK,560.0,52,552,18,376,24,L1 exterior only; not cut list
-P014,Smoked-oak top base,Top,SMOKED_OAK,0,0,576,600,480,8,L1 exterior only; not cut list
-P015,Natural-oak top inset,Top,NATURAL_OAK,24,24,584,552,432,16,L1 exterior only; not cut list
-P016,Left fine side line,Side lines,SMOKED_OAK,27.0,50.56944444444444,370.0,8.0,378.8611111111111,10.0,L1 exterior only; not cut list
-P017,Right fine side line,Side lines,SMOKED_OAK,565.0,50.56944444444444,370.0,8.0,378.8611111111111,10.0,L1 exterior only; not cut list
+P001,Leg 11 walnut foot,Legs,WALNUT,18,12,0,30,40,22,L1 exterior only; not cut list
+P002,Leg 11 walnut cheek,Legs,WALNUT,18,12,22,8,40,554,L1 exterior only; not cut list
+P003,Leg 11 walnut cheek,Legs,WALNUT,40,12,22,8,40,554,L1 exterior only; not cut list
+P004,Leg 11 maple core,Legs,MAPLE,26,12,22,14,40,12,L1 exterior only; not cut list
+P005,Leg 11 maple core,Legs,MAPLE,26,12,44,14,40,12,L1 exterior only; not cut list
+P006,Leg 11 maple core,Legs,MAPLE,26,12,74,14,40,206,L1 exterior only; not cut list
+P007,Leg 11 maple core,Legs,MAPLE,26,12,290,14,40,12,L1 exterior only; not cut list
+P008,Leg 11 maple core,Legs,MAPLE,26,12,320,14,40,256,L1 exterior only; not cut list
+P009,Leg 12 walnut foot,Legs,WALNUT,18,428,0,30,40,22,L1 exterior only; not cut list
+P010,Leg 12 walnut cheek,Legs,WALNUT,18,428,22,8,40,554,L1 exterior only; not cut list
+P011,Leg 12 walnut cheek,Legs,WALNUT,40,428,22,8,40,554,L1 exterior only; not cut list
+P012,Leg 12 maple core,Legs,MAPLE,26,428,22,14,40,12,L1 exterior only; not cut list
+P013,Leg 12 maple core,Legs,MAPLE,26,428,44,14,40,12,L1 exterior only; not cut list
+P014,Leg 12 maple core,Legs,MAPLE,26,428,74,14,40,206,L1 exterior only; not cut list
+P015,Leg 12 maple core,Legs,MAPLE,26,428,290,14,40,12,L1 exterior only; not cut list
+P016,Leg 12 maple core,Legs,MAPLE,26,428,320,14,40,256,L1 exterior only; not cut list
+P017,Leg 21 walnut foot,Legs,WALNUT,552,12,0,30,40,22,L1 exterior only; not cut list
+P018,Leg 21 walnut cheek,Legs,WALNUT,552,12,22,8,40,554,L1 exterior only; not cut list
+P019,Leg 21 walnut cheek,Legs,WALNUT,574,12,22,8,40,554,L1 exterior only; not cut list
+P020,Leg 21 maple core,Legs,MAPLE,560,12,22,14,40,12,L1 exterior only; not cut list
+P021,Leg 21 maple core,Legs,MAPLE,560,12,44,14,40,12,L1 exterior only; not cut list
+P022,Leg 21 maple core,Legs,MAPLE,560,12,74,14,40,206,L1 exterior only; not cut list
+P023,Leg 21 maple core,Legs,MAPLE,560,12,290,14,40,12,L1 exterior only; not cut list
+P024,Leg 21 maple core,Legs,MAPLE,560,12,320,14,40,256,L1 exterior only; not cut list
+P025,Leg 22 walnut foot,Legs,WALNUT,552,428,0,30,40,22,L1 exterior only; not cut list
+P026,Leg 22 walnut cheek,Legs,WALNUT,552,428,22,8,40,554,L1 exterior only; not cut list
+P027,Leg 22 walnut cheek,Legs,WALNUT,574,428,22,8,40,554,L1 exterior only; not cut list
+P028,Leg 22 maple core,Legs,MAPLE,560,428,22,14,40,12,L1 exterior only; not cut list
+P029,Leg 22 maple core,Legs,MAPLE,560,428,44,14,40,12,L1 exterior only; not cut list
+P030,Leg 22 maple core,Legs,MAPLE,560,428,74,14,40,206,L1 exterior only; not cut list
+P031,Leg 22 maple core,Legs,MAPLE,560,428,290,14,40,12,L1 exterior only; not cut list
+P032,Leg 22 maple core,Legs,MAPLE,560,428,320,14,40,256,L1 exterior only; not cut list
+P033,Lower through bracing line,Lower,WALNUT,26,2,34,14,476,10,L1 exterior only; not cut list
+P034,Lower main side bearer lower half,Lower,WALNUT,26,2,56,14,476,9,L1 exterior only; not cut list
+P035,Lower main side bearer upper half,Lower,WALNUT,26,2,65,14,74,9,L1 exterior only; not cut list
+P036,Lower main side bearer upper half,Lower,WALNUT,26,104,65,14,272,9,L1 exterior only; not cut list
+P037,Lower main side bearer upper half,Lower,WALNUT,26,404,65,14,74,9,L1 exterior only; not cut list
+P038,Lower through bracing line,Lower,WALNUT,560,2,34,14,476,10,L1 exterior only; not cut list
+P039,Lower main side bearer lower half,Lower,WALNUT,560,2,56,14,476,9,L1 exterior only; not cut list
+P040,Lower main side bearer upper half,Lower,WALNUT,560,2,65,14,74,9,L1 exterior only; not cut list
+P041,Lower main side bearer upper half,Lower,WALNUT,560,104,65,14,272,9,L1 exterior only; not cut list
+P042,Lower main side bearer upper half,Lower,WALNUT,560,404,65,14,74,9,L1 exterior only; not cut list
+P043,Lower transverse bearer lower half,Lower,WALNUT,40,76,56,520,28,9,L1 exterior only; not cut list
+P044,Lower transverse bearer upper half,Lower,WALNUT,26,76,65,548,28,9,L1 exterior only; not cut list
+P045,Lower transverse bearer lower half,Lower,WALNUT,40,376,56,520,28,9,L1 exterior only; not cut list
+P046,Lower transverse bearer upper half,Lower,WALNUT,26,376,65,548,28,9,L1 exterior only; not cut list
+P047,Middle through bracing line,Middle,WALNUT,26,2,280,14,476,10,L1 exterior only; not cut list
+P048,Middle main side bearer lower half,Middle,WALNUT,26,2,302,14,476,9,L1 exterior only; not cut list
+P049,Middle main side bearer upper half,Middle,WALNUT,26,2,311,14,74,9,L1 exterior only; not cut list
+P050,Middle main side bearer upper half,Middle,WALNUT,26,104,311,14,272,9,L1 exterior only; not cut list
+P051,Middle main side bearer upper half,Middle,WALNUT,26,404,311,14,74,9,L1 exterior only; not cut list
+P052,Middle through bracing line,Middle,WALNUT,560,2,280,14,476,10,L1 exterior only; not cut list
+P053,Middle main side bearer lower half,Middle,WALNUT,560,2,302,14,476,9,L1 exterior only; not cut list
+P054,Middle main side bearer upper half,Middle,WALNUT,560,2,311,14,74,9,L1 exterior only; not cut list
+P055,Middle main side bearer upper half,Middle,WALNUT,560,104,311,14,272,9,L1 exterior only; not cut list
+P056,Middle main side bearer upper half,Middle,WALNUT,560,404,311,14,74,9,L1 exterior only; not cut list
+P057,Middle transverse bearer lower half,Middle,WALNUT,40,76,302,520,28,9,L1 exterior only; not cut list
+P058,Middle transverse bearer upper half,Middle,WALNUT,26,76,311,548,28,9,L1 exterior only; not cut list
+P059,Middle transverse bearer lower half,Middle,WALNUT,40,376,302,520,28,9,L1 exterior only; not cut list
+P060,Middle transverse bearer upper half,Middle,WALNUT,26,376,311,548,28,9,L1 exterior only; not cut list
+P061,Top front/back apron,Top,WALNUT,48,23,552,504,18,24,L1 exterior only; not cut list
+P062,Top front/back apron,Top,WALNUT,48,439,552,504,18,24,L1 exterior only; not cut list
+P063,Top side apron,Top,WALNUT,24,52,552,18,376,24,L1 exterior only; not cut list
+P064,Top side apron,Top,WALNUT,558,52,552,18,376,24,L1 exterior only; not cut list
+P065,Lower mitred perimeter strip 1,Lower,WALNUT,62,52,74,476,22,8,L1 exterior only; not cut list
+P066,Lower mitred perimeter strip 2,Lower,WALNUT,520,52,74,32,32,8,L1 exterior only; not cut list
+P067,Lower mitred perimeter strip 3,Lower,WALNUT,530,66,74,22,348,8,L1 exterior only; not cut list
+P068,Lower mitred perimeter strip 4,Lower,WALNUT,520,396,74,32,32,8,L1 exterior only; not cut list
+P069,Lower mitred perimeter strip 5,Lower,WALNUT,62,406,74,476,22,8,L1 exterior only; not cut list
+P070,Lower mitred perimeter strip 6,Lower,WALNUT,48,396,74,32,32,8,L1 exterior only; not cut list
+P071,Lower mitred perimeter strip 7,Lower,WALNUT,48,66,74,22,348,8,L1 exterior only; not cut list
+P072,Lower mitred perimeter strip 8,Lower,WALNUT,48,52,74,32,32,8,L1 exterior only; not cut list
+P073,Lower plywood infill,Lower,MAPLE,70,74,74,460,332,8,L1 exterior only; not cut list
+P074,Lower maple-veneered plywood raised panel,Lower,MAPLE,66,70,82,468,340,10,L1 exterior only; not cut list
+P075,Middle mitred perimeter strip 1,Middle,WALNUT,62,52,320,476,22,8,L1 exterior only; not cut list
+P076,Middle mitred perimeter strip 2,Middle,WALNUT,520,52,320,32,32,8,L1 exterior only; not cut list
+P077,Middle mitred perimeter strip 3,Middle,WALNUT,530,66,320,22,348,8,L1 exterior only; not cut list
+P078,Middle mitred perimeter strip 4,Middle,WALNUT,520,396,320,32,32,8,L1 exterior only; not cut list
+P079,Middle mitred perimeter strip 5,Middle,WALNUT,62,406,320,476,22,8,L1 exterior only; not cut list
+P080,Middle mitred perimeter strip 6,Middle,WALNUT,48,396,320,32,32,8,L1 exterior only; not cut list
+P081,Middle mitred perimeter strip 7,Middle,WALNUT,48,66,320,22,348,8,L1 exterior only; not cut list
+P082,Middle mitred perimeter strip 8,Middle,WALNUT,48,52,320,32,32,8,L1 exterior only; not cut list
+P083,Middle plywood infill,Middle,MAPLE,70,74,320,460,332,8,L1 exterior only; not cut list
+P084,Middle maple-veneered plywood raised panel,Middle,MAPLE,66,70,328,468,340,10,L1 exterior only; not cut list
+P085,Top mitred perimeter strip 1,Top,WALNUT,24,0,576,552,28,8,L1 exterior only; not cut list
+P086,Top mitred perimeter strip 2,Top,WALNUT,552,0,576,48,48,8,L1 exterior only; not cut list
+P087,Top mitred perimeter strip 3,Top,WALNUT,572,24,576,28,432,8,L1 exterior only; not cut list
+P088,Top mitred perimeter strip 4,Top,WALNUT,552,432,576,48,48,8,L1 exterior only; not cut list
+P089,Top mitred perimeter strip 5,Top,WALNUT,24,452,576,552,28,8,L1 exterior only; not cut list
+P090,Top mitred perimeter strip 6,Top,WALNUT,0,432,576,48,48,8,L1 exterior only; not cut list
+P091,Top mitred perimeter strip 7,Top,WALNUT,0,24,576,28,432,8,L1 exterior only; not cut list
+P092,Top mitred perimeter strip 8,Top,WALNUT,0,0,576,48,48,8,L1 exterior only; not cut list
+P093,Top plywood infill,Top,MAPLE,28,28,576,544,424,8,L1 exterior only; not cut list
+P094,Top maple-veneered plywood raised panel,Top,MAPLE,24,24,584,552,432,16,L1 exterior only; not cut list

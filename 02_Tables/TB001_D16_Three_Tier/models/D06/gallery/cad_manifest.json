@@ -1,5 +1,5 @@
 {
-  "geometry_sha256": "2feb4883fab6a96ad7b849689685b369a44511add5b51af63444bd723cc56da1",
+  "geometry_sha256": "f05a5ebc126596b286c4755b27b8a56674fe9fd27baaead42cee6c4fe4b33217",
   "renderer": "triangle z-buffer / NumPy + Pillow",
   "views": {
     "persp": {
@@ -23,7 +23,7 @@
         "span": 0.87
       },
       "cad": "persp_cad.png",
-      "cad_sha256": "36ba5bae0c17d8c91b995c809db546552419452cb0df3f69c70074268cda6d96"
+      "cad_sha256": "ad639c0c568349c8a1120911e670c09888f3d3de126e6571bc43b328f3fa4c8f"
     },
     "front": {
       "camera": {
@@ -46,7 +46,7 @@
         "span": 0.76
       },
       "cad": "front_cad.png",
-      "cad_sha256": "5cdd46aa41140b33f05c5ab127f6df6ec69fddbf950688c523748fd0b163eead"
+      "cad_sha256": "09163bf2cd63166417878689ae29e9894ad03bed2bc209f876bdf8c8e55a9dcb"
     },
     "side": {
       "camera": {
@@ -69,7 +69,7 @@
         "span": 0.76
       },
       "cad": "side_cad.png",
-      "cad_sha256": "231b8d37b84fd095d28de01fa35c86e71a2261379d219f894f09e6753d1c09c3"
+      "cad_sha256": "3caf390e77172534aef07b94c0ce4fae9dff46b57adb65d78afdc5673a1b771b"
     },
     "top": {
       "camera": {
@@ -92,20 +92,20 @@
         "span": 0.68
       },
       "cad": "top_cad.png",
-      "cad_sha256": "e8dbd34e6dddbf10b6c028998fa9f93c12b3d5f48e79afe12353c51ab501257f"
+      "cad_sha256": "fd15793713dc91e2f92bf56744cc83bb912f7ef61853714ac6b9876c9d6d0069"
     },
     "detail": {
       "camera": {
-        "label": "細橫線接點",
+        "label": "承托與半搭接",
         "position": [
           -0.4,
           -0.65,
-          0.59
+          0.48
         ],
         "target": [
-          0.055,
-          0.085,
-          0.367
+          0.048,
+          0.086,
+          0.292
         ],
         "up": [
           0,
@@ -115,7 +115,7 @@
         "span": 0.27
       },
       "cad": "detail_cad.png",
-      "cad_sha256": "bb8b2cb3fc70f80702d3d734281d5833500b006e263aeaa277f9aee2a9f75f16"
+      "cad_sha256": "b2a4097bb2721ef15effc4d3b8f61ee1ac2b0bdb67efa8df4811858b1272ed95"
     },
     "bottom": {
       "camera": {
@@ -138,7 +138,7 @@
         "span": 0.9
       },
       "cad": "bottom_cad.png",
-      "cad_sha256": "399bc3bffc2e0c431668b96811eacdde6cbc81641f6f5156007acebb58543098"
+      "cad_sha256": "823585ab0b8c734f11a2ccba606a6ceed15ee074ecb89d99de19fe3e74457d44"
     }
   }
 }

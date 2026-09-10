@@ -1,6 +1,6 @@
 {
   "revision": "D06",
-  "concept": "Quiet Frame / Fine Lines",
+  "concept": "Quiet Frame / Light Rhythm",
   "width": 600,
   "overall_width": 600,
   "depth": 480,
@@ -10,10 +10,10 @@
     338,
     600
   ],
-  "post_x": 34,
-  "post_y": 38,
-  "post_bottom_x": 26,
-  "post_bottom_y": 30,
+  "post_x": 30,
+  "post_y": 40,
+  "post_bottom_x": 30,
+  "post_bottom_y": 40,
   "setback": 14,
   "top_thickness": 24,
   "top_base_thickness": 8,
@@ -31,7 +31,16 @@
   "back_stretcher_z": 222,
   "back_stretcher_height": 22,
   "back_stretcher_depth": 18,
-  "side_line_width": 8,
-  "side_line_height": 10,
-  "side_line_bottom": 370
+  "setback_x": 18,
+  "setback_y": 12,
+  "foot_height": 22,
+  "cheek": 8,
+  "support_height": 18,
+  "support_depth": 28,
+  "top_edge_width": 28,
+  "shelf_edge_width": 22,
+  "support_line_count": 2,
+  "line_gap": 12,
+  "bar_extension": 10,
+  "panel_material": "MAPLE_VENEER_PLYWOOD"
 }

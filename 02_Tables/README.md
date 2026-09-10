@@ -1,6 +1,3 @@
 # Tables
 
-- [TB001 · Quiet Frame / Fine Lines](TB001_D16_Three_Tier/ITEM.md)：D06 重做。D05 15 件原樣保留，左右各加一道細線。600 × 480 × 600 mm。
-  - [D06 模型與六視角 CAD／AI 對照](TB001_D16_Three_Tier/models/D06/TB001_D06_viewer.html)
-  - [D05 原型](TB001_D16_Three_Tier/models/D05/TB001_D05_viewer.html)
-  - [線上展示](https://ivanshyu.github.io/furniture-cad/tb001/)
+- [TB001 · D06 Light Rhythm](TB001_D16_Three_Tier/ITEM.md) — D04 三明治直腳、D05 托盤輪廓、兩道出頭承托線與一條比較與楓木面／胡桃木省料周邊框。L1；非生產圖。

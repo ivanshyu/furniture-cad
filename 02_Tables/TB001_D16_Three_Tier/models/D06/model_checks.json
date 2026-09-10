@@ -1,7 +1,11 @@
 {
-  "part_count": 17,
-  "d05_base_parts_unchanged": 15,
-  "added_parts": 2,
+  "part_count": 94,
+  "d05_raised_panels_unchanged": 3,
+  "d04_leg_section_mm": [
+    8,
+    14,
+    8
+  ],
   "bounds_mm": [
     [
       0,
@@ -17,20 +21,47 @@
     ]
   ],
   "positive_volume_overlap": [],
-  "collision_method": "convex SAT, face and edge axes",
   "closed_consistently_wound_meshes": true,
+  "load_paths": {
+    "Lower": {
+      "panel": "P073",
+      "cross_bearers": [
+        "P044",
+        "P046"
+      ],
+      "side_bearers": [
+        "P034",
+        "P039"
+      ],
+      "path": "plywood deck -> two transverse bearers -> half-laps -> through side bearers -> maple core slot shoulders -> laminated legs -> feet",
+      "verified": "positive-area bearing contact, NOT strength or joint sizing"
+    },
+    "Middle": {
+      "panel": "P083",
+      "cross_bearers": [
+        "P058",
+        "P060"
+      ],
+      "side_bearers": [
+        "P048",
+        "P053"
+      ],
+      "path": "plywood deck -> two transverse bearers -> half-laps -> through side bearers -> maple core slot shoulders -> laminated legs -> feet",
+      "verified": "positive-area bearing contact, NOT strength or joint sizing"
+    }
+  },
+  "dark_deck_material_mm3": {
+    "previous_solid_bases": 5320576.0,
+    "new_perimeter_only": 1041408.0000000005,
+    "volume_reduction_percent": 80.4,
+    "note": "net model volume only, not purchase quantity or total cost"
+  },
   "surface_heights_mm": [
     92,
     338,
     600
   ],
-  "clear_opening_front_mm": [
-    228,
-    214
-  ],
-  "side_line_bottom_mm": 370,
-  "side_line_gap_above_middle_mm": 32,
   "maturity": "L1",
   "engineering_verified": false,
-  "note": "Surface-contact line ends are not designed joinery; D05 shelf support and racking remain unresolved."
+  "note": "Nominal slots/half-laps and positive-area bearing are modelled. Adhesives, mechanical retention, tolerances, plywood specification, strength and racking remain unverified."
 }
