@@ -1,25 +1,39 @@
-# TB001 · D16 三層邊几
+# TB001 · Quiet Frame / Fine Lines 三層邊几
 
-Revision D06 · 2026-09-10 · L1 外觀幾何方案（D01–D05保留）
+Revision D06（重做）· 2026-09-10 · L1 外觀幾何方案
 
-用途：沙發旁的三層開放式邊几。主面板基準600 × 480 mm；含出頭最大640 × 480 × 600 mm。
-設計由 CB001 D16 的胡桃木框、楓木面板及雙色細腳延伸；不是原作縮尺重建。
-寬深來自使用者需求，公分為本輪單位假設；高度及層位由本輪設計決定。
-材料表現參照既有 D16 模型；預算、加工設備及木材供應待確認。
-來源權利沿用 CB001 原資料紀錄，尚未確認商業重製權利。
+這版 D06 直接以 D05 為基底，不是先前被否決的 Line & Plane。
+D05 全部 15 個模型分件、材料與頂面／中層／下層高度原樣保留，只加入左右各一道細橫線，合計 17 個視覺分件。
 
-開啟 `models/D06/TB001_D06_viewer.html` 可旋轉、看正側俯視及爆炸圖。
-`models/D06/preview.svg` 為 Line & Plane 方向：Freddy Tuppen 的疊線語彙經 Audo 式簡化，只保留有主次的橫、縱線，詳見 `design/D06_revision.md`。
+- 外廓：600 × 480 × 600 mm，沒有出頭。
+- 三層面高：92 / 338 / 600 mm。
+- 材質提案：煙燻橡木腳、框與細線；自然橡木嵌面。
+- 新側線：8 × 10 mm，下緣離地 370 mm，距中層表面 32 mm。
+- 四腳保留 D05 的上端 34 × 38、下端 26 × 30 mm 錐形截面。
+- 幾何接觸、封閉網格與無干涉不代表接合或承重已通過驗證；層板托持仍未設計。
 
-`models/D05/TB001_D05_viewer.html` 保留 Quiet Frame 方案。
-`models/D05/preview.svg` 為 Quiet Frame 方向預覽：錐形單體腿、柔角托盤面與單一道後撐，詳見 `design/D05_revision.md`。
+## 檢視
 
-`models/D04/TB001_D04_viewer.html` 保留上一版 D16 格柵語彙。
-`models/D04/preview.svg` 為相同幾何的外觀及尺寸預覽。三明治腳、貫穿側桿及外伸橫條，移除面板內細嵌線，詳見 `design/D04_revision.md`。
-模型與零件尺寸皆為外形幾何，不是榫接或開料圖。
+- [D06 互動模型與六視角 CAD／AI 對照](models/D06/TB001_D06_viewer.html)
+- [D05 原始方案](models/D05/TB001_D05_viewer.html)
+- [完整尺寸參數](models/D06/parameters.json)
+- [更新說明](design/D06_revision.md)
+- [共用 AI prompt](models/D06/gallery/ai_prompt.txt)
+- [六個完整 prompts](models/D06/gallery/prompts.json)
+- [產圖及 QA manifest](models/D06/gallery/ai_manifest.json)
 
-重建：`python3 scripts/tb001_three_tier.py`
+AI 視角：透視、正面、左側、俯視、側線接點、底部；每張使用對應 CAD 底圖，不以 AI 圖推回幾何。沒有把手，因此不沿用 D16 的 handles 視角。
 
-手機公開展示頁：https://ivanshyu.github.io/furniture-cad/tb001/
-D04底層面高60 mm、刪除底板下飾桿。使用者未採用三個AI方向，相關圖片與比較頁已移除。
-更新展示檔：`python3 scripts/publish_tb001.py`，提交並推送至main後由GitHub Pages發布。
+## 重建
+
+```bash
+python3 scripts/tb001_d06.py
+python3 scripts/tb001_gallery_render.py
+python3 scripts/publish_tb001.py
+```
+
+Python 依賴：NumPy、Pillow。上列指令不呼叫 AI、不花費 API 費用；AI 另由內建 ImageGen 依 prompts.json 執行。
+如修改幾何，須重新產六張 AI 圖，更新 hash 與 QA；發布腳本拒絕過期的 AI manifest。
+
+原先 D06 寬板腿方案已由本版覆寫，不在總覽或版本列表另留入口；Git 正常提交歷史不改寫。
+歷史 D01–D04 保留作研究紀錄，不是本版尺寸來源。

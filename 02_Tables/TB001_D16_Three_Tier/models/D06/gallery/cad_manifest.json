@@ -1,0 +1,144 @@
+{
+  "geometry_sha256": "2feb4883fab6a96ad7b849689685b369a44511add5b51af63444bd723cc56da1",
+  "renderer": "triangle z-buffer / NumPy + Pillow",
+  "views": {
+    "persp": {
+      "camera": {
+        "label": "透視",
+        "position": [
+          -1.1,
+          -1.7,
+          1.25
+        ],
+        "target": [
+          0.3,
+          0.24,
+          0.3
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "span": 0.87
+      },
+      "cad": "persp_cad.png",
+      "cad_sha256": "36ba5bae0c17d8c91b995c809db546552419452cb0df3f69c70074268cda6d96"
+    },
+    "front": {
+      "camera": {
+        "label": "正面",
+        "position": [
+          0.3,
+          -2,
+          0.3
+        ],
+        "target": [
+          0.3,
+          0.24,
+          0.3
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "span": 0.76
+      },
+      "cad": "front_cad.png",
+      "cad_sha256": "5cdd46aa41140b33f05c5ab127f6df6ec69fddbf950688c523748fd0b163eead"
+    },
+    "side": {
+      "camera": {
+        "label": "左側",
+        "position": [
+          -2,
+          0.24,
+          0.3
+        ],
+        "target": [
+          0.3,
+          0.24,
+          0.3
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "span": 0.76
+      },
+      "cad": "side_cad.png",
+      "cad_sha256": "231b8d37b84fd095d28de01fa35c86e71a2261379d219f894f09e6753d1c09c3"
+    },
+    "top": {
+      "camera": {
+        "label": "俯視",
+        "position": [
+          0.3,
+          0.24,
+          3
+        ],
+        "target": [
+          0.3,
+          0.24,
+          0.3
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "span": 0.68
+      },
+      "cad": "top_cad.png",
+      "cad_sha256": "e8dbd34e6dddbf10b6c028998fa9f93c12b3d5f48e79afe12353c51ab501257f"
+    },
+    "detail": {
+      "camera": {
+        "label": "細橫線接點",
+        "position": [
+          -0.4,
+          -0.65,
+          0.59
+        ],
+        "target": [
+          0.055,
+          0.085,
+          0.367
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "span": 0.27
+      },
+      "cad": "detail_cad.png",
+      "cad_sha256": "bb8b2cb3fc70f80702d3d734281d5833500b006e263aeaa277f9aee2a9f75f16"
+    },
+    "bottom": {
+      "camera": {
+        "label": "底部",
+        "position": [
+          -1.1,
+          -1.7,
+          -1.0
+        ],
+        "target": [
+          0.3,
+          0.24,
+          0.3
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "span": 0.9
+      },
+      "cad": "bottom_cad.png",
+      "cad_sha256": "399bc3bffc2e0c431668b96811eacdde6cbc81641f6f5156007acebb58543098"
+    }
+  }
+}

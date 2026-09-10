@@ -1,23 +1,18 @@
 id,name,group,material,x_mm,y_mm,z_mm,width_mm,depth_mm,height_mm,status
-P001,Oak blade leg 11,Legs,OAK,22,14,0,36,32,576,"CONCEPT exterior, not cut list"
-P002,Sapele outer edge 11,Leg lines,SAPELE,14,14,0,8,32,576,"CONCEPT exterior, not cut list"
-P003,Oak blade leg 12,Legs,OAK,22,434,0,36,32,576,"CONCEPT exterior, not cut list"
-P004,Sapele outer edge 12,Leg lines,SAPELE,14,434,0,8,32,576,"CONCEPT exterior, not cut list"
-P005,Oak blade leg 21,Legs,OAK,542,14,0,36,32,576,"CONCEPT exterior, not cut list"
-P006,Sapele outer edge 21,Leg lines,SAPELE,578,14,0,8,32,576,"CONCEPT exterior, not cut list"
-P007,Oak blade leg 22,Legs,OAK,542,434,0,36,32,576,"CONCEPT exterior, not cut list"
-P008,Sapele outer edge 22,Leg lines,SAPELE,578,434,0,8,32,576,"CONCEPT exterior, not cut list"
-P009,Lower oak plane,Lower,OAK,60,58,72,480,364,16,"CONCEPT exterior, not cut list"
-P010,Lower sapele line,Lower,SAPELE,48,46,70,504,12,18,"CONCEPT exterior, not cut list"
-P011,Lower sapele line,Lower,SAPELE,48,422,70,504,12,18,"CONCEPT exterior, not cut list"
-P012,Middle oak plane,Middle,OAK,60,58,320,480,364,16,"CONCEPT exterior, not cut list"
-P013,Middle sapele line,Middle,SAPELE,48,46,318,504,12,18,"CONCEPT exterior, not cut list"
-P014,Middle sapele line,Middle,SAPELE,48,422,318,504,12,18,"CONCEPT exterior, not cut list"
-P015,Single rear stretcher,Structure,SAPELE,58,443.0,210,484,14,18,"CONCEPT exterior, not cut list"
-P016,Top projecting sapele line,Top,SAPELE,-10,0,576,620,14,24,"CONCEPT exterior, not cut list"
-P017,Top projecting sapele line,Top,SAPELE,-10,466,576,620,14,24,"CONCEPT exterior, not cut list"
-P018,Top side sapele line,Top,SAPELE,0,14,576,14,452,24,"CONCEPT exterior, not cut list"
-P019,Top side sapele line,Top,SAPELE,586,14,576,14,452,24,"CONCEPT exterior, not cut list"
-P020,Top oak plane,Top,OAK,16,16,582,568,448,18,"CONCEPT exterior, not cut list"
-P021,Quiet front/back apron,Top,SAPELE,58,22.0,550,484,16,26,"CONCEPT exterior, not cut list"
-P022,Quiet front/back apron,Top,SAPELE,58,442.0,550,484,16,26,"CONCEPT exterior, not cut list"
+P001,Tapered leg 11,Legs,SMOKED_OAK,14,14,0,34,38,576,L1 exterior only; not cut list
+P002,Tapered leg 12,Legs,SMOKED_OAK,14,428,0,34,38,576,L1 exterior only; not cut list
+P003,Tapered leg 21,Legs,SMOKED_OAK,552,14,0,34,38,576,L1 exterior only; not cut list
+P004,Tapered leg 22,Legs,SMOKED_OAK,552,428,0,34,38,576,L1 exterior only; not cut list
+P005,Lower smoked-oak tray base,Lower,SMOKED_OAK,48,52,74,504,376,8,L1 exterior only; not cut list
+P006,Lower natural-oak inset,Lower,NATURAL_OAK,66,70,82,468,340,10,L1 exterior only; not cut list
+P007,Middle smoked-oak tray base,Middle,SMOKED_OAK,48,52,320,504,376,8,L1 exterior only; not cut list
+P008,Middle natural-oak inset,Middle,NATURAL_OAK,66,70,328,468,340,10,L1 exterior only; not cut list
+P009,Single rear stretcher,Structure,SMOKED_OAK,48,438.0,222,504,18,22,L1 exterior only; not cut list
+P010,Front/back apron,Top,SMOKED_OAK,48,24.0,552,504,18,24,L1 exterior only; not cut list
+P011,Front/back apron,Top,SMOKED_OAK,48,438.0,552,504,18,24,L1 exterior only; not cut list
+P012,Side apron,Top,SMOKED_OAK,22.0,52,552,18,376,24,L1 exterior only; not cut list
+P013,Side apron,Top,SMOKED_OAK,560.0,52,552,18,376,24,L1 exterior only; not cut list
+P014,Smoked-oak top base,Top,SMOKED_OAK,0,0,576,600,480,8,L1 exterior only; not cut list
+P015,Natural-oak top inset,Top,NATURAL_OAK,24,24,584,552,432,16,L1 exterior only; not cut list
+P016,Left fine side line,Side lines,SMOKED_OAK,27.0,50.56944444444444,370.0,8.0,378.8611111111111,10.0,L1 exterior only; not cut list
+P017,Right fine side line,Side lines,SMOKED_OAK,565.0,50.56944444444444,370.0,8.0,378.8611111111111,10.0,L1 exterior only; not cut list
