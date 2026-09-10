@@ -14,4 +14,3 @@ for source_name, public_name in [
 ]:
     shutil.copy2(SOURCE / source_name, DESTINATION / public_name)
 print('Built TB001 Pages: https://ivanshyu.github.io/furniture-cad/tb001/')
-shutil.copytree(SOURCE / 'ai', DESTINATION / 'ai', dirs_exist_ok=True)

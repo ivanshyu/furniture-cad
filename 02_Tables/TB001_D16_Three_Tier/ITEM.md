@@ -15,5 +15,5 @@ Revision D04 · 2026-09-10 · L1 外觀幾何方案（D01/D02/D03保留）
 重建：`python3 scripts/tb001_three_tier.py`
 
 手機公開展示頁：https://ivanshyu.github.io/furniture-cad/tb001/
-AI概念比較：https://ivanshyu.github.io/furniture-cad/tb001/ai/ 。D04底層面高60 mm、刪除底板下飾桿；AI三個方向待挑選，圖檔及提示詞在models/D04/ai。
+D04底層面高60 mm、刪除底板下飾桿。使用者未採用三個AI方向，相關圖片與比較頁已移除。
 更新展示檔：`python3 scripts/publish_tb001.py`，提交並推送至main後由GitHub Pages發布。
