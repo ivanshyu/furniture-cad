@@ -1,0 +1,32 @@
+{
+  "bounds_mm": [
+    [
+      0,
+      600
+    ],
+    [
+      0,
+      480
+    ],
+    [
+      0,
+      600
+    ]
+  ],
+  "part_count": 15,
+  "positive_volume_overlap": [],
+  "closed_consistently_wound_meshes": true,
+  "surface_heights_mm": [
+    92,
+    338,
+    600
+  ],
+  "clear_opening_front_mm": [
+    228,
+    214
+  ],
+  "maturity": "L1",
+  "engineering_verified": false,
+  "note": "D05 removes D04 sandwich legs, projecting bars and split panels. Tapered solid legs, chamfered tray planes and one rear stretcher are exterior concepts; joinery, racking resistance and solid-wood movement remain unverified.",
+  "concept": "Quiet Frame — Japandi with Danish/French restraint"
+}

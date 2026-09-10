@@ -1,0 +1,10 @@
+{
+  "revision": "D06",
+  "view": "perspective",
+  "file": "persp_ai.png",
+  "method": "OpenAI built-in image generation, sketch-to-render",
+  "geometry_reference": "../preview.svg.png",
+  "geometry_authority": "../geometry_mm.json",
+  "status": "visual material study only",
+  "warning": "AI render may alter local geometry or joinery. Do not measure from the image."
+}

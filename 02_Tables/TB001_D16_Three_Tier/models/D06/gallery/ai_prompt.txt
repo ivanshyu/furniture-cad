@@ -1,0 +1,7 @@
+Use case: sketch-to-render
+Asset type: photorealistic furniture design render for the TB001 D06 project gallery and website overview
+Input image: D06 Line & Plane CAD preview; use only the furniture shown in its large perspective view and ignore typography and diagrams.
+Primary request: render the exact three-tier side table as a refined manufactured object. Preserve the three levels, four broad light-oak blade legs, one dark vertical strip on the outside of each leg, thin dark reddish-brown rails at the front and back of each shelf, subtly projecting top rails, restrained line density, and single rear stretcher. Do not invent extra slats, braces, drawers, doors, or joinery.
+Scene: pale lime-plaster wall and warm-grey floor. High-end editorial product photography under soft north-facing window light.
+Materials: quarter-sawn natural white oak with fine ray fleck and matte hardwax oil; dark sapele with subtle ribbon grain and warm reddish-brown tone; believable end grain and tiny edge breaks.
+Constraints: preserve CAD geometry and part count; no text, logos, watermark, decor, props, books, plants, or people.

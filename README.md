@@ -2,6 +2,8 @@
 
 這是一套把家具參考資料逐步轉換為可驗證、可打樣、可製造文件的專案骨架。
 
+[開啟 Furniture CAD 專案總覽](https://ivanshyu.github.io/furniture-cad/)
+
 核心資料流：
 
 ```text

@@ -1,6 +1,6 @@
 # TB001 · D16 三層邊几
 
-Revision D04 · 2026-09-10 · L1 外觀幾何方案（D01/D02/D03保留）
+Revision D06 · 2026-09-10 · L1 外觀幾何方案（D01–D05保留）
 
 用途：沙發旁的三層開放式邊几。主面板基準600 × 480 mm；含出頭最大640 × 480 × 600 mm。
 設計由 CB001 D16 的胡桃木框、楓木面板及雙色細腳延伸；不是原作縮尺重建。
@@ -8,7 +8,13 @@ Revision D04 · 2026-09-10 · L1 外觀幾何方案（D01/D02/D03保留）
 材料表現參照既有 D16 模型；預算、加工設備及木材供應待確認。
 來源權利沿用 CB001 原資料紀錄，尚未確認商業重製權利。
 
-開啟 `models/D04/TB001_D04_viewer.html` 可旋轉、看正側俯視及爆炸圖。
+開啟 `models/D06/TB001_D06_viewer.html` 可旋轉、看正側俯視及爆炸圖。
+`models/D06/preview.svg` 為 Line & Plane 方向：Freddy Tuppen 的疊線語彙經 Audo 式簡化，只保留有主次的橫、縱線，詳見 `design/D06_revision.md`。
+
+`models/D05/TB001_D05_viewer.html` 保留 Quiet Frame 方案。
+`models/D05/preview.svg` 為 Quiet Frame 方向預覽：錐形單體腿、柔角托盤面與單一道後撐，詳見 `design/D05_revision.md`。
+
+`models/D04/TB001_D04_viewer.html` 保留上一版 D16 格柵語彙。
 `models/D04/preview.svg` 為相同幾何的外觀及尺寸預覽。三明治腳、貫穿側桿及外伸橫條，移除面板內細嵌線，詳見 `design/D04_revision.md`。
 模型與零件尺寸皆為外形幾何，不是榫接或開料圖。
 
