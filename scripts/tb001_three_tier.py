@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""D16-inspired TB001 D03. Dependency-free, mm source / metre GLB.
+"""D16-inspired TB001 D04. Dependency-free, mm source / metre GLB.
 
 Generates exterior design geometry, not joinery or a production cut list.
 Run from any directory: python3 scripts/tb001_three_tier.py
@@ -12,7 +12,7 @@ import struct
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / '02_Tables/TB001_D16_Three_Tier/models/D03'
+OUT = ROOT / '02_Tables/TB001_D16_Three_Tier/models/D04'
 P = json.loads((OUT / 'parameters.json').read_text())
 PARTS = []
 COLORS = {'WALNUT': '#63432e', 'MAPLE': '#d9bd89'}
@@ -32,7 +32,7 @@ def build():
     w,d,h = P['width'],P['depth'],P['height']
     sx,sy,s = P['post_x'],P['post_y'],P['setback']
     e,foot,tt = P['walnut_cheek'],P['foot_height'],P['top_thickness']
-    rail_levels=[P['foot_stretcher_z']]+[level+offset for level in P['surface_levels'][:2] for offset in P['side_bar_offsets']]
+    rail_levels=[level+offset for level in P['surface_levels'][:2] for offset in P['side_bar_offsets']]
     # Two continuous walnut cheeks and one maple core, with real through slots.
     assert sx-2*e == P['side_bar_depth']
     for i,x in enumerate([s,w-s-sx]):
@@ -127,12 +127,12 @@ def glb():
         meshes.append(dict(name=part['id']+' '+part['name'],primitives=[dict(attributes=attrs,material=list(COLORS).index(part['material']))]))
         nodes.append(dict(mesh=len(meshes)-1,name=part['id']+' '+part['name']))
     materials=[dict(name=n,pbrMetallicRoughness=dict(baseColorFactor=[int(c[i:i+2],16)/255 for i in (1,3,5)]+[1],metallicFactor=0,roughnessFactor=.55)) for n,c in COLORS.items()]
-    data=dict(asset=dict(version='2.0',generator='TB001 D03'),scene=0,scenes=[dict(nodes=list(range(len(nodes))))],nodes=nodes,meshes=meshes,materials=materials,buffers=[dict(byteLength=len(binary))],bufferViews=views,accessors=accessors)
+    data=dict(asset=dict(version='2.0',generator='TB001 D04'),scene=0,scenes=[dict(nodes=list(range(len(nodes))))],nodes=nodes,meshes=meshes,materials=materials,buffers=[dict(byteLength=len(binary))],bufferViews=views,accessors=accessors)
     js=json.dumps(data,separators=(',',':')).encode();js+=b' '*((-len(js))%4)
     out=struct.pack('<III',0x46546c67,2,28+len(js)+len(binary))+struct.pack('<II',len(js),0x4e4f534a)+js+struct.pack('<II',len(binary),0x004e4942)+binary
-    (OUT/'TB001_D03.glb').write_bytes(out)
+    (OUT/'TB001_D04.glb').write_bytes(out)
     # Read back container and accessors rather than trusting export alone.
-    blob=(OUT/'TB001_D03.glb').read_bytes();assert struct.unpack_from('<I',blob,8)[0]==len(blob)
+    blob=(OUT/'TB001_D04.glb').read_bytes();assert struct.unpack_from('<I',blob,8)[0]==len(blob)
     size=struct.unpack_from('<I',blob,12)[0];parsed=json.loads(blob[20:20+size])
     assert len(parsed['meshes'])==len(PARTS)
     for view in parsed['bufferViews']:assert view['byteOffset']+view['byteLength']<=len(binary)
@@ -151,7 +151,7 @@ def svg():
     content=['<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1000" viewBox="0 0 1560 1000">',
         '<rect width="1560" height="1000" fill="#f4f0e8"/>',
         '<g font-family="Arial, PingFang TC, sans-serif" fill="#372c23">',
-        '<text x="52" y="54" font-size="13" letter-spacing="4">TB001 / D03 · THROUGH LINES</text>',
+        '<text x="52" y="54" font-size="13" letter-spacing="4">TB001 / D04 · THROUGH LINES</text>',
         '<text x="52" y="102" font-size="34">D16 三層邊几</text>',
         '<text x="725" y="94" font-size="23">含出頭 W 640 × D 480 × H 600 mm</text>']
     for mode,x,y,w,h,label in panels:
@@ -195,7 +195,7 @@ def svg():
                 content.append(f'<text x="{ox+640*scale+12}" y="{yy+4}" font-size="12">{level}</text>')
     content.extend(['<text x="1180" y="615" font-size="19">胡桃木框 × 楓木面</text>',
         '<text x="1180" y="654" font-size="15">桌面 + 中層 + 下層</text>',
-        '<text x="1180" y="686" font-size="15">離地 600 / 350 / 140 mm</text>',
+        '<text x="1180" y="686" font-size="15">離地 600 / 350 / 60 mm</text>',
         '<text x="1180" y="718" font-size="15">8 / 14 / 8 mm 三明治腳</text>',
         '<text x="1180" y="750" font-size="15">橫桿出頭 20 mm · 純楓木面</text>',
         '<path d="M52 886H1508" stroke="#cdbfae"/>',
@@ -207,14 +207,14 @@ def svg():
 
 def main():
     build();checks=verify()
-    data=dict(revision='D03',units='mm',parameters=P,parts=PARTS)
+    data=dict(revision='D04',units='mm',parameters=P,parts=PARTS)
     (OUT/'geometry_mm.json').write_text(json.dumps(data,separators=(',',':')))
     with (OUT/'parts_dimensions.csv').open('w',newline='') as f:
         writer=csv.writer(f,lineterminator='\n');writer.writerow(['id','name','group','material','x_mm','y_mm','z_mm','width_mm','depth_mm','height_mm','status'])
         for part in PARTS:writer.writerow([part['id'],part['name'],part['group'],part['material'],*part['origin_mm'],*part['size_mm'],'CONCEPT exterior, not cut list'])
     glb();svg()
     template=(ROOT/'scripts/tb001_viewer.html').read_text()
-    (OUT/'TB001_D03_viewer.html').write_text(template.replace('__DATA__',json.dumps(data,separators=(',',':'))))
+    (OUT/'TB001_D04_viewer.html').write_text(template.replace('__DATA__',json.dumps(data,separators=(',',':'))))
     (OUT/'model_checks.json').write_text(json.dumps(checks,indent=2))
     print(json.dumps(checks,indent=2))
 
