@@ -1,0 +1,5 @@
+# Residential reference photographs remain local.
+*.jpg
+*.jpeg
+*.png
+*.pdf

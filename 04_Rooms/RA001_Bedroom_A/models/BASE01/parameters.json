@@ -1,0 +1,11 @@
+{
+  "revision": "BASE01",
+  "units": "mm",
+  "room": {"head_wall":3150,"foot_wall":5500,"depth":3200,"notch_depth":2100,"height":2485,"wall_thickness":120},
+  "wardrobe": {"length":2114,"depth":600,"height":2485,"upper_zone":470},
+  "boxing": {"drop":400,"projection":110,"start_x":2350,"end_x":5500},
+  "bed": {"width":1800,"total_depth":2050,"right_gap":0,"base_height":230,"mattress_height":250,"headboard_height":950,"headboard_depth":110},
+  "window": {"offset_from_head":1000,"width":1500,"sill":700,"height":1500},
+  "entrance": {"width":850},
+  "interpretation": "User confirmed 3150 wall-to-wall includes 600 wardrobe depth, leaving 2550. User reports aisle about 800. Provisional 1800-wide bed placed against window wall leaves 750 at wardrobe; bed exterior width and exact wall gap remain unmeasured."
+}

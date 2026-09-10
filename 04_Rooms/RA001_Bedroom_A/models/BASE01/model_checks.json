@@ -1,0 +1,10 @@
+{
+  "part_count": 62,
+  "foot_clearance_mm": 1150,
+  "boxing_bottom_mm": 2085,
+  "wardrobe_to_bed_mm": 750,
+  "bed_to_window_wall_mm": 0,
+  "maturity": "L1",
+  "dimension_definition_pending": false,
+  "bed_dimensions_pending": true
+}
