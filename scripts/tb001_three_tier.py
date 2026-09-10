@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""D16-inspired TB001 D01. Dependency-free, mm source / metre GLB.
+"""D16-inspired TB001 D02. Dependency-free, mm source / metre GLB.
 
 Generates exterior design geometry, not joinery or a production cut list.
 Run from any directory: python3 scripts/tb001_three_tier.py
@@ -12,7 +12,7 @@ import struct
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / '02_Tables/TB001_D16_Three_Tier/models/D01'
+OUT = ROOT / '02_Tables/TB001_D16_Three_Tier/models/D02'
 P = json.loads((OUT / 'parameters.json').read_text())
 PARTS = []
 COLORS = {'WALNUT': '#63432e', 'MAPLE': '#d9bd89'}
@@ -26,6 +26,20 @@ def box(name, group, material, x, y, z, w, d, h):
     PARTS.append(dict(id=f'P{len(PARTS)+1:03}', name=name, group=group,
                       material=material, origin_mm=[x,y,z], size_mm=[w,d,h],
                       vertices_mm=vertices, faces=FACES))
+
+
+def lined_panel(name, group, x, y, z, w, d, t, centre):
+    """Tessellated appearance panel: maple margin, fine walnut ring, centre line."""
+    margin,line=P['inset_margin'],P['inset_line']
+    for offset,width,mat in [(0,margin,'MAPLE'),(margin,line,'WALNUT')]:
+        for yy in [y+offset,y+d-offset-width]:
+            box(name+' border',group,mat,x+offset,yy,z,w-2*offset,width,t)
+        for xx in [x+offset,x+w-offset-width]:
+            box(name+' border',group,mat,xx,y+offset+width,z,width,d-2*(offset+width),t)
+    pad=margin+line
+    box(name+' centre line',group,'WALNUT',x+(w-centre)/2,y+pad,z,centre,d-2*pad,t)
+    for xx in [x+pad,x+(w+centre)/2]:
+        box(name+' maple field',group,'MAPLE',xx,y+pad,z,(w-centre)/2-pad,d-2*pad,t)
 
 
 def build():
@@ -49,8 +63,15 @@ def build():
             box(label+' front/back rail',label,'WALNUT',s+sx,y,level-t,w-2*(s+sx),sy,t)
         for x in [s,w-s-sx]:
             box(label+' side rail',label,'WALNUT',x,s+sy,level-t,sx,d-2*(s+sy),t)
-        box(label+' maple panel',label,'MAPLE',s+sx+g,s+sy+g,level-st,
-            w-2*(s+sx+g),d-2*(s+sy+g),st)
+        lined_panel(label+' panel',label,s+sx+g,s+sy+g,level-st,
+            w-2*(s+sx+g),d-2*(s+sy+g),st,P['shelf_centre_strip'])
+        for x in [s+(sx-P['side_bar_depth'])/2,w-s-(sx+P['side_bar_depth'])/2]:
+            for offset in P['side_bar_offsets']:
+                box(label+' side parallel bar','Side lines','WALNUT',x,s+sy,level+offset,
+                    P['side_bar_depth'],d-2*(s+sy),P['side_bar_height'])
+    for x in [s+(sx-P['side_bar_depth'])/2,w-s-(sx+P['side_bar_depth'])/2]:
+        box('Foot side stretcher','Side lines','WALNUT',x,s+sy,P['foot_stretcher_z'],
+            P['side_bar_depth'],d-2*(s+sy),P['side_bar_height'])
     # Top aprons terminate between the posts and meet the top underside.
     a,at=P['apron_height'],P['apron_thickness']
     for y in [s,d-s-at]:
@@ -62,9 +83,7 @@ def build():
         box('Top front/back border','Top','WALNUT',0,y,h-tt,w,b,tt)
     for x in [0,w-b]:
         box('Top side border','Top','WALNUT',x,b,h-tt,b,d-2*b,tt)
-    box('Top centre strip','Top','WALNUT',(w-c)/2,b,h-tt,c,d-2*b,tt)
-    for x in [b+g,(w+c)/2+g]:
-        box('Top maple panel','Top','MAPLE',x,b+g,h-tt,(w-c)/2-b-2*g,d-2*(b+g),tt)
+    lined_panel('Top panel','Top',b+g,b+g,h-tt,w-2*(b+g),d-2*(b+g),tt,c)
 
 
 def verify():
@@ -115,12 +134,12 @@ def glb():
         meshes.append(dict(name=part['id']+' '+part['name'],primitives=[dict(attributes=attrs,material=list(COLORS).index(part['material']))]))
         nodes.append(dict(mesh=len(meshes)-1,name=part['id']+' '+part['name']))
     materials=[dict(name=n,pbrMetallicRoughness=dict(baseColorFactor=[int(c[i:i+2],16)/255 for i in (1,3,5)]+[1],metallicFactor=0,roughnessFactor=.55)) for n,c in COLORS.items()]
-    data=dict(asset=dict(version='2.0',generator='TB001 D01'),scene=0,scenes=[dict(nodes=list(range(len(nodes))))],nodes=nodes,meshes=meshes,materials=materials,buffers=[dict(byteLength=len(binary))],bufferViews=views,accessors=accessors)
+    data=dict(asset=dict(version='2.0',generator='TB001 D02'),scene=0,scenes=[dict(nodes=list(range(len(nodes))))],nodes=nodes,meshes=meshes,materials=materials,buffers=[dict(byteLength=len(binary))],bufferViews=views,accessors=accessors)
     js=json.dumps(data,separators=(',',':')).encode();js+=b' '*((-len(js))%4)
     out=struct.pack('<III',0x46546c67,2,28+len(js)+len(binary))+struct.pack('<II',len(js),0x4e4f534a)+js+struct.pack('<II',len(binary),0x004e4942)+binary
-    (OUT/'TB001_D01.glb').write_bytes(out)
+    (OUT/'TB001_D02.glb').write_bytes(out)
     # Read back container and accessors rather than trusting export alone.
-    blob=(OUT/'TB001_D01.glb').read_bytes();assert struct.unpack_from('<I',blob,8)[0]==len(blob)
+    blob=(OUT/'TB001_D02.glb').read_bytes();assert struct.unpack_from('<I',blob,8)[0]==len(blob)
     size=struct.unpack_from('<I',blob,12)[0];parsed=json.loads(blob[20:20+size])
     assert len(parsed['meshes'])==len(PARTS)
     for view in parsed['bufferViews']:assert view['byteOffset']+view['byteLength']<=len(binary)
@@ -139,7 +158,7 @@ def svg():
     content=['<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1000" viewBox="0 0 1560 1000">',
         '<rect width="1560" height="1000" fill="#f4f0e8"/>',
         '<g font-family="Arial, PingFang TC, sans-serif" fill="#372c23">',
-        '<text x="52" y="54" font-size="13" letter-spacing="4">TB001 / D01 · DESIGN STUDY</text>',
+        '<text x="52" y="54" font-size="13" letter-spacing="4">TB001 / D02 · LINE STUDY</text>',
         '<text x="52" y="102" font-size="34">D16 三層邊几</text>',
         '<text x="725" y="94" font-size="23">W 600 × D 480 × H 600 mm</text>']
     for mode,x,y,w,h,label in panels:
@@ -185,7 +204,7 @@ def svg():
         '<text x="1180" y="654" font-size="15">桌面 + 中層 + 下層</text>',
         '<text x="1180" y="686" font-size="15">離地 600 / 350 / 140 mm</text>',
         '<text x="1180" y="718" font-size="15">30 × 40 mm 雙色細腳</text>',
-        '<text x="1180" y="750" font-size="15">四面開放，頂面深色分隔條</text>',
+        '<text x="1180" y="750" font-size="15">雙框細線 × 平行側桿 × 中央長線</text>',
         '<path d="M52 886H1508" stroke="#cdbfae"/>',
         '<text x="52" y="924" font-size="14">L1 外觀幾何方案 · 同一模型正交投影 · 單位 mm · 非生產圖／非開料尺寸</text>',
         '<text x="52" y="955" font-size="13" fill="#756655">寬深按使用者公分需求換算；高度、層位及截面為本輪設計。榫接、面板托持及實木活動量待工程化。</text>',
@@ -195,14 +214,14 @@ def svg():
 
 def main():
     build();checks=verify()
-    data=dict(revision='D01',units='mm',parameters=P,parts=PARTS)
+    data=dict(revision='D02',units='mm',parameters=P,parts=PARTS)
     (OUT/'geometry_mm.json').write_text(json.dumps(data,separators=(',',':')))
     with (OUT/'parts_dimensions.csv').open('w',newline='') as f:
-        writer=csv.writer(f);writer.writerow(['id','name','group','material','x_mm','y_mm','z_mm','width_mm','depth_mm','height_mm','status'])
+        writer=csv.writer(f,lineterminator='\n');writer.writerow(['id','name','group','material','x_mm','y_mm','z_mm','width_mm','depth_mm','height_mm','status'])
         for part in PARTS:writer.writerow([part['id'],part['name'],part['group'],part['material'],*part['origin_mm'],*part['size_mm'],'CONCEPT exterior, not cut list'])
     glb();svg()
     template=(ROOT/'scripts/tb001_viewer.html').read_text()
-    (OUT/'TB001_D01_viewer.html').write_text(template.replace('__DATA__',json.dumps(data,separators=(',',':'))))
+    (OUT/'TB001_D02_viewer.html').write_text(template.replace('__DATA__',json.dumps(data,separators=(',',':'))))
     (OUT/'model_checks.json').write_text(json.dumps(checks,indent=2))
     print(json.dumps(checks,indent=2))
 

@@ -3,13 +3,13 @@ from pathlib import Path
 import shutil
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / '02_Tables/TB001_D16_Three_Tier/models/D01'
+SOURCE = ROOT / '02_Tables/TB001_D16_Three_Tier/models/D02'
 DESTINATION = ROOT / 'docs/tb001'
 DESTINATION.mkdir(parents=True, exist_ok=True)
 for source_name, public_name in [
-    ('TB001_D01_viewer.html', 'index.html'),
+    ('TB001_D02_viewer.html', 'index.html'),
     ('preview.svg', 'preview.svg'),
-    ('TB001_D01.glb', 'TB001_D01.glb'),
+    ('TB001_D02.glb', 'TB001_D02.glb'),
     ('parts_dimensions.csv', 'parts_dimensions.csv'),
 ]:
     shutil.copy2(SOURCE / source_name, DESTINATION / public_name)
