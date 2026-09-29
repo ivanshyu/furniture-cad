@@ -54,7 +54,7 @@ def poly(points,z,h):
 H=p['overall_height'];tt=p['top_thickness'];zt=H-tt
 s=p['shelf_top']-p['shelf_thickness'];h=p['x_height'];R=p['leg_radius'];w=p['leg_width'];t=p['leg_thickness'];shoe=p['shoe_height'];trim=p['slot_trim'];clear=p['slot_clear_width']
 assert p['shelf_diameter']/2<R-t/2
-assert p['x_width']<clear
+assert p['x_width']<=clear
 assert p['crown_bearing_width']<w
 L=p['grip_clear_length'];W=p['grip_clear_width'];q=p['grip_trim'];r=p['grip_corner_radius']
 outer=rr(L+2*q,W+2*q,p.get('grip_outer_corner_radius',r+q),zt,tt)
@@ -79,12 +79,14 @@ for i in range(p.get('upper_band_count',0)):
  assert bandtop-bh>s+trim, 'Upper accent overlaps slot lintel'
  band=box(R+t/2-depth,-w/2,bandtop-bh,depth,w,bh)
  blade=blade.cut(band);bands.append(band)
-angles=[45,135,225,315];zs=[s-h,s-3*h,s-5*h]
+angles=p.get('leg_angles',[45,135,225,315]);levels=p.get('rail_level_count',3)
+assert isinstance(levels,int) and levels>=1
+zs=[s-(2*i+1)*h for i in range(levels)]
 # Real cross-bored dowels transfer rail load into blade cheeks. Nominal fit;
 # engineering verification of the pin and reduced rod section remains open.
 pins=[]
 for angle in angles:
- holes=[Part.makeCylinder(p['cross_pin_diameter']/2,w,V(R,-w/2,z+h/2),V(0,1,0)) for z in zs]
+ holes=[Part.makeCylinder(p['cross_pin_diameter']/2,w,V(R,-w/2,z+h/2),V(0,1,0)) for z in zs] if p.get('cross_pins_enabled',True) else []
  def drilled(shape):
   for hole in holes:shape=shape.cut(hole)
   return radial(shape,angle)
@@ -97,14 +99,31 @@ for angle in angles:
  add(f'Foot shoe {angle}','WALNUT','foot',radial(box(R-p['shoe_depth']/2,-w/2,0,p['shoe_depth'],w,shoe),angle),'Tangential; shoe-to-leg joint unresolved')
  for k,hole in enumerate(holes):pins.append((f'Cross pin {angle} / level {k+1}',radial(hole,angle)))
 length=2*(R+t/2+p['x_projection']);bw=p['x_width']
-for level,z in enumerate(zs):
- for j,angle in enumerate([45,135]):
-  beam=box(-length/2,-bw/2,z,length,bw,h)
-  notch_z=z+h/2 if j==0 else z
-  beam=beam.cut(box(-bw/2,-bw/2-1,notch_z,bw,bw+2,h/2))
-  # Endpoint transverse pin axes are perpendicular to beam.
-  for sign in [-1,1]:beam=beam.cut(Part.makeCylinder(p['cross_pin_diameter']/2,bw,V(sign*R,-bw/2,z+h/2),V(0,1,0)))
-  add(f'X level {level+1} beam {j+1}','WALNUT','x_rail',radial(beam,angle),'Along beam; half-lap centre; drilled ends')
+if p.get('rail_layout')=='triangle':
+ assert len(angles)==3 and not p.get('cross_pins_enabled',True)
+ # Three mitred rails per horizontal level. The narrow existing slots require
+ # local cheek clearance cuts; this is NOT an engineered corner/leg joint.
+ outer_r=R+t/2+p['x_projection'];inner_r=outer_r-2*bw
+ point=lambda r,a:(r*math.cos(math.radians(a)),r*math.sin(math.radians(a)))
+ obstacles=[x['shape'] for x in parts if x['group'] in ('leg','slot_trim')]
+ for level,z in enumerate(zs):
+  for j,angle in enumerate(angles):
+   next_angle=angles[(j+1)%3]
+   pa=point(outer_r,angle);pb=point(outer_r,next_angle)
+   beam=poly([pa,pb,point(inner_r,next_angle),point(inner_r,angle)],z,h)
+   for obstacle in obstacles:
+    if beam.BoundBox.intersect(obstacle.BoundBox):beam=beam.cut(obstacle)
+   item=add(f'Triangle level {level+1} beam {j+1}','WALNUT','x_rail',beam,'Along triangle side; corner and vertical retention NOT DESIGNED')
+   item['grain_angle_deg']=math.degrees(math.atan2(pb[1]-pa[1],pb[0]-pa[0]))
+else:
+ for level,z in enumerate(zs):
+  for j,angle in enumerate([45,135]):
+   beam=box(-length/2,-bw/2,z,length,bw,h)
+   notch_z=z+h/2 if j==0 else z
+   beam=beam.cut(box(-bw/2,-bw/2-1,notch_z,bw,bw+2,h/2))
+   # Endpoint transverse pin axes are perpendicular to beam.
+   for sign in ([-1,1] if p.get('cross_pins_enabled',True) else []):beam=beam.cut(Part.makeCylinder(p['cross_pin_diameter']/2,bw,V(sign*R,-bw/2,z+h/2),V(0,1,0)))
+   add(f'X level {level+1} beam {j+1}','WALNUT','x_rail',radial(beam,angle),'Along beam; half-lap centre; drilled ends' if p.get('cross_pins_enabled',True) else 'Along beam; full-width unpinned ends; vertical retention NOT DESIGNED')
 for angle in angles:
  for i,band in enumerate(bands):
   add(f'Upper transition band {angle} / {i+1}','WALNUT','upper_accent',radial(band,angle),'Tangential; full-thickness structural splice, joints NOT DESIGNED' if p.get('upper_band_through') else 'Tangential; solid inlay, cross-grain joint TO VERIFY')
@@ -128,7 +147,7 @@ def contact_area(a,b):
  return total
 bearings={x['id']:contact_area(x['shape'],upper) for x in parts if x['group']=='leg'}
 shelf_bearings={x['id']:contact_area(x['shape'],lower) for x in parts if x['group']=='x_rail' and 'level 1 ' in x['name']}
-assert sum(v>0 for v in bearings.values())==4 and all(v>0 for v in shelf_bearings.values())
+assert sum(v>0 for v in bearings.values())==len(angles) and all(v>0 for v in shelf_bearings.values())
 # Export native named solids and an exact STEP assembly.
 doc=App.newDocument('TB001_D07')
 objects=[];mesh=[]
@@ -158,7 +177,7 @@ assert len(check.Solids)==len(parts) and abs(check.Volume-volume)<.01
 (OUT/'geometry_mm.json').write_text(json.dumps({'revision':'D07','units':'mm','source':'Exact FreeCAD BRep tessellation, not AI','parts':mesh},ensure_ascii=False,separators=(',',':'))+'\n')
 import tb001_three_tier as exporter
 exporter.PARTS=mesh;exporter.OUT=OUT;exporter.REV='D07';exporter.COLORS={'MAPLE':'#e5d6b5','WALNUT':'#63432e'};exporter.glb()
-checks={'status':'PASS — geometry only, not structural certification','solid_count':len(parts),'all_solids_valid':True,'native_readback_valid':True,'grip_bore_empty':True,'lower_full_disk_volume_verified':True,'positive_volume_collisions':collisions,'step_readback_solid_count':len(check.Solids),'step_volume_delta_mm3':check.Volume-volume,'upper_bearing_area_mm2':bearings,'lower_bearing_area_mm2':shelf_bearings,'x_bottom_z_top_to_bottom_mm':zs,'x_height_mm':h,'x_clear_gap_mm':h,'x_stack_height_mm':5*h,'grip_net_mm':[L,W],'grip_corner_radius_mm':r,'lower_has_grip':False,'shelf_to_leg_radial_clearance_mm':R-t/2-p['shelf_diameter']/2,'not_checked':['strength','tipping','carrying','wood movement','glue joint strength','pin tolerances','positive top/shelf retention','foot joinery']}
+checks={'status':'PASS — geometry only, not structural certification','solid_count':len(parts),'all_solids_valid':True,'native_readback_valid':True,'grip_bore_empty':True,'lower_full_disk_volume_verified':True,'positive_volume_collisions':collisions,'step_readback_solid_count':len(check.Solids),'step_volume_delta_mm3':check.Volume-volume,'upper_bearing_area_mm2':bearings,'lower_bearing_area_mm2':shelf_bearings,'x_bottom_z_top_to_bottom_mm':zs,'x_height_mm':h,'x_clear_gap_mm':h,'rail_level_count':levels,'x_stack_height_mm':(2*levels-1)*h,'grip_net_mm':[L,W],'grip_corner_radius_mm':r,'lower_has_grip':False,'shelf_to_leg_radial_clearance_mm':R-t/2-p['shelf_diameter']/2,'not_checked':['strength','tipping','carrying','wood movement','glue joint strength','pin tolerances','positive top/shelf retention','foot joinery']}
 (OUT/'model_checks.json').write_text(json.dumps(checks,indent=2,ensure_ascii=False)+'\n')
 with (OUT/'parts.csv').open('w') as f:
  writer=csv.writer(f);writer.writerow(['ID','Part','Material','Role','Global AABB mm — NOT blank size','Volume mm3','Grain'])

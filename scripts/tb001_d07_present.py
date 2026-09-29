@@ -82,13 +82,29 @@ body='''</head><body><header><small>TB001 / D07 · CAD DRAFT</small><h1>Round Ar
 <label>桌板分離檢視 <input id="explode" type="range" min="0" max="1" step=".01" value="0"></label>
 <label>零件 <select id="parts"><option value="">全部部件</option></select></label><div id="partInfo">拖曳旋轉、滾輪縮放；點選零件。分離檢視不是裝配順序。</div>
 <p id="loadError">互動元件未載入，可查看 CAD 靜態圖或下載原生模型。</p>
-<div class="rule"><a href="TB001_D07.FCStd">FreeCAD 原生實體</a><br><a href="TB001_D07.step">STEP 實體交換檔</a><br><a href="TB001_D07.glb">GLB 預覽</a><br><a href="dimensions.svg">尺寸草圖</a><br><a href="parts.csv">零件表（非開料表）</a><br><a href="README.md">工程待辦／重建方式</a></div></aside></main>
+<div class="rule"><a href="TB001_D07.FCStd">FreeCAD 原生實體</a><br><a href="TB001_D07.step">STEP 實體交換檔</a><br><a href="TB001_D07.glb">GLB 預覽</a><br><a href="dimensions.svg">尺寸草圖</a><br><a href="parts.csv">零件表（非開料表）</a><br><a href="README.html">工程待辦／重建方式</a></div></aside></main>
 <details open><summary>同一實體 CAD 六視圖</summary><img src="preview.png" alt="CAD views"></details>
 <footer>L1 工程草稿，非施工圖。尺寸待確認；桌板固定、腳墊接合、伸縮與承重未完成驗證；開孔尚不可視為承重提把。互動視窗使用網路載入 Three.js，靜態圖可離線查看。</footer>
 '''
 body=body.replace('Ø600 × H600',f'Ø{p["top_diameter"]} × H{p["overall_height"]}').replace('Ø420／面高 320',f'Ø{p["shelf_diameter"]}／面高 {p["shelf_top"]}').replace('95 × 30／R3',f'{p["grip_clear_length"]} × {p["grip_clear_width"]}／R{p["grip_corner_radius"]}').replace('框寬 4／外廓 103 × 38',f'框寬 {p["grip_trim"]}／外廓 {p["grip_clear_length"]+2*p["grip_trim"]} × {p["grip_clear_width"]+2*p["grip_trim"]}').replace('桿高 14／淨間隔 14',f'桿高 {p["x_height"]}／淨間隔 {p["x_height"]}')
 if (OUT/'gallery/perspective_ai_square_v1.png').exists():
  body=body.replace('<details open><summary>同一實體 CAD 六視圖', (ROOT/'scripts/tb001_d07_gallery.html').read_text().replace("{perspective:'透視',front:'正面',top:'俯視',structure:'承托結構',grip:'開孔細節',x_detail:'X 接合'}",json.dumps({k:{'perspective':'透視','front':'正面','top':'俯視','structure':'承托結構','grip':'開孔細節','x_detail':'X 接合','side':'側面','bottom':'底部'}[k] for k in views},ensure_ascii=False)).replace('六個視角',str(len(views))+' 個視角')+'<details><summary>同一實體 CAD 六視圖')
+if (OUT/'gallery/blender_manifest.json').exists() and (OUT/'gallery/ai_blender_manifest_v1.json').exists():
+ import hashlib
+ bm=json.loads((OUT/'gallery/blender_manifest.json').read_text())
+ assert bm['geometry_sha256']==hashlib.sha256((OUT/'geometry_mm.json').read_bytes()).hexdigest(),'Stale Blender geometry'
+ assert bm['views_sha256']==hashlib.sha256((OUT/'views.json').read_bytes()).hexdigest(),'Stale Blender cameras'
+ for key,entry in bm['views'].items():assert entry['sha256']==hashlib.sha256((OUT/'gallery'/entry['output']).read_bytes()).hexdigest(),key
+ am=json.loads((OUT/'gallery/ai_blender_manifest_v1.json').read_text())
+ assert am['geometry_sha256']==bm['geometry_sha256'],'Stale AI geometry source'
+ assert am['views_sha256']==bm['views_sha256'],'Stale AI camera source'
+ assert am['prompts_sha256']==hashlib.sha256((OUT/'gallery/ai_prompts_blender_v1.json').read_bytes()).hexdigest(),'Stale AI prompts'
+ assert set(am['views'])==set(bm['views']),'Missing AI views'
+ for key,entry in am['views'].items():
+  assert entry['input']==bm['views'][key]['output'],key
+  assert entry['input_sha256']==bm['views'][key]['sha256'],key
+  assert entry['sha256']==hashlib.sha256((OUT/'gallery'/entry['output']).read_bytes()).hexdigest(),key
+ body=body.replace('<details open><summary>同一實體 CAD 六視圖', (ROOT/'scripts/tb001_blender_gallery.html').read_text()+'<details><summary>同一實體 CAD 六視圖')
 listener="""document.addEventListener('d07-gallery-view',e=>{
  const spec=__VIEWS__[e.detail];if(!spec)return;
  controls.dispose();camera=spec.projection==='perspective'?new THREE.PerspectiveCamera(12,1,.01,20):new THREE.OrthographicCamera(-.6,.6,.6,-.6,.001,20);
@@ -109,8 +125,24 @@ if p.get('variant')=='upper_double_lines':
  body=body.replace('<main>','<p style="padding:0 36px"><a href="../../TB001_D07_viewer.html">← 回到無橫線基準版</a></p><main>')
 elif (OUT/'variants/upper_double_lines/TB001_D07_viewer.html').exists():
  body=body.replace('<main>','<p style="padding:0 36px"><a href="variants/upper_double_lines/TB001_D07_viewer.html">查看上方雙胡桃橫線 CAD 試款 →</a>（基準版與 AI 圖維持不變）</p><main>')
+if p.get('variant')=='snug_slot_20':
+ body=body.replace('<h1>Round Arch · 緊密三層 X</h1>','<h1>Round Arch · 20 mm 滿槽試版</h1>').replace('<main>','<p style="padding:0 36px">框條寬__SLOT_TRIM__／槽寬20／X桿20 × 20 mm，取消脚上穿銷；僅名義滿槽，垂直固定未設計。上孔框依同寬規則同步20 mm；上方雙橫段仍14 mm。<a href="../upper_double_lines/TB001_D07_viewer.html">回到前版</a></p><main>')
+body=body.replace('__SLOT_TRIM__',str(p['slot_trim']))
 body=body.replace('同一實體 CAD 六視圖',f'同一實體 CAD {len(views)} 視圖')
 if p.get('gallery_set')=='cabinet_seven' and (OUT/'gallery/ai_manifest_all_v1.json').exists():
  body=body.replace('僅 CAD 試款，尚無此款 AI 渲染。','已提供此款七視角 AI／CAD 對照。')
+if p.get('rail_layout')=='triangle':
+ body=body.replace('Round Arch · 緊密三層 X','Round Arch · 三腳三層三角框').replace('四隻拱頂板腳','三隻拱頂板腳').replace('X 桿高','三角框桿高')
+ body=body.replace('<main>','<p style="padding:0 36px">獨立試款：三腳 120° 等分，三層三角框；角點斜接與腳槽避讓僅造型，承重接合／抗傾覆未驗證。<a href="../snug_slot_20/TB001_D07_viewer.html">對照四腳版</a></p><main>')
+ body=body.replace('<a href="dimensions.svg">尺寸草圖</a><br>','')
+ if p.get('rail_level_count',3)==2:
+  body=body.replace('三腳三層三角框','三腳兩層三角框').replace('三層三角框；','兩層三角框；')
+  body=body.replace('<main>','<p style="padding:0 36px">移除最下層；兩條截面 20 × 20 mm、淨間距 20 mm，上方雙橫段不變。<a href="../three_leg_triangle/TB001_D07_viewer.html">對照三條版</a></p><main>')
+ else:
+  body=body.replace('<main>','<p style="padding:0 36px"><a href="../three_leg_triangle_two/TB001_D07_viewer.html">查看兩條版 →</a></p><main>')
+elif p.get('variant')=='snug_slot_20':
+ body=body.replace('<main>','<p style="padding:0 36px"><a href="../three_leg_triangle/TB001_D07_viewer.html">查看三腳三角框試款 →</a></p><main>')
+from tb001_readme_page import write_readme_page
+write_readme_page(OUT)
 (OUT/'TB001_D07_viewer.html').write_text(head+body+script)
 print('CAD previews and D07 interactive viewer written')

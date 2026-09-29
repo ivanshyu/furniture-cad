@@ -1,0 +1,59 @@
+{
+  "tool": "built-in image_gen",
+  "version": 1,
+  "geometry_sha256": "c65cbe4f5d54ab2f0381b521aa604ae2a6e898e281179c5463d02419855d3164",
+  "views_sha256": "83ece4a4438bf9cbf6094cd6a4e69ff9a4b17fc3ed5ad715da4ea11ea5cea13a",
+  "prompts_sha256": "ed3766faa216cf7ed720d7f86989e0044ab342725d2de1c10f050a9aff45c6a8",
+  "note": "AI material visualization, not geometry or manufacturing evidence.",
+  "views": {
+    "perspective": {
+      "output": "perspective_ai_v1.png",
+      "sha256": "860885b5f20f5c4cbedf132e460513604a8352c20340060fb77747745ecf8cd8",
+      "input": "perspective_blender.png",
+      "input_sha256": "781d38e9966522d2522f2802bbc8322cdde62b630858723ed0145e2c7f2afd67",
+      "original_output": "/Users/ivanshyu/.codex/generated_images/01a07a5c-91d2-7a93-921b-13ca88634f7f/exec-cd4bca84-0ed5-4c4d-9035-fe68221490e6.png"
+    },
+    "front": {
+      "output": "front_ai_v1.png",
+      "sha256": "70ecef76eeda3ef880fc9f3820ca66eaa5593cb97d44ec3daea3f5d882d1eb5d",
+      "input": "front_blender.png",
+      "input_sha256": "9eaf12a7c3f6b91c45f923754d4ca4c07e993ade6d728b3aef06bee2459ec0ba",
+      "original_output": "/Users/ivanshyu/.codex/generated_images/01a07a5c-91d2-7a93-921b-13ca88634f7f/exec-e72f153b-5fc4-4909-afef-8dd81b17cb57.png"
+    },
+    "side": {
+      "output": "side_ai_v1.png",
+      "sha256": "1031dfddf58c9c5ac5727694523003ced6c9e9cbfa71c92f6b7c0670f1e7ea0b",
+      "input": "side_blender.png",
+      "input_sha256": "8aa5b8b5a52c67934df1719ecd0c6ad71700c0d6f3356c0da4b50a40f6fbfbb5",
+      "original_output": "/Users/ivanshyu/.codex/generated_images/01a07a5c-91d2-7a93-921b-13ca88634f7f/exec-94cee6a0-533b-464e-829a-e79d611d6802.png"
+    },
+    "top": {
+      "output": "top_ai_v1.png",
+      "sha256": "633a0ff86908b12f029d22bf9a6d4c7dd713f184004517573ba83978b9e71366",
+      "input": "top_blender.png",
+      "input_sha256": "9e2697da4680b4d0fa2e548d87765ec376212f610b37c8a8313648037879d622",
+      "original_output": "/Users/ivanshyu/.codex/generated_images/01a07a5c-91d2-7a93-921b-13ca88634f7f/exec-5c2e8d47-648a-4878-ad50-580d84cc9394.png"
+    },
+    "bottom": {
+      "output": "bottom_ai_v1.png",
+      "sha256": "d137c9f710158ddf7fa0f78a48aae2ed333cfb7d32e8d7c9b81d99441ca9d921",
+      "input": "bottom_blender.png",
+      "input_sha256": "deabae46f23173965fc069cee4df629a837a642540cc908d93d8438b2a9d0fd3",
+      "original_output": "/Users/ivanshyu/.codex/generated_images/01a07a5c-91d2-7a93-921b-13ca88634f7f/exec-5183524c-ac77-4ad9-91aa-3b3df0dc08ac.png"
+    },
+    "structure": {
+      "output": "structure_ai_v1.png",
+      "sha256": "483905d51d29d2b513a753620a207589b21ded523323fbef2fc517ddc8654144",
+      "input": "structure_blender.png",
+      "input_sha256": "96a8f7920d472187a08ea36c8228993f0124e12b55bf608ea984ab4cbbd46c31",
+      "original_output": "/Users/ivanshyu/.codex/generated_images/01a07a5c-91d2-7a93-921b-13ca88634f7f/exec-b816a430-d17a-4f6d-b7be-898bbed15fea.png"
+    },
+    "grip": {
+      "output": "grip_ai_v1.png",
+      "sha256": "a3fc37226aa02adcea074482d44367ba6dcf3eba6896389dfc673872ecbda5ab",
+      "input": "grip_blender.png",
+      "input_sha256": "d6d83838199052f0a1f3cb7d5bb2daffb07bc842d0713addfccde23ad08c54fa",
+      "original_output": "/Users/ivanshyu/.codex/generated_images/01a07a5c-91d2-7a93-921b-13ca88634f7f/exec-23449645-1ea8-4c3f-bd05-290510f2005a.png"
+    }
+  }
+}

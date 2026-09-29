@@ -1,0 +1,43 @@
+ID,Part,Material,Role,Global AABB mm — NOT blank size,Volume mm3,Grain
+P01,Upper circular maple top with grip recess,MAPLE,upper_top,650.00 × 649.80 × 20.00,6447614.48,X; solid edge-glued maple
+P02,Grip mitred strip north,WALNUT,grip_trim,135.00 × 20.00 × 20.00,46000.0,Along strip; solid walnut
+P03,Grip mitred strip south,WALNUT,grip_trim,135.00 × 20.00 × 20.00,46000.0,Along strip; solid walnut
+P04,Grip mitred strip east,WALNUT,grip_trim,20.00 × 70.00 × 20.00,20000.0,Along strip; solid walnut
+P05,Grip mitred strip west,WALNUT,grip_trim,20.00 × 70.00 × 20.00,20000.0,Along strip; solid walnut
+P06,Lower circular maple shelf — no opening,MAPLE,lower_top,520.00 × 519.84 × 20.00,4247433.27,X; solid edge-glued maple
+P07,Arched blade 30 / maple segment 1,MAPLE,leg,77.32 × 113.92 × 335.91,657212.6,Vertical Z; segment joints TO VERIFY
+P08,Arched blade 30 / maple segment 2,MAPLE,leg,77.32 × 113.92 × 14.00,33600.0,Vertical Z; segment joints TO VERIFY
+P09,Arched blade 30 / maple segment 3,MAPLE,leg,77.32 × 113.92 × 134.09,294732.78,Vertical Z; segment joints TO VERIFY
+P10,Slot jamb 30 / -1,WALNUT,slot_trim,19.32 × 13.46 × 262.00,20960.0,Vertical Z
+P11,Slot jamb 30 / 1,WALNUT,slot_trim,19.32 × 13.46 × 262.00,20960.0,Vertical Z
+P12,Slot lintel 30,WALNUT,slot_trim,31.32 × 34.25 × 4.00,2240.0,Tangential
+P13,Foot shoe 30,WALNUT,foot,80.78 × 115.92 × 18.00,51840.0,Tangential; shoe-to-leg joint unresolved
+P14,Arched blade 150 / maple segment 1,MAPLE,leg,77.32 × 113.92 × 335.91,657212.6,Vertical Z; segment joints TO VERIFY
+P15,Arched blade 150 / maple segment 2,MAPLE,leg,77.32 × 113.92 × 14.00,33600.0,Vertical Z; segment joints TO VERIFY
+P16,Arched blade 150 / maple segment 3,MAPLE,leg,77.32 × 113.92 × 134.09,294732.78,Vertical Z; segment joints TO VERIFY
+P17,Slot jamb 150 / -1,WALNUT,slot_trim,19.32 × 13.46 × 262.00,20960.0,Vertical Z
+P18,Slot jamb 150 / 1,WALNUT,slot_trim,19.32 × 13.46 × 262.00,20960.0,Vertical Z
+P19,Slot lintel 150,WALNUT,slot_trim,31.32 × 34.25 × 4.00,2240.0,Tangential
+P20,Foot shoe 150,WALNUT,foot,80.78 × 115.92 × 18.00,51840.0,Tangential; shoe-to-leg joint unresolved
+P21,Arched blade 270 / maple segment 1,MAPLE,leg,120.00 × 20.00 × 335.91,657212.6,Vertical Z; segment joints TO VERIFY
+P22,Arched blade 270 / maple segment 2,MAPLE,leg,120.00 × 20.00 × 14.00,33600.0,Vertical Z; segment joints TO VERIFY
+P23,Arched blade 270 / maple segment 3,MAPLE,leg,120.00 × 20.00 × 134.09,294732.78,Vertical Z; segment joints TO VERIFY
+P24,Slot jamb 270 / -1,WALNUT,slot_trim,4.00 × 20.00 × 262.00,20960.0,Vertical Z
+P25,Slot jamb 270 / 1,WALNUT,slot_trim,4.00 × 20.00 × 262.00,20960.0,Vertical Z
+P26,Slot lintel 270,WALNUT,slot_trim,28.00 × 20.00 × 4.00,2240.0,Tangential
+P27,Foot shoe 270,WALNUT,foot,120.00 × 24.00 × 18.00,51840.0,Tangential; shoe-to-leg joint unresolved
+P28,Triangle level 1 beam 1,WALNUT,x_rail,507.49 × 20.00 × 20.00,187822.99,Along triangle side; corner and vertical retention NOT DESIGNED
+P29,Triangle level 1 beam 2,WALNUT,x_rail,253.75 × 439.50 × 20.00,187822.99,Along triangle side; corner and vertical retention NOT DESIGNED
+P30,Triangle level 1 beam 3,WALNUT,x_rail,253.75 × 439.50 × 20.00,187822.99,Along triangle side; corner and vertical retention NOT DESIGNED
+P31,Triangle level 2 beam 1,WALNUT,x_rail,507.49 × 20.00 × 20.00,187822.99,Along triangle side; corner and vertical retention NOT DESIGNED
+P32,Triangle level 2 beam 2,WALNUT,x_rail,253.75 × 439.50 × 20.00,187822.99,Along triangle side; corner and vertical retention NOT DESIGNED
+P33,Triangle level 2 beam 3,WALNUT,x_rail,253.75 × 439.50 × 20.00,187822.99,Along triangle side; corner and vertical retention NOT DESIGNED
+P34,Triangle level 3 beam 1,WALNUT,x_rail,507.49 × 20.00 × 20.00,187822.99,Along triangle side; corner and vertical retention NOT DESIGNED
+P35,Triangle level 3 beam 2,WALNUT,x_rail,253.75 × 439.50 × 20.00,187822.99,Along triangle side; corner and vertical retention NOT DESIGNED
+P36,Triangle level 3 beam 3,WALNUT,x_rail,253.75 × 439.50 × 20.00,187822.99,Along triangle side; corner and vertical retention NOT DESIGNED
+P37,Upper transition band 30 / 1,WALNUT,upper_accent,77.32 × 113.92 × 14.00,33600.0,"Tangential; full-thickness structural splice, joints NOT DESIGNED"
+P38,Upper transition band 30 / 2,WALNUT,upper_accent,77.32 × 113.92 × 14.00,33600.0,"Tangential; full-thickness structural splice, joints NOT DESIGNED"
+P39,Upper transition band 150 / 1,WALNUT,upper_accent,77.32 × 113.92 × 14.00,33600.0,"Tangential; full-thickness structural splice, joints NOT DESIGNED"
+P40,Upper transition band 150 / 2,WALNUT,upper_accent,77.32 × 113.92 × 14.00,33600.0,"Tangential; full-thickness structural splice, joints NOT DESIGNED"
+P41,Upper transition band 270 / 1,WALNUT,upper_accent,120.00 × 20.00 × 14.00,33600.0,"Tangential; full-thickness structural splice, joints NOT DESIGNED"
+P42,Upper transition band 270 / 2,WALNUT,upper_accent,120.00 × 20.00 × 14.00,33600.0,"Tangential; full-thickness structural splice, joints NOT DESIGNED"

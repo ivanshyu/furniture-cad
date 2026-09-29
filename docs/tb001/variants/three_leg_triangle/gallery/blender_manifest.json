@@ -1,0 +1,169 @@
+{
+  "renderer": "Blender 4.5.3 LTS / Cycles / 24 samples / denoised",
+  "not_ai": true,
+  "geometry_sha256": "c65cbe4f5d54ab2f0381b521aa604ae2a6e898e281179c5463d02419855d3164",
+  "views_sha256": "83ece4a4438bf9cbf6094cd6a4e69ff9a4b17fc3ed5ad715da4ea11ea5cea13a",
+  "script_sha256": "08037afb838899d3433de93fdf90e63060e95f522d256f4df65facca2cdbe1fe",
+  "part_count": 42,
+  "vertex_positions_preserved": true,
+  "materials": "Procedural illustrative maple/walnut; not scanned wood or verified finish",
+  "views": {
+    "perspective": {
+      "camera": {
+        "position": [
+          0,
+          -4,
+          1.2999999999999998
+        ],
+        "target": [
+          0,
+          0,
+          0.275
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "span": 0.8450000000000001,
+        "projection": "perspective"
+      },
+      "output": "perspective_blender.png",
+      "sha256": "781d38e9966522d2522f2802bbc8322cdde62b630858723ed0145e2c7f2afd67"
+    },
+    "front": {
+      "camera": {
+        "position": [
+          0,
+          -2,
+          0.275
+        ],
+        "target": [
+          0,
+          0,
+          0.275
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "span": 0.8450000000000001
+      },
+      "output": "front_blender.png",
+      "sha256": "9eaf12a7c3f6b91c45f923754d4ca4c07e993ade6d728b3aef06bee2459ec0ba"
+    },
+    "top": {
+      "camera": {
+        "position": [
+          0,
+          0,
+          3
+        ],
+        "target": [
+          0,
+          0,
+          0.275
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "span": 0.8450000000000001
+      },
+      "output": "top_blender.png",
+      "sha256": "9e2697da4680b4d0fa2e548d87765ec376212f610b37c8a8313648037879d622"
+    },
+    "structure": {
+      "camera": {
+        "position": [
+          0,
+          -4,
+          1.2999999999999998
+        ],
+        "target": [
+          0,
+          0,
+          0.275
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "span": 0.8450000000000001,
+        "projection": "perspective"
+      },
+      "output": "structure_blender.png",
+      "sha256": "96a8f7920d472187a08ea36c8228993f0124e12b55bf608ea984ab4cbbd46c31"
+    },
+    "grip": {
+      "camera": {
+        "position": [
+          0.12,
+          -0.22,
+          1.0
+        ],
+        "target": [
+          0,
+          0,
+          0.54
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "span": 0.22
+      },
+      "output": "grip_blender.png",
+      "sha256": "d6d83838199052f0a1f3cb7d5bb2daffb07bc842d0713addfccde23ad08c54fa"
+    },
+    "side": {
+      "camera": {
+        "position": [
+          -2,
+          0,
+          0.275
+        ],
+        "target": [
+          0,
+          0,
+          0.275
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "span": 0.845
+      },
+      "output": "side_blender.png",
+      "sha256": "8aa5b8b5a52c67934df1719ecd0c6ad71700c0d6f3356c0da4b50a40f6fbfbb5"
+    },
+    "bottom": {
+      "camera": {
+        "position": [
+          0.9,
+          -1.5,
+          -1.2
+        ],
+        "target": [
+          0,
+          0,
+          0.275
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "span": 0.845
+      },
+      "output": "bottom_blender.png",
+      "sha256": "deabae46f23173965fc069cee4df629a837a642540cc908d93d8438b2a9d0fd3"
+    }
+  },
+  "blend_sha256": "29da7c8ffd09eed61cc36f3469a451e899a88fade95ac6b8b5d15dcf228c34f1"
+}
