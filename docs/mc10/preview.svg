@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<rect width="1200" height="900" fill="#e9e3d9"/>
+<circle cx="625" cy="470" r="350" fill="#ded4c6"/>
+<g fill="none" stroke="#8f4028" stroke-linejoin="round">
+  <path d="M325 395 793 330 905 408 442 477Z" stroke-width="52"/>
+  <path d="M351 427 285 720M854 410 902 695M443 475 403 720M790 360 748 686" stroke-width="45" stroke-linecap="round"/>
+  <path d="M327 376 286 230 748 164 795 330" stroke-width="58"/>
+  <path d="M330 259 766 199" stroke="#b95d33" stroke-width="108"/>
+</g>
+<text x="70" y="790" fill="#302820" font-family="Georgia,serif" font-size="74">MC10 Clerici Lounge</text>
+<text x="76" y="840" fill="#796d60" font-family="Arial,sans-serif" font-size="24" letter-spacing="6">INTERACTIVE SOURCE CAD</text>
+</svg>

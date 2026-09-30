@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Mattiazzi MC10 Clerici Lounge Chair 互動 3D CAD 檢視器。">
+<title>MC10 Clerici Lounge · 3D CAD Viewer</title>
+<style>
+:root{--paper:#eee9df;--ink:#27231e;--muted:#736b61;--wood:#b95d33;--line:#c9c0b3;--glass:#f8f5efdd}
+*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"PingFang TC",sans-serif}
+#stage{position:fixed;inset:0}canvas{display:block}
+.brand{position:fixed;left:26px;top:22px;z-index:3;pointer-events:none}.eyebrow{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}h1{font:500 clamp(27px,4vw,48px)/.95 Georgia,serif;letter-spacing:-.035em;margin:9px 0 0}.by{font-size:12px;color:var(--muted);margin-top:8px}
+.panel{position:fixed;z-index:3;right:22px;top:22px;width:min(310px,calc(100vw - 44px));background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(15px);padding:17px 18px;box-shadow:0 14px 40px #30281d16}
+.label{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0 15px}.dim{border-top:1px solid var(--line);padding-top:7px}.dim b{display:block;font:500 20px Georgia,serif}.dim span{font-size:10px;color:var(--muted)}
+.controls{display:grid;grid-template-columns:1fr 1fr;gap:7px}button,a.button{appearance:none;border:1px solid var(--line);background:#f7f2e9;color:var(--ink);padding:9px 10px;font:600 11px/1 system-ui;letter-spacing:.05em;text-decoration:none;text-align:center;cursor:pointer}button:hover,a.button:hover{border-color:var(--wood);color:var(--wood)}
+.status{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;background:#28231eea;color:white;padding:13px 18px;font-size:12px;letter-spacing:.08em}.status.hidden{display:none}.note{position:fixed;z-index:3;left:26px;bottom:22px;max-width:520px;color:var(--muted);font-size:11px;line-height:1.5}.note a{color:inherit}.badge{display:inline-block;border:1px solid var(--line);background:#f8f5efcc;padding:4px 8px;margin-right:6px;color:var(--ink)}
+.help{position:fixed;z-index:3;right:22px;bottom:20px;text-align:right;color:var(--muted);font-size:11px}
+@media(max-width:680px){.brand{left:16px;top:15px}.brand h1{font-size:28px}.panel{left:14px;right:14px;top:auto;bottom:14px;width:auto}.note{left:16px;bottom:184px;right:16px}.help{display:none}.by{display:none}}
+</style>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}</script>
+</head>
+<body>
+<main id="stage" aria-label="MC10 Clerici Lounge 互動三維模型"></main>
+<header class="brand"><div class="eyebrow">CH001 · Source CAD Study · L0</div><h1>MC10 Clerici<br>Lounge</h1><div class="by">Konstantin Grcic for Mattiazzi · 2015</div></header>
+<aside class="panel">
+  <div class="label">Manufacturer dimensions · mm</div>
+  <div class="dims"><div class="dim"><b>655</b><span>Width</span></div><div class="dim"><b>840</b><span>Depth</span></div><div class="dim"><b>700</b><span>Height</span></div></div>
+  <div class="controls"><button id="home">回到全景</button><button id="rotate">停止旋轉</button><button data-view="front">正面</button><button data-view="side">側面</button><a class="button" href="mc10_clerici_lounge.3dm" download>下載 3DM</a><a class="button" href="../">返回總覽</a></div>
+</aside>
+<div id="status" class="status">載入 3D CAD…</div>
+<div class="note"><span class="badge">REFERENCE ONLY</span>來源模型僅供研究與視覺參考，不是生產圖。CAD 由 <a href="https://store.leibal.com/products/mc-10-clerici" target="_blank" rel="noopener">Leibal 公開連結</a>取得；尺寸來自 <a href="https://www.mattiazzi.eu/product/mc10-clerici-lounge/" target="_blank" rel="noopener">Mattiazzi</a>。</div>
+<div class="help">拖曳旋轉 · 滾輪縮放 · 右鍵平移</div>
+<script type="module">
+import * as THREE from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import {Rhino3dmLoader} from 'three/addons/loaders/3DMLoader.js';
+
+const stage=document.querySelector('#stage'), status=document.querySelector('#status');
+const scene=new THREE.Scene(); scene.background=new THREE.Color(0xeee9df); scene.fog=new THREE.Fog(0xeee9df,2200,5200);
+const camera=new THREE.PerspectiveCamera(34,innerWidth/innerHeight,1,10000); camera.up.set(0,0,1); camera.position.set(1050,-1250,920);
+const renderer=new THREE.WebGLRenderer({antialias:true,alpha:false}); renderer.setPixelRatio(Math.min(devicePixelRatio,2)); renderer.setSize(innerWidth,innerHeight); renderer.shadowMap.enabled=true; renderer.shadowMap.type=THREE.PCFSoftShadowMap; renderer.outputColorSpace=THREE.SRGBColorSpace; renderer.toneMapping=THREE.ACESFilmicToneMapping; renderer.toneMappingExposure=1.15; stage.append(renderer.domElement);
+const controls=new OrbitControls(camera,renderer.domElement); controls.enableDamping=true; controls.dampingFactor=.06; controls.autoRotate=true; controls.autoRotateSpeed=.7; controls.target.set(0,0,330);
+scene.add(new THREE.HemisphereLight(0xfffbf0,0x6e665e,2.2));
+const key=new THREE.DirectionalLight(0xffe5c5,3.3); key.position.set(-900,-700,1600); key.castShadow=true; key.shadow.mapSize.set(2048,2048); key.shadow.camera.left=-1200;key.shadow.camera.right=1200;key.shadow.camera.top=1200;key.shadow.camera.bottom=-1200;scene.add(key);
+const fill=new THREE.DirectionalLight(0xcbd7e5,1.6);fill.position.set(900,600,850);scene.add(fill);
+const floor=new THREE.Mesh(new THREE.CircleGeometry(1750,96),new THREE.MeshStandardMaterial({color:0xe3ddd2,roughness:1}));floor.position.z=-4;floor.receiveShadow=true;scene.add(floor);
+const grid=new THREE.GridHelper(2600,26,0xc1b6a7,0xd8d0c4);grid.rotation.x=Math.PI/2;grid.position.z=-2;grid.material.transparent=true;grid.material.opacity=.35;scene.add(grid);
+
+let model,homePosition=new THREE.Vector3(),homeTarget=new THREE.Vector3();
+const loader=new Rhino3dmLoader();loader.setLibraryPath('https://cdn.jsdelivr.net/npm/rhino3dm@8.17.0/');
+loader.load('mc10_clerici_lounge.3dm',object=>{
+  model=object;
+  const wood=new THREE.MeshStandardMaterial({color:0xb85f37,roughness:.56,metalness:0});
+  model.traverse(o=>{if(o.isMesh){o.material=wood;o.castShadow=true;o.receiveShadow=true;}});
+  scene.add(model);
+  const box=new THREE.Box3().setFromObject(model), center=box.getCenter(new THREE.Vector3()), size=box.getSize(new THREE.Vector3());
+  model.position.sub(center); model.position.z+=size.z/2;
+  const radius=Math.max(size.x,size.y,size.z), d=radius*1.75;
+  homeTarget.set(0,0,size.z*.46);homePosition.set(d*.82,-d, d*.7);camera.position.copy(homePosition);controls.target.copy(homeTarget);controls.update();
+  status.classList.add('hidden');
+},progress=>{if(progress.total)status.textContent=`載入 3D CAD · ${Math.round(progress.loaded/progress.total*100)}%`;},err=>{console.error(err);status.textContent='模型載入失敗，請重新整理頁面';});
+
+function setView(kind){if(!model)return;const box=new THREE.Box3().setFromObject(model),s=box.getSize(new THREE.Vector3()),d=Math.max(s.x,s.y,s.z)*2.45;controls.autoRotate=false;document.querySelector('#rotate').textContent='開始旋轉';if(kind==='front')camera.position.set(0,-d,s.z*.5);else camera.position.set(d,0,s.z*.5);controls.target.set(0,0,s.z*.5);controls.update();}
+document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>setView(b.dataset.view));
+document.querySelector('#home').onclick=()=>{camera.position.copy(homePosition);controls.target.copy(homeTarget);controls.update()};
+document.querySelector('#rotate').onclick=e=>{controls.autoRotate=!controls.autoRotate;e.currentTarget.textContent=controls.autoRotate?'停止旋轉':'開始旋轉'};
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
+renderer.setAnimationLoop(()=>{controls.update();renderer.render(scene,camera)});
+</script>
+</body>
+</html>

@@ -42,3 +42,9 @@ WORKFLOW.md
 [公開展示頁](https://ivanshyu.github.io/furniture-cad/CB001_D16_viewer.html) · [D16原始檔與重建說明](03_Cabinets/CB001_Curiosity_Low_Maple_Walnut/README.md)
 
 原版DWG/DXF及D16模型、腳本都在main。docs由`python scripts/publish_d16.py`產生，Pages來源為main/docs。D16以前的方案、暫存與工具不納入同步。
+
+## CH001 MC10 Clerici Lounge
+
+[互動 3D CAD 檢視器](https://ivanshyu.github.io/furniture-cad/mc10/) · [來源與證據紀錄](01_Chairs/CH001_Mattiazzi_MC10_Clerici/ITEM.md)
+
+此頁呈現公開來源的第三方 `.3dm` 幾何，僅供研究與視覺參考，不是生產圖。尺寸、來源、權利狀態與未決問題均記錄於 CH001 專案資料夾。

@@ -5,6 +5,7 @@ __pycache__/
 *.log
 *.blend1
 *.bak
+Mattiazzi_MC10_Clerici_3D_CAD.zip
 # Keep earlier design versions local
 scripts/curiosity_d0*.py
 scripts/curiosity_d1[0-5]*.py
