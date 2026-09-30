@@ -1,89 +1,13 @@
-<!doctype html>
-<html lang="zh-Hant">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Mattiazzi MC10 Clerici Lounge Chair 互動 3D CAD 檢視器。">
-<title>MC10 Clerici Lounge · 3D CAD Viewer</title>
-<style>
-:root{--paper:#eee9df;--ink:#27231e;--muted:#736b61;--wood:#b95d33;--line:#c9c0b3;--glass:#f8f5efdd}
-*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"PingFang TC",sans-serif}
-#stage{position:fixed;inset:0}canvas{display:block}
-.brand{position:fixed;left:26px;top:22px;z-index:3;pointer-events:none}.eyebrow{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}h1{font:500 clamp(27px,4vw,48px)/.95 Georgia,serif;letter-spacing:-.035em;margin:9px 0 0}.by{font-size:12px;color:var(--muted);margin-top:8px}
-.panel{position:fixed;z-index:3;right:22px;top:22px;width:min(310px,calc(100vw - 44px));background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(15px);padding:17px 18px;box-shadow:0 14px 40px #30281d16}
-.label{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0 15px}.dim{border-top:1px solid var(--line);padding-top:7px}.dim b{display:block;font:500 20px Georgia,serif}.dim span{font-size:10px;color:var(--muted)}
-.controls{display:grid;grid-template-columns:1fr 1fr;gap:7px}button,a.button{appearance:none;border:1px solid var(--line);background:#f7f2e9;color:var(--ink);padding:9px 10px;font:600 11px/1 system-ui;letter-spacing:.05em;text-decoration:none;text-align:center;cursor:pointer}button:hover,a.button:hover,button.active{border-color:var(--wood);color:var(--wood);background:#fff9f2}
-.explode-box{border-top:1px solid var(--line);margin-top:14px;padding-top:12px}.explode-head{display:flex;align-items:center;justify-content:space-between;gap:8px}.explode-head b{font:500 17px Georgia,serif}.explode-box input{width:100%;accent-color:var(--wood);margin:10px 0 7px}.groups{display:grid;grid-template-columns:1fr 1fr;gap:5px}.groups button{padding:7px 5px;font-size:10px}.group-count{color:var(--muted);font-size:10px;margin-top:7px}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px}.partTag{position:fixed;z-index:2;display:none;transform:translate(-50%,-50%);pointer-events:none;border:1px solid #8d7b66;background:#fffaf0e8;padding:3px 6px;font:600 10px system-ui;letter-spacing:.04em;box-shadow:0 4px 16px #4a382522}
-.status{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;background:#28231eea;color:white;padding:13px 18px;font-size:12px;letter-spacing:.08em}.status.hidden{display:none}.note{position:fixed;z-index:3;left:26px;bottom:22px;max-width:520px;color:var(--muted);font-size:11px;line-height:1.5}.note a{color:inherit}.badge{display:inline-block;border:1px solid var(--line);background:#f8f5efcc;padding:4px 8px;margin-right:6px;color:var(--ink)}
-.help{position:fixed;z-index:3;right:22px;bottom:20px;text-align:right;color:var(--muted);font-size:11px}
-@media(max-width:680px){.brand{left:16px;top:15px}.brand h1{font-size:28px}.panel{left:14px;right:14px;top:auto;bottom:14px;width:auto;padding:12px}.note{display:none}.help{display:none}.by{display:none}.dims{margin-bottom:9px}.explode-box{margin-top:9px;padding-top:8px}.group-count{display:none}}
-</style>
-<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}</script>
-</head>
-<body>
-<main id="stage" aria-label="MC10 Clerici Lounge 互動三維模型"></main>
-<header class="brand"><div class="eyebrow">CH001 · Source CAD Study · L0</div><h1>MC10 Clerici<br>Lounge</h1><div class="by">Konstantin Grcic for Mattiazzi · 2015</div></header>
-<aside class="panel">
-  <div class="label">Manufacturer dimensions · mm</div>
-  <div class="dims"><div class="dim"><b>655</b><span>Width</span></div><div class="dim"><b>840</b><span>Depth</span></div><div class="dim"><b>700</b><span>Height</span></div></div>
-  <div class="controls"><button id="home">回到全景</button><button id="rotate">停止旋轉</button><button data-view="front">正面</button><button data-view="side">側面</button><a class="button" href="mc10_clerici_lounge.3dm" download>下載 3DM</a><a class="button" href="../">返回總覽</a></div>
-  <div class="explode-box"><div class="explode-head"><b>組件爆炸圖</b><button id="explode">展開</button></div><input id="explodeAmount" aria-label="爆炸距離" type="range" min="0" max="1" step=".01" value="1"><div class="groups"><button class="active" data-filter="all">全部</button><button data-filter="back"><span class="dot" style="background:#773721"></span>B01 靠背</button><button data-filter="seat"><span class="dot" style="background:#d57a42"></span>S01 座面</button><button data-filter="left"><span class="dot" style="background:#a34d2c"></span>F01 左框</button><button data-filter="right"><span class="dot" style="background:#bd6035"></span>F02 右框</button></div><div id="groupCount" class="group-count">分析來源 CAD 結構…</div></div>
-</aside>
-<div class="partTag" data-tag="back">B01 · 靠背</div><div class="partTag" data-tag="seat">S01 · 座面</div><div class="partTag" data-tag="left">F01 · 左框</div><div class="partTag" data-tag="right">F02 · 右框</div>
-<div id="status" class="status">載入 3D CAD…</div>
-<div class="note"><span class="badge">REFERENCE ONLY</span>來源模型僅供研究與視覺參考，不是生產圖。CAD 由 <a href="https://store.leibal.com/products/mc-10-clerici" target="_blank" rel="noopener">Leibal 公開連結</a>取得；尺寸來自 <a href="https://www.mattiazzi.eu/product/mc10-clerici-lounge/" target="_blank" rel="noopener">Mattiazzi</a>。</div>
-<div class="help">拖曳旋轉 · 滾輪縮放 · 右鍵平移</div>
-<script type="module">
-import * as THREE from 'three';
-import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
-import {Rhino3dmLoader} from 'three/addons/loaders/3DMLoader.js';
-
-const stage=document.querySelector('#stage'), status=document.querySelector('#status');
-const scene=new THREE.Scene(); scene.background=new THREE.Color(0xeee9df); scene.fog=new THREE.Fog(0xeee9df,2200,5200);
-const camera=new THREE.PerspectiveCamera(34,innerWidth/innerHeight,1,10000); camera.up.set(0,0,1); camera.position.set(1050,-1250,920);
-const renderer=new THREE.WebGLRenderer({antialias:true,alpha:false}); renderer.setPixelRatio(Math.min(devicePixelRatio,2)); renderer.setSize(innerWidth,innerHeight); renderer.shadowMap.enabled=true; renderer.shadowMap.type=THREE.PCFSoftShadowMap; renderer.outputColorSpace=THREE.SRGBColorSpace; renderer.toneMapping=THREE.ACESFilmicToneMapping; renderer.toneMappingExposure=1.15; stage.append(renderer.domElement);
-const controls=new OrbitControls(camera,renderer.domElement); controls.enableDamping=true; controls.dampingFactor=.06; controls.autoRotate=true; controls.autoRotateSpeed=.7; controls.target.set(0,0,330);
-scene.add(new THREE.HemisphereLight(0xfffbf0,0x6e665e,2.2));
-const key=new THREE.DirectionalLight(0xffe5c5,3.3); key.position.set(-900,-700,1600); key.castShadow=true; key.shadow.mapSize.set(2048,2048); key.shadow.camera.left=-1200;key.shadow.camera.right=1200;key.shadow.camera.top=1200;key.shadow.camera.bottom=-1200;scene.add(key);
-const fill=new THREE.DirectionalLight(0xcbd7e5,1.6);fill.position.set(900,600,850);scene.add(fill);
-const floor=new THREE.Mesh(new THREE.CircleGeometry(1750,96),new THREE.MeshStandardMaterial({color:0xe3ddd2,roughness:1}));floor.position.z=-4;floor.receiveShadow=true;scene.add(floor);
-const grid=new THREE.GridHelper(2600,26,0xc1b6a7,0xd8d0c4);grid.rotation.x=Math.PI/2;grid.position.z=-2;grid.material.transparent=true;grid.material.opacity=.35;scene.add(grid);
-
-let model,homePosition=new THREE.Vector3(),homeTarget=new THREE.Vector3(),exploded=false,explodeT=0,activeFilter='all';
-const componentGroups={
-  back:{label:'B01 · 靠背',color:0x773721,offset:new THREE.Vector3(0,150,250),meshes:[],center:new THREE.Vector3()},
-  seat:{label:'S01 · 座面',color:0xd57a42,offset:new THREE.Vector3(0,-220,70),meshes:[],center:new THREE.Vector3()},
-  left:{label:'F01 · 左框',color:0xa34d2c,offset:new THREE.Vector3(-240,0,0),meshes:[],center:new THREE.Vector3()},
-  right:{label:'F02 · 右框',color:0xbd6035,offset:new THREE.Vector3(240,0,0),meshes:[],center:new THREE.Vector3()}
-};
-function classify(center,size){if(center.z>500&&(size.x>300||Math.abs(center.x-315)<45))return'back';if(center.z<430&&size.x>300)return'seat';return center.x<315?'left':'right';}
-function applyExplode(){explodeT=exploded?Number(document.querySelector('#explodeAmount').value):0;Object.values(componentGroups).forEach(g=>g.meshes.forEach(o=>o.position.copy(o.userData.basePosition).addScaledVector(g.offset,explodeT)));}
-function applyFilter(id){activeFilter=id;Object.entries(componentGroups).forEach(([key,g])=>g.meshes.forEach(o=>o.visible=id==='all'||id===key));document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('active',b.dataset.filter===id));}
-const loader=new Rhino3dmLoader();loader.setLibraryPath('https://cdn.jsdelivr.net/npm/rhino3dm@8.17.0/');
-loader.load('mc10_clerici_lounge.3dm',object=>{
-  model=object;
-  model.updateMatrixWorld(true);let meshCount=0;
-  model.traverse(o=>{if(o.isLine||o.isPoints)o.visible=false;if(o.isMesh){const b=new THREE.Box3().setFromObject(o),c=b.getCenter(new THREE.Vector3()),s=b.getSize(new THREE.Vector3()),id=classify(c,s),g=componentGroups[id];o.material=new THREE.MeshStandardMaterial({color:g.color,roughness:.56,metalness:0});o.castShadow=true;o.receiveShadow=true;o.userData.basePosition=o.position.clone();o.userData.component=id;g.meshes.push(o);meshCount++;}});
-  scene.add(model);
-  const box=new THREE.Box3().setFromObject(model), center=box.getCenter(new THREE.Vector3()), size=box.getSize(new THREE.Vector3());
-  model.position.sub(center); model.position.z+=size.z/2;
-  model.updateMatrixWorld(true);Object.values(componentGroups).forEach(g=>{const b=new THREE.Box3();g.meshes.forEach(o=>b.expandByObject(o));b.getCenter(g.center)});
-  const radius=Math.max(size.x,size.y,size.z), d=radius*1.75;
-  homeTarget.set(0,0,size.z*.46);homePosition.set(d*.82,-d, d*.7);camera.position.copy(homePosition);controls.target.copy(homeTarget);controls.update();
-  document.querySelector('#groupCount').textContent=`4 組件 · ${meshCount} 個來源曲面；分組為檢視用推定`;
-  status.classList.add('hidden');
-},progress=>{if(progress.total)status.textContent=`載入 3D CAD · ${Math.round(progress.loaded/progress.total*100)}%`;},err=>{console.error(err);status.textContent='模型載入失敗，請重新整理頁面';});
-
-function setView(kind){if(!model)return;const box=new THREE.Box3().setFromObject(model),s=box.getSize(new THREE.Vector3()),d=Math.max(s.x,s.y,s.z)*2.45;controls.autoRotate=false;document.querySelector('#rotate').textContent='開始旋轉';if(kind==='front')camera.position.set(0,-d,s.z*.5);else camera.position.set(d,0,s.z*.5);controls.target.set(0,0,s.z*.5);controls.update();}
-document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>setView(b.dataset.view));
-document.querySelector('#home').onclick=()=>{camera.position.copy(homePosition);controls.target.copy(homeTarget);controls.update()};
-document.querySelector('#rotate').onclick=e=>{controls.autoRotate=!controls.autoRotate;e.currentTarget.textContent=controls.autoRotate?'停止旋轉':'開始旋轉'};
-document.querySelector('#explode').onclick=e=>{exploded=!exploded;e.currentTarget.textContent=exploded?'收合':'展開';e.currentTarget.classList.toggle('active',exploded);controls.autoRotate=false;document.querySelector('#rotate').textContent='開始旋轉';applyExplode();if(exploded){camera.position.set(1700,-2100,1450);controls.target.set(0,0,390);controls.update()}else document.querySelector('#home').click();};
-document.querySelector('#explodeAmount').oninput=applyExplode;
-document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>applyFilter(b.dataset.filter));
-function positionTags(){Object.entries(componentGroups).forEach(([id,g])=>{const el=document.querySelector(`[data-tag="${id}"]`),show=exploded&&(activeFilter==='all'||activeFilter===id);if(!show){el.style.display='none';return}const p=g.center.clone().addScaledVector(g.offset,explodeT).project(camera);el.style.display='block';el.style.left=`${(p.x*.5+.5)*innerWidth}px`;el.style.top=`${(-p.y*.5+.5)*innerHeight}px`;});}
-addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
-renderer.setAnimationLoop(()=>{controls.update();positionTags();renderer.render(scene,camera)});
-</script>
-</body>
-</html>
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MC10 Clerici — CAD 分組檢視</title><style>body{margin:0;background:#eeeae3;color:#292824;font:16px system-ui}header{padding:20px 28px;background:#faf8f3}h1{font-size:21px;margin:0 0 6px}p{margin:6px 0;color:#625e57}nav{display:flex;gap:10px;flex-wrap:wrap;padding:12px 28px;background:#faf8f3}button,label{padding:8px 12px;border:1px solid #c7bfae;border-radius:5px;background:white;color:#292824}#viewport{height:75vh;min-height:450px;position:relative}canvas{display:block}#status{position:absolute;left:24px;top:14px;color:#625e57;font-size:14px}footer{padding:12px 28px;font-size:14px}#layout{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,1fr);gap:14px;padding:14px}aside{background:#faf8f3;padding:16px;max-height:78vh;overflow:auto}aside img{width:100%;display:block}aside h2{font-size:18px;margin:0 0 10px}.thumbs{display:flex;flex-wrap:wrap;gap:5px}.thumbs button{font-size:13px;padding:5px}#viewport{height:75vh}#partinfo{font-size:14px;line-height:1.6}#partlist{width:100%;padding:8px}small{display:block;color:#665d50;margin:8px 0}@media(max-width:850px){#layout{grid-template-columns:1fr}aside{max-height:none}#viewport{height:65vh}}aside{box-sizing:border-box;min-width:0}aside p{margin:10px 0;line-height:1.5}.explode-controls{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.explode-controls label{display:inline-flex;align-items:center;gap:6px;box-sizing:border-box;min-height:40px;line-height:1.4;margin:0;white-space:nowrap}.explode-controls input{margin:0;flex:none}#groupParts{margin:10px 0 14px}#explodeAmount{display:block;width:100%;box-sizing:border-box;margin:12px 0}#groupFilter,#subFilter,#partlist{box-sizing:border-box;max-width:100%}#groupFilter,#subFilter{width:100%;padding:8px}#groupParts{display:flex;flex-wrap:wrap;gap:4px;max-height:140px;overflow:auto}#groupParts button{padding:4px;font-size:12px}.partTag{position:absolute;background:#fffbea;border:1px solid #8f795b;border-radius:4px;padding:2px 4px;font:11px system-ui;pointer-events:auto;cursor:pointer}#partOverlay{position:absolute;inset:0;pointer-events:none;overflow:hidden}#groupCount{font-size:13px}
+#viewport{min-width:0;overflow:hidden}#viewport canvas{max-width:100%}aside{min-width:0}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.5}button[aria-pressed="true"]{background:#e8dac0}#referenceImage{aspect-ratio:4/3;object-fit:contain}#partinfo{overflow-wrap:anywhere}#reports{padding:24px;overflow:auto}table{border-collapse:collapse;width:100%;font-size:13px}th,td{padding:8px;border:1px solid #c7bfae;text-align:left}.atlas{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.atlas article{padding:12px;background:#faf8f3}.atlas img{width:100%}#status{pointer-events:none}#partOverlay .partTag{padding:3px 5px}a{color:#705037}</style><script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}</script></head><body>
+<header><h1>MC10 Clerici Lounge · CAD 幾何 D02</h1><p>Konstantin Grcic / Mattiazzi｜L0 來源參考｜型錄 655 × 840 × 700 mm，軸向待核對</p><p><a href="../">專案總覽</a> · <a href="mc10_clerici_lounge.3dm" download>原始 3DM</a> · <a href="https://store.leibal.com/products/mc-10-clerici">CAD 來源</a></p></header>
+<nav id="views"><button id="persp">透視</button><button id="front">正面</button><button id="side">側面</button><button id="top">俯視</button><button id="detail">腳位近看</button><button id="handles">扶手近看</button><button id="bottom">座底檢查</button><label title="此椅沒有玻璃"><input id="glass" type="checkbox" disabled>玻璃（不適用）</label><label><input id="wire" type="checkbox">線框</label><label><input id="back" type="checkbox" checked>顯示靠背</label></nav>
+<div id="layout"><div id="viewport"><span id="status">載入來源 CAD…</span><div id="partOverlay"></div></div><aside>
+<h2 id="imageTitle">透視 · 原始 CAD 底圖</h2><div class="thumbs" id="galleryButtons"></div><p><a id="imageLink" download="mc10-view.png">下載原圖</a> · <button id="enlarge">放大圖片</button></p><img id="referenceImage" alt="由同一來源幾何渲染的固定視角"><small>固定視角由來源 CAD 直接渲染；沒有 AI 材質圖。展示顏色用於分組，不代表原廠木種或塗裝。</small><hr>
+<h2>模型爆炸圖 · 分組檢視</h2><p>GROUP → 細部分組 → 來源分件。原檔為未命名曲面，以下分類是幾何推定，非原廠 BOM。</p>
+<p><select id="groupFilter" aria-label="GROUP 分組"></select></p><p><select id="subFilter" aria-label="細部分組"></select></p>
+<div class="explode-controls"><label><input id="partLabels" type="checkbox" checked>顯示編號</label><label><input id="spreadParts" type="checkbox">分件攤開</label><label><input id="exploded" type="checkbox">展開部件</label></div>
+<p id="groupCount"></p><div id="groupParts"></div><input id="explodeAmount" type="range" min="0" max="1" step=".01" value="1" aria-label="爆炸距離"><select id="partlist" aria-label="選取部件"></select><p id="partinfo">選取分件查看材質狀態與尺寸</p>
+<p><a href="?report=atlas#reports">全部分件：分解圖與尺寸</a> · <a id="csv" download="MC10_source_parts.csv">CSV</a> · <a href="?report=verification#reports">尺寸與數量驗證</a></p><small>雙擊模型或點擊編號選取。X/Y/Z 是原組裝座標軸對齊包圍盒；零厚度可能是單一曲面，不是缺件或開料厚度。分件攤開優先於爆炸位移。</small></aside></div>
+<dialog id="imageDialog"><button id="closeImage">關閉圖片</button><img id="largeImage" alt="放大的固定 CAD 視角" style="display:block;max-width:85vw;max-height:80vh"></dialog><section id="reports" hidden></section><footer>拖曳旋轉 · 滾輪縮放 · 右鍵平移。75 個來源分件 ≠ 75 個製造零件。榫接、材質、權利條款及製造尺寸仍待確認。</footer>
+<script type="module" src="viewer.js"></script></body></html>

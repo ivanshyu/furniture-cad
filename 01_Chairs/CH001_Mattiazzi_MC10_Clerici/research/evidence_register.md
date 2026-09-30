@@ -10,3 +10,8 @@
 ## Conflicts
 
 No direct conflict is registered. The manufacturer's dimension order is W × D × H, while 3D software axes may use a different orientation.
+
+## D02 viewer audit
+- [KNOWN] Browser loader exposes 75 source meshes with 75 unique UUIDs (2026-09-30).
+- [DERIVED] Mesh AABB is 840.000 × 651.964 × 700.668 source units; comparison with axis-mapped catalogue dimensions differs by 0 / -3.036 / +0.668. Model units and manufacturing significance remain unverified.
+- [ASSUMED] Four geometric zones and ten subgroup labels are visualization classifications only. See `viewer_parity.md`.

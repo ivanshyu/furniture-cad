@@ -12,7 +12,7 @@
 | Fidelity target | Source-model visualization only |
 | Current maturity | L0 |
 | Owner | Ivan Shyu |
-| Current revision | D01 |
+| Current revision | D02 |
 
 ## Rights and provenance
 

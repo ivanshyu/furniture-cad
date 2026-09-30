@@ -8,3 +8,6 @@
 | Q-004 | Do the four inferred viewer groups correspond to actual shop assemblies and joints? | The exploded view must not be mistaken for an assembly sequence | EV-004, DEC-001 | High | Compare against manufacturer assembly/production documentation | Owner | Open |
 
 This D01 viewer is L0 reference visualization only and must not be used as a production drawing.
+
+- Q-005: Verify Rhino file units and explain catalogue-versus-mesh extent differences (651.964 vs 655; 700.668 vs 700); no manufacturing tolerances inferred.
+- Q-006: Validate per-surface subgroup assignments and physical component boundaries; M001–M075 are not a fabrication BOM.
