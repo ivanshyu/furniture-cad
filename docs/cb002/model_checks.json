@@ -1,0 +1,10 @@
+{
+  "mesh_count": 127,
+  "valid_brep_solids": 127,
+  "step_roundtrip_solids": 127,
+  "structural_interferences": 0,
+  "fastener_wood_interferences": 0,
+  "tool_access_channels_verified": 10,
+  "units": "mm",
+  "maturity": "L0 / L1 HOLD"
+}

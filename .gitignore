@@ -22,3 +22,7 @@ scripts/d15_*.py
 # FreeCAD automatic backup files
 *.FCBak
 *.FCStd1
+.DS_Store
+03_Cabinets/CB002_Walnut_Amplifier_Chassis/output/
+03_Cabinets/CB002_Walnut_Amplifier_Chassis/cad/backup_blender_renders/
+

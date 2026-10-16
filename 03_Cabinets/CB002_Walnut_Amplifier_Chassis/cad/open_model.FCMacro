@@ -1,0 +1,11 @@
+import FreeCAD as App, FreeCADGui as Gui
+from pathlib import Path
+p=Path(__file__).resolve().parents[1]/'output'/'CB002_D01.FCStd'
+doc=App.openDocument(str(p))
+for obj in doc.Objects:
+    if hasattr(obj,'Shape'):
+        obj.ViewObject.ShapeColor=(0.28,0.13,0.055) if obj.Name.startswith('W0') else (0.78,0.61,0.29) if obj.Name.startswith('A0') else (0.55,0.55,0.57)
+Gui.activeDocument().activeView().viewAxonometric()
+Gui.activeDocument().activeView().fitAll()
+doc.recompute()
+doc.save()

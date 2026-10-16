@@ -1,0 +1,17 @@
+Part,Quantity,Description,Status
+W01-W02,2,Burmese Teak 520x20x90 with 45-deg miter + 2 spline slots + outer 444.6x64.6x4 rebate + inner 404x48 window + 2 top-rabbet nut mortises,ASSUMED
+W03-W04,2,Burmese Teak 20x380x90 with 45-deg miter + 2 spline slots + 3 top-rabbet drop-in square nut mortises,ASSUMED
+SP01-SP08,8,American Black Walnut corner spline (14x14x5mm right-triangle across 45-deg miter at Z=21..26 & Z=64..69),ASSUMED
+CB01-CB04,4,Burmese Teak internal corner reinforcement block 22x22x78mm (per S04 corner post),ASSUMED
+A01-A02,2,Chamfered Brass/Aluminium 444x64x6 R8 panel blanks (4mm recessed / 2mm proud of wood) with 6x M3 blind holes,ASSUMED
+A03,1,Two-tier stepped top plate 520x380 (lower 8 + upper 5 + boss 4) with 10-point hidden underside fixing,ASSUMED
+F01-F04,4,CNC machined gold foot Ø48x14 with chamfer and groove,ASSUMED
+LB0-RB2,6,3mm stainless/aluminium side internal L-bracket (24mm wide x 22mm tall),ASSUMED
+FB0-BB1,4,3mm stainless/aluminium front/rear compact internal L-bracket (24mm wide x 16mm tall above window),ASSUMED
+Side_SquareNutBar,6,Drop-in dual-M4 square nut bar 20x16x4 in left/right top-rabbet blind mortise,ASSUMED
+FrontRear_SquareNutBar,4,Drop-in dual-M4 square nut bar 20x14x4 in front/rear top-rabbet blind mortise (per S04),ASSUMED
+M3x20,12,Front/rear panel interior socket button head screws through 16mm wood shoulder,ASSUMED
+M3 washer,12,Ø7x1mm flat washer resting on 16mm wood shoulder,ASSUMED
+M4x8,10,Upward top-plate fixing socket head cap screws (6 side + 4 front/rear),ASSUMED
+M4x14,20,Horizontal bracket screws into drop-in square nut bars (12 side + 8 front/rear),ASSUMED
+M4 washer,30,Ø9x1mm flat washer,ASSUMED

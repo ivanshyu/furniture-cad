@@ -1,0 +1,57 @@
+{
+  "mode": "built-in image_gen, individual Blender Cycles CAD references",
+  "revision": "D05",
+  "geometry_sha256": "b95cb6fa3469d89a676d91147ea13b127a9b8e4b694710ac7071c8cd444209a1",
+  "prompt_sha256": "71855d46f718f11e96906aaeafbb36534cc574b133839bb7f56370c06ed37e63",
+  "views": {
+    "persp": {
+      "input": "persp_cad.png",
+      "output": "persp_ai.png",
+      "input_sha256": "c8d745de10157bb812e2001da2f239a16c91da5e5668f3cf2fda8426685a25b0",
+      "output_sha256": "decb36a540c2e3268ab2225edabcc7c94d54513961258ddefc59be076b696b91",
+      "visual_review": "Reviewed against D05 CAD baseline. Exact camera, silhouette, Burmese Teak frame, dual Black Walnut splines, proud 2mm panel, and 10 hidden fixing points retained visually; CAD remains dimensional authority."
+    },
+    "front": {
+      "input": "front_cad.png",
+      "output": "front_ai.png",
+      "input_sha256": "fd39f988b6d32674a7ed95d0789c30e60e4f54d64d3e2301f9c63a5e1de22529",
+      "output_sha256": "7260ccf9d073b1760a6f4b8d4b9d173673a31abd402effaf9ab11c043f0e6750",
+      "visual_review": "Reviewed against D05 CAD baseline. Exact camera, silhouette, Burmese Teak frame, dual Black Walnut splines, proud 2mm panel, and 10 hidden fixing points retained visually; CAD remains dimensional authority."
+    },
+    "side": {
+      "input": "side_cad.png",
+      "output": "side_ai.png",
+      "input_sha256": "12608a39d8a53c059ab6f244efd3151363efcc10eb1210dea660487e7bfbea69",
+      "output_sha256": "83e23ce89946da7427788e4e4c6e795dabfeaaf9627ed4cad24a37b5abf4ed10",
+      "visual_review": "Reviewed against D05 CAD baseline. Exact camera, silhouette, Burmese Teak frame, dual Black Walnut splines, proud 2mm panel, and 10 hidden fixing points retained visually; CAD remains dimensional authority."
+    },
+    "top": {
+      "input": "top_cad.png",
+      "output": "top_ai.png",
+      "input_sha256": "41252c4e4b2b661cb89c24c3da6583e4e546b8e04feaf4e691cc06ea7ff6ac81",
+      "output_sha256": "a2cb285ee51340fb8c64b87da5aef4c35f51e8c21b9ec048cb170ca0f9abbbe8",
+      "visual_review": "Reviewed against D05 CAD baseline. Exact camera, silhouette, Burmese Teak frame, dual Black Walnut splines, proud 2mm panel, and 10 hidden fixing points retained visually; CAD remains dimensional authority."
+    },
+    "detail": {
+      "input": "detail_cad.png",
+      "output": "detail_ai.png",
+      "input_sha256": "d9e1756007f504c347df8dd258121882bb863d534df47681bdfb94ac36d47b42",
+      "output_sha256": "49223036a3f9f61546a74c1eb3f93ff9fc327b2e7e1c41cd51c1d326bd987141",
+      "visual_review": "Reviewed against D05 CAD baseline. Exact camera, silhouette, Burmese Teak frame, dual Black Walnut splines, proud 2mm panel, and 10 hidden fixing points retained visually; CAD remains dimensional authority."
+    },
+    "frame": {
+      "input": "frame_cad.png",
+      "output": "frame_ai.png",
+      "input_sha256": "e79d0bd0d50b29b8767edc83a42a53f0299122987125fd272a05d9de76c50a4f",
+      "output_sha256": "17016c655fa019b23cc431acccdd6edc79ef98e240fd4937ea2a2215a5900a21",
+      "visual_review": "Reviewed against D05 CAD baseline. Exact camera, silhouette, Burmese Teak frame, dual Black Walnut splines, proud 2mm panel, and 10 hidden fixing points retained visually; CAD remains dimensional authority."
+    },
+    "bottom": {
+      "input": "bottom_cad.png",
+      "output": "bottom_ai.png",
+      "input_sha256": "29e3e5da1b6a9d766baf76119eee72fcc013b21dc9e24b7c9823a4b552c8f094",
+      "output_sha256": "4f7699df542f0555b69c6eb9d0ad97ccc3a4187992bb38e4095165b2c034b5a6",
+      "visual_review": "Reviewed against D05 CAD baseline. Exact camera, silhouette, Burmese Teak frame, dual Black Walnut splines, proud 2mm panel, and 10 hidden fixing points retained visually; CAD remains dimensional authority."
+    }
+  }
+}

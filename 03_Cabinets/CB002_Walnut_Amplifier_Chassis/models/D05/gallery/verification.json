@@ -1,0 +1,1671 @@
+{
+  "checks": [
+    {
+      "id": "P001",
+      "name": "W01_Front_Teak",
+      "component": "前緬甸柚木框 W01（45°斜接＋外槽深4＋404×48通孔＋上止口雙盲槽）",
+      "material": "緬甸柚木",
+      "dimensions_mm": [
+        520.0,
+        20.0,
+        90.0
+      ],
+      "volume_mm3": 450067.99,
+      "status": "PASS"
+    },
+    {
+      "id": "P002",
+      "name": "W02_Rear_Teak",
+      "component": "後緬甸柚木框 W02（45°斜接＋外槽深4＋404×48通孔＋上止口雙盲槽）",
+      "material": "緬甸柚木",
+      "dimensions_mm": [
+        520.0,
+        20.0,
+        90.0
+      ],
+      "volume_mm3": 450067.99,
+      "status": "PASS"
+    },
+    {
+      "id": "P003",
+      "name": "W03_Side_Teak",
+      "component": "左緬甸柚木側板 W03（45°斜接＋上止口 3 處方螺母盲槽）",
+      "material": "緬甸柚木",
+      "dimensions_mm": [
+        20.0,
+        380.0,
+        90.0
+      ],
+      "volume_mm3": 626903.88,
+      "status": "PASS"
+    },
+    {
+      "id": "P004",
+      "name": "W04_Side_Teak",
+      "component": "右緬甸柚木側板 W04（45°斜接＋上止口 3 處方螺母盲槽）",
+      "material": "緬甸柚木",
+      "dimensions_mm": [
+        20.0,
+        380.0,
+        90.0
+      ],
+      "volume_mm3": 626903.88,
+      "status": "PASS"
+    },
+    {
+      "id": "P005",
+      "name": "A01_Front_Blank",
+      "component": "前浮凸倒角金屬面板 A01（444×64×6，嵌深4／浮凸2mm）",
+      "material": "黃銅／陽極鋁",
+      "dimensions_mm": [
+        444.0,
+        6.0,
+        64.0
+      ],
+      "volume_mm3": 169248.76,
+      "status": "PASS"
+    },
+    {
+      "id": "P006",
+      "name": "A02_Rear_Blank",
+      "component": "後浮凸倒角金屬面板 A02（444×64×6，嵌深4／浮凸2mm）",
+      "material": "黃銅／陽極鋁",
+      "dimensions_mm": [
+        444.0,
+        6.0,
+        64.0
+      ],
+      "volume_mm3": 169248.76,
+      "status": "PASS"
+    },
+    {
+      "id": "P007",
+      "name": "A03_Stepped_Hidden_Top",
+      "component": "雙層階梯隱藏固定頂板 A03（下層8＋上層5＋凸台4，頂面無孔）",
+      "material": "黃銅／陽極鋁",
+      "dimensions_mm": [
+        520.0,
+        380.0,
+        17.0
+      ],
+      "volume_mm3": 3128712.07,
+      "status": "PASS"
+    },
+    {
+      "id": "P008",
+      "name": "F01_Foot",
+      "component": "車削金屬腳墊 F01（Ø48×14mm）",
+      "material": "黃銅／陽極鋁",
+      "dimensions_mm": [
+        48.0,
+        47.985,
+        14.0
+      ],
+      "volume_mm3": 24709.09,
+      "status": "PASS"
+    },
+    {
+      "id": "P009",
+      "name": "F02_Foot",
+      "component": "車削金屬腳墊 F02（Ø48×14mm）",
+      "material": "黃銅／陽極鋁",
+      "dimensions_mm": [
+        48.0,
+        47.985,
+        14.0
+      ],
+      "volume_mm3": 24709.09,
+      "status": "PASS"
+    },
+    {
+      "id": "P010",
+      "name": "F03_Foot",
+      "component": "車削金屬腳墊 F03（Ø48×14mm）",
+      "material": "黃銅／陽極鋁",
+      "dimensions_mm": [
+        48.0,
+        47.985,
+        14.0
+      ],
+      "volume_mm3": 24709.09,
+      "status": "PASS"
+    },
+    {
+      "id": "P011",
+      "name": "F04_Foot",
+      "component": "車削金屬腳墊 F04（Ø48×14mm）",
+      "material": "黃銅／陽極鋁",
+      "dimensions_mm": [
+        48.0,
+        47.985,
+        14.0
+      ],
+      "volume_mm3": 24709.09,
+      "status": "PASS"
+    },
+    {
+      "id": "P012",
+      "name": "CB01_CornerBlock_FL",
+      "component": "左前內角補強柚木柱 CB01（22×22×78，倒角8mm）",
+      "material": "緬甸柚木",
+      "dimensions_mm": [
+        22.0,
+        22.0,
+        78.0
+      ],
+      "volume_mm3": 30108.0,
+      "status": "PASS"
+    },
+    {
+      "id": "P013",
+      "name": "CB02_CornerBlock_FR",
+      "component": "右前內角補強柚木柱 CB02（22×22×78，倒角8mm）",
+      "material": "緬甸柚木",
+      "dimensions_mm": [
+        22.0,
+        22.0,
+        78.0
+      ],
+      "volume_mm3": 30108.0,
+      "status": "PASS"
+    },
+    {
+      "id": "P014",
+      "name": "CB03_CornerBlock_RR",
+      "component": "右後內角補強柚木柱 CB03（22×22×78，倒角8mm）",
+      "material": "緬甸柚木",
+      "dimensions_mm": [
+        22.0,
+        22.0,
+        78.0
+      ],
+      "volume_mm3": 30108.0,
+      "status": "PASS"
+    },
+    {
+      "id": "P015",
+      "name": "CB04_CornerBlock_RL",
+      "component": "左後內角補強柚木柱 CB04（22×22×78，倒角8mm）",
+      "material": "緬甸柚木",
+      "dimensions_mm": [
+        22.0,
+        22.0,
+        78.0
+      ],
+      "volume_mm3": 30108.0,
+      "status": "PASS"
+    },
+    {
+      "id": "P016",
+      "name": "SP01_Spline_FL",
+      "component": "黑胡桃 45° 雙羽鍵 SP01 · 左前角（14×14×5mm, Z=21..26）",
+      "material": "北美黑胡桃木",
+      "dimensions_mm": [
+        14.0,
+        14.0,
+        5.0
+      ],
+      "volume_mm3": 490.0,
+      "status": "PASS"
+    },
+    {
+      "id": "P017",
+      "name": "SP02_Spline_FR",
+      "component": "黑胡桃 45° 雙羽鍵 SP02 · 右前角（14×14×5mm, Z=21..26）",
+      "material": "北美黑胡桃木",
+      "dimensions_mm": [
+        14.0,
+        14.0,
+        5.0
+      ],
+      "volume_mm3": 490.0,
+      "status": "PASS"
+    },
+    {
+      "id": "P018",
+      "name": "SP03_Spline_RR",
+      "component": "黑胡桃 45° 雙羽鍵 SP03 · 右後角（14×14×5mm, Z=21..26）",
+      "material": "北美黑胡桃木",
+      "dimensions_mm": [
+        14.0,
+        14.0,
+        5.0
+      ],
+      "volume_mm3": 490.0,
+      "status": "PASS"
+    },
+    {
+      "id": "P019",
+      "name": "SP04_Spline_RL",
+      "component": "黑胡桃 45° 雙羽鍵 SP04 · 左後角（14×14×5mm, Z=21..26）",
+      "material": "北美黑胡桃木",
+      "dimensions_mm": [
+        14.0,
+        14.0,
+        5.0
+      ],
+      "volume_mm3": 490.0,
+      "status": "PASS"
+    },
+    {
+      "id": "P020",
+      "name": "SP05_Spline_FL",
+      "component": "黑胡桃 45° 雙羽鍵 SP05 · 左前角（14×14×5mm, Z=64..69）",
+      "material": "北美黑胡桃木",
+      "dimensions_mm": [
+        14.0,
+        14.0,
+        5.0
+      ],
+      "volume_mm3": 490.0,
+      "status": "PASS"
+    },
+    {
+      "id": "P021",
+      "name": "SP06_Spline_FR",
+      "component": "黑胡桃 45° 雙羽鍵 SP06 · 右前角（14×14×5mm, Z=64..69）",
+      "material": "北美黑胡桃木",
+      "dimensions_mm": [
+        14.0,
+        14.0,
+        5.0
+      ],
+      "volume_mm3": 490.0,
+      "status": "PASS"
+    },
+    {
+      "id": "P022",
+      "name": "SP07_Spline_RR",
+      "component": "黑胡桃 45° 雙羽鍵 SP07 · 右後角（14×14×5mm, Z=64..69）",
+      "material": "北美黑胡桃木",
+      "dimensions_mm": [
+        14.0,
+        14.0,
+        5.0
+      ],
+      "volume_mm3": 490.0,
+      "status": "PASS"
+    },
+    {
+      "id": "P023",
+      "name": "SP08_Spline_RL",
+      "component": "黑胡桃 45° 雙羽鍵 SP08 · 左後角（14×14×5mm, Z=64..69）",
+      "material": "北美黑胡桃木",
+      "dimensions_mm": [
+        14.0,
+        14.0,
+        5.0
+      ],
+      "volume_mm3": 490.0,
+      "status": "PASS"
+    },
+    {
+      "id": "P024",
+      "name": "LB0_Bracket",
+      "component": "左側 #1 (LB0) · 3mm L 型隱藏支架（高22mm）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        28.0,
+        24.0,
+        22.0
+      ],
+      "volume_mm3": 3200.36,
+      "status": "PASS"
+    },
+    {
+      "id": "P025",
+      "name": "LB0_TopWasher",
+      "component": "左側 #1 (LB0) · 頂板向 Ø9×1mm 平墊圈",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        9.0,
+        8.997,
+        1.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P026",
+      "name": "LB0_Up_M4x8",
+      "component": "左側 #1 (LB0) · 底部向上 M4×8 內六角螺絲（鎖頂板盲牙）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        7.0,
+        6.998,
+        11.5
+      ],
+      "volume_mm3": 221.8,
+      "status": "PASS"
+    },
+    {
+      "id": "P027",
+      "name": "LB0_SquareNutBar",
+      "component": "左側 #1 (LB0) · 上止口預埋雙孔方螺母條（20×16×4mm, M4×2）",
+      "material": "黃銅／陽極鋁",
+      "dimensions_mm": [
+        4.0,
+        20.0,
+        16.0
+      ],
+      "volume_mm3": 1211.58,
+      "status": "PASS"
+    },
+    {
+      "id": "P028",
+      "name": "LB0_SideWasher0",
+      "component": "左側 #1 (LB0) · 水平向 Ø9×1mm 平墊圈 #1",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        1.0,
+        8.997,
+        9.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P029",
+      "name": "LB0_Side_M4x14_0",
+      "component": "左側 #1 (LB0) · 水平向 M4×14 螺絲 #1（穿 6mm 木肩入方螺母條）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        17.0,
+        6.998,
+        7.0
+      ],
+      "volume_mm3": 279.37,
+      "status": "PASS"
+    },
+    {
+      "id": "P030",
+      "name": "LB0_SideWasher1",
+      "component": "左側 #1 (LB0) · 水平向 Ø9×1mm 平墊圈 #2",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        1.0,
+        8.997,
+        9.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P031",
+      "name": "LB0_Side_M4x14_1",
+      "component": "左側 #1 (LB0) · 水平向 M4×14 螺絲 #2（穿 6mm 木肩入方螺母條）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        17.0,
+        6.998,
+        7.0
+      ],
+      "volume_mm3": 279.37,
+      "status": "PASS"
+    },
+    {
+      "id": "P032",
+      "name": "LB1_Bracket",
+      "component": "左側 #2 (LB1) · 3mm L 型隱藏支架（高22mm）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        28.0,
+        24.0,
+        22.0
+      ],
+      "volume_mm3": 3200.36,
+      "status": "PASS"
+    },
+    {
+      "id": "P033",
+      "name": "LB1_TopWasher",
+      "component": "左側 #2 (LB1) · 頂板向 Ø9×1mm 平墊圈",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        9.0,
+        8.997,
+        1.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P034",
+      "name": "LB1_Up_M4x8",
+      "component": "左側 #2 (LB1) · 底部向上 M4×8 內六角螺絲（鎖頂板盲牙）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        7.0,
+        6.998,
+        11.5
+      ],
+      "volume_mm3": 221.8,
+      "status": "PASS"
+    },
+    {
+      "id": "P035",
+      "name": "LB1_SquareNutBar",
+      "component": "左側 #2 (LB1) · 上止口預埋雙孔方螺母條（20×16×4mm, M4×2）",
+      "material": "黃銅／陽極鋁",
+      "dimensions_mm": [
+        4.0,
+        20.0,
+        16.0
+      ],
+      "volume_mm3": 1211.58,
+      "status": "PASS"
+    },
+    {
+      "id": "P036",
+      "name": "LB1_SideWasher0",
+      "component": "左側 #2 (LB1) · 水平向 Ø9×1mm 平墊圈 #1",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        1.0,
+        8.997,
+        9.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P037",
+      "name": "LB1_Side_M4x14_0",
+      "component": "左側 #2 (LB1) · 水平向 M4×14 螺絲 #1（穿 6mm 木肩入方螺母條）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        17.0,
+        6.998,
+        7.0
+      ],
+      "volume_mm3": 279.37,
+      "status": "PASS"
+    },
+    {
+      "id": "P038",
+      "name": "LB1_SideWasher1",
+      "component": "左側 #2 (LB1) · 水平向 Ø9×1mm 平墊圈 #2",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        1.0,
+        8.997,
+        9.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P039",
+      "name": "LB1_Side_M4x14_1",
+      "component": "左側 #2 (LB1) · 水平向 M4×14 螺絲 #2（穿 6mm 木肩入方螺母條）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        17.0,
+        6.998,
+        7.0
+      ],
+      "volume_mm3": 279.37,
+      "status": "PASS"
+    },
+    {
+      "id": "P040",
+      "name": "LB2_Bracket",
+      "component": "左側 #3 (LB2) · 3mm L 型隱藏支架（高22mm）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        28.0,
+        24.0,
+        22.0
+      ],
+      "volume_mm3": 3200.36,
+      "status": "PASS"
+    },
+    {
+      "id": "P041",
+      "name": "LB2_TopWasher",
+      "component": "左側 #3 (LB2) · 頂板向 Ø9×1mm 平墊圈",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        9.0,
+        8.997,
+        1.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P042",
+      "name": "LB2_Up_M4x8",
+      "component": "左側 #3 (LB2) · 底部向上 M4×8 內六角螺絲（鎖頂板盲牙）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        7.0,
+        6.998,
+        11.5
+      ],
+      "volume_mm3": 221.8,
+      "status": "PASS"
+    },
+    {
+      "id": "P043",
+      "name": "LB2_SquareNutBar",
+      "component": "左側 #3 (LB2) · 上止口預埋雙孔方螺母條（20×16×4mm, M4×2）",
+      "material": "黃銅／陽極鋁",
+      "dimensions_mm": [
+        4.0,
+        20.0,
+        16.0
+      ],
+      "volume_mm3": 1211.58,
+      "status": "PASS"
+    },
+    {
+      "id": "P044",
+      "name": "LB2_SideWasher0",
+      "component": "左側 #3 (LB2) · 水平向 Ø9×1mm 平墊圈 #1",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        1.0,
+        8.997,
+        9.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P045",
+      "name": "LB2_Side_M4x14_0",
+      "component": "左側 #3 (LB2) · 水平向 M4×14 螺絲 #1（穿 6mm 木肩入方螺母條）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        17.0,
+        6.998,
+        7.0
+      ],
+      "volume_mm3": 279.37,
+      "status": "PASS"
+    },
+    {
+      "id": "P046",
+      "name": "LB2_SideWasher1",
+      "component": "左側 #3 (LB2) · 水平向 Ø9×1mm 平墊圈 #2",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        1.0,
+        8.997,
+        9.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P047",
+      "name": "LB2_Side_M4x14_1",
+      "component": "左側 #3 (LB2) · 水平向 M4×14 螺絲 #2（穿 6mm 木肩入方螺母條）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        17.0,
+        6.998,
+        7.0
+      ],
+      "volume_mm3": 279.37,
+      "status": "PASS"
+    },
+    {
+      "id": "P048",
+      "name": "RB0_Bracket",
+      "component": "右側 #1 (RB0) · 3mm L 型隱藏支架（高22mm）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        28.0,
+        24.0,
+        22.0
+      ],
+      "volume_mm3": 3200.36,
+      "status": "PASS"
+    },
+    {
+      "id": "P049",
+      "name": "RB0_TopWasher",
+      "component": "右側 #1 (RB0) · 頂板向 Ø9×1mm 平墊圈",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        9.0,
+        8.997,
+        1.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P050",
+      "name": "RB0_Up_M4x8",
+      "component": "右側 #1 (RB0) · 底部向上 M4×8 內六角螺絲（鎖頂板盲牙）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        7.0,
+        6.998,
+        11.5
+      ],
+      "volume_mm3": 221.8,
+      "status": "PASS"
+    },
+    {
+      "id": "P051",
+      "name": "RB0_SquareNutBar",
+      "component": "右側 #1 (RB0) · 上止口預埋雙孔方螺母條（20×16×4mm, M4×2）",
+      "material": "黃銅／陽極鋁",
+      "dimensions_mm": [
+        4.0,
+        20.0,
+        16.0
+      ],
+      "volume_mm3": 1211.58,
+      "status": "PASS"
+    },
+    {
+      "id": "P052",
+      "name": "RB0_SideWasher0",
+      "component": "右側 #1 (RB0) · 水平向 Ø9×1mm 平墊圈 #1",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        1.0,
+        8.997,
+        9.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P053",
+      "name": "RB0_Side_M4x14_0",
+      "component": "右側 #1 (RB0) · 水平向 M4×14 螺絲 #1（穿 6mm 木肩入方螺母條）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        17.0,
+        6.998,
+        7.0
+      ],
+      "volume_mm3": 279.37,
+      "status": "PASS"
+    },
+    {
+      "id": "P054",
+      "name": "RB0_SideWasher1",
+      "component": "右側 #1 (RB0) · 水平向 Ø9×1mm 平墊圈 #2",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        1.0,
+        8.997,
+        9.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P055",
+      "name": "RB0_Side_M4x14_1",
+      "component": "右側 #1 (RB0) · 水平向 M4×14 螺絲 #2（穿 6mm 木肩入方螺母條）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        17.0,
+        6.998,
+        7.0
+      ],
+      "volume_mm3": 279.37,
+      "status": "PASS"
+    },
+    {
+      "id": "P056",
+      "name": "RB1_Bracket",
+      "component": "右側 #2 (RB1) · 3mm L 型隱藏支架（高22mm）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        28.0,
+        24.0,
+        22.0
+      ],
+      "volume_mm3": 3200.36,
+      "status": "PASS"
+    },
+    {
+      "id": "P057",
+      "name": "RB1_TopWasher",
+      "component": "右側 #2 (RB1) · 頂板向 Ø9×1mm 平墊圈",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        9.0,
+        8.997,
+        1.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P058",
+      "name": "RB1_Up_M4x8",
+      "component": "右側 #2 (RB1) · 底部向上 M4×8 內六角螺絲（鎖頂板盲牙）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        7.0,
+        6.998,
+        11.5
+      ],
+      "volume_mm3": 221.8,
+      "status": "PASS"
+    },
+    {
+      "id": "P059",
+      "name": "RB1_SquareNutBar",
+      "component": "右側 #2 (RB1) · 上止口預埋雙孔方螺母條（20×16×4mm, M4×2）",
+      "material": "黃銅／陽極鋁",
+      "dimensions_mm": [
+        4.0,
+        20.0,
+        16.0
+      ],
+      "volume_mm3": 1211.58,
+      "status": "PASS"
+    },
+    {
+      "id": "P060",
+      "name": "RB1_SideWasher0",
+      "component": "右側 #2 (RB1) · 水平向 Ø9×1mm 平墊圈 #1",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        1.0,
+        8.997,
+        9.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P061",
+      "name": "RB1_Side_M4x14_0",
+      "component": "右側 #2 (RB1) · 水平向 M4×14 螺絲 #1（穿 6mm 木肩入方螺母條）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        17.0,
+        6.998,
+        7.0
+      ],
+      "volume_mm3": 279.37,
+      "status": "PASS"
+    },
+    {
+      "id": "P062",
+      "name": "RB1_SideWasher1",
+      "component": "右側 #2 (RB1) · 水平向 Ø9×1mm 平墊圈 #2",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        1.0,
+        8.997,
+        9.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P063",
+      "name": "RB1_Side_M4x14_1",
+      "component": "右側 #2 (RB1) · 水平向 M4×14 螺絲 #2（穿 6mm 木肩入方螺母條）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        17.0,
+        6.998,
+        7.0
+      ],
+      "volume_mm3": 279.37,
+      "status": "PASS"
+    },
+    {
+      "id": "P064",
+      "name": "RB2_Bracket",
+      "component": "右側 #3 (RB2) · 3mm L 型隱藏支架（高22mm）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        28.0,
+        24.0,
+        22.0
+      ],
+      "volume_mm3": 3200.36,
+      "status": "PASS"
+    },
+    {
+      "id": "P065",
+      "name": "RB2_TopWasher",
+      "component": "右側 #3 (RB2) · 頂板向 Ø9×1mm 平墊圈",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        9.0,
+        8.997,
+        1.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P066",
+      "name": "RB2_Up_M4x8",
+      "component": "右側 #3 (RB2) · 底部向上 M4×8 內六角螺絲（鎖頂板盲牙）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        7.0,
+        6.998,
+        11.5
+      ],
+      "volume_mm3": 221.8,
+      "status": "PASS"
+    },
+    {
+      "id": "P067",
+      "name": "RB2_SquareNutBar",
+      "component": "右側 #3 (RB2) · 上止口預埋雙孔方螺母條（20×16×4mm, M4×2）",
+      "material": "黃銅／陽極鋁",
+      "dimensions_mm": [
+        4.0,
+        20.0,
+        16.0
+      ],
+      "volume_mm3": 1211.58,
+      "status": "PASS"
+    },
+    {
+      "id": "P068",
+      "name": "RB2_SideWasher0",
+      "component": "右側 #3 (RB2) · 水平向 Ø9×1mm 平墊圈 #1",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        1.0,
+        8.997,
+        9.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P069",
+      "name": "RB2_Side_M4x14_0",
+      "component": "右側 #3 (RB2) · 水平向 M4×14 螺絲 #1（穿 6mm 木肩入方螺母條）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        17.0,
+        6.998,
+        7.0
+      ],
+      "volume_mm3": 279.37,
+      "status": "PASS"
+    },
+    {
+      "id": "P070",
+      "name": "RB2_SideWasher1",
+      "component": "右側 #3 (RB2) · 水平向 Ø9×1mm 平墊圈 #2",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        1.0,
+        8.997,
+        9.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P071",
+      "name": "RB2_Side_M4x14_1",
+      "component": "右側 #3 (RB2) · 水平向 M4×14 螺絲 #2（穿 6mm 木肩入方螺母條）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        17.0,
+        6.998,
+        7.0
+      ],
+      "volume_mm3": 279.37,
+      "status": "PASS"
+    },
+    {
+      "id": "P072",
+      "name": "FB0_Bracket",
+      "component": "前上橫樑 #1 (FB0) · 3mm L 型隱藏支架（緊湊高16mm）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        24.0,
+        28.0,
+        16.0
+      ],
+      "volume_mm3": 2768.36,
+      "status": "PASS"
+    },
+    {
+      "id": "P073",
+      "name": "FB0_TopWasher",
+      "component": "前上橫樑 #1 (FB0) · 頂板向 Ø9×1mm 平墊圈",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        9.0,
+        8.997,
+        1.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P074",
+      "name": "FB0_Up_M4x8",
+      "component": "前上橫樑 #1 (FB0) · 底部向上 M4×8 內六角螺絲（鎖頂板盲牙）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        7.0,
+        6.998,
+        11.5
+      ],
+      "volume_mm3": 221.8,
+      "status": "PASS"
+    },
+    {
+      "id": "P075",
+      "name": "FB0_SquareNutBar",
+      "component": "前上橫樑 #1 (FB0) · 上止口預埋雙孔方螺母條（20×14×4mm, M4×2）",
+      "material": "黃銅／陽極鋁",
+      "dimensions_mm": [
+        20.0,
+        4.0,
+        14.0
+      ],
+      "volume_mm3": 1051.58,
+      "status": "PASS"
+    },
+    {
+      "id": "P076",
+      "name": "FB0_SideWasher0",
+      "component": "前上橫樑 #1 (FB0) · 水平向 Ø9×1mm 平墊圈 #1",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        8.997,
+        1.0,
+        9.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P077",
+      "name": "FB0_Side_M4x14_0",
+      "component": "前上橫樑 #1 (FB0) · 水平向 M4×14 螺絲 #1（穿 6mm 木肩入方螺母條）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        6.998,
+        17.0,
+        7.0
+      ],
+      "volume_mm3": 279.37,
+      "status": "PASS"
+    },
+    {
+      "id": "P078",
+      "name": "FB0_SideWasher1",
+      "component": "前上橫樑 #1 (FB0) · 水平向 Ø9×1mm 平墊圈 #2",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        8.997,
+        1.0,
+        9.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P079",
+      "name": "FB0_Side_M4x14_1",
+      "component": "前上橫樑 #1 (FB0) · 水平向 M4×14 螺絲 #2（穿 6mm 木肩入方螺母條）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        6.998,
+        17.0,
+        7.0
+      ],
+      "volume_mm3": 279.37,
+      "status": "PASS"
+    },
+    {
+      "id": "P080",
+      "name": "FB1_Bracket",
+      "component": "前上橫樑 #2 (FB1) · 3mm L 型隱藏支架（緊湊高16mm）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        24.0,
+        28.0,
+        16.0
+      ],
+      "volume_mm3": 2768.36,
+      "status": "PASS"
+    },
+    {
+      "id": "P081",
+      "name": "FB1_TopWasher",
+      "component": "前上橫樑 #2 (FB1) · 頂板向 Ø9×1mm 平墊圈",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        9.0,
+        8.997,
+        1.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P082",
+      "name": "FB1_Up_M4x8",
+      "component": "前上橫樑 #2 (FB1) · 底部向上 M4×8 內六角螺絲（鎖頂板盲牙）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        7.0,
+        6.998,
+        11.5
+      ],
+      "volume_mm3": 221.8,
+      "status": "PASS"
+    },
+    {
+      "id": "P083",
+      "name": "FB1_SquareNutBar",
+      "component": "前上橫樑 #2 (FB1) · 上止口預埋雙孔方螺母條（20×14×4mm, M4×2）",
+      "material": "黃銅／陽極鋁",
+      "dimensions_mm": [
+        20.0,
+        4.0,
+        14.0
+      ],
+      "volume_mm3": 1051.58,
+      "status": "PASS"
+    },
+    {
+      "id": "P084",
+      "name": "FB1_SideWasher0",
+      "component": "前上橫樑 #2 (FB1) · 水平向 Ø9×1mm 平墊圈 #1",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        8.997,
+        1.0,
+        9.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P085",
+      "name": "FB1_Side_M4x14_0",
+      "component": "前上橫樑 #2 (FB1) · 水平向 M4×14 螺絲 #1（穿 6mm 木肩入方螺母條）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        6.998,
+        17.0,
+        7.0
+      ],
+      "volume_mm3": 279.37,
+      "status": "PASS"
+    },
+    {
+      "id": "P086",
+      "name": "FB1_SideWasher1",
+      "component": "前上橫樑 #2 (FB1) · 水平向 Ø9×1mm 平墊圈 #2",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        8.997,
+        1.0,
+        9.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P087",
+      "name": "FB1_Side_M4x14_1",
+      "component": "前上橫樑 #2 (FB1) · 水平向 M4×14 螺絲 #2（穿 6mm 木肩入方螺母條）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        6.998,
+        17.0,
+        7.0
+      ],
+      "volume_mm3": 279.37,
+      "status": "PASS"
+    },
+    {
+      "id": "P088",
+      "name": "BB0_Bracket",
+      "component": "後上橫樑 #1 (BB0) · 3mm L 型隱藏支架（緊湊高16mm）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        24.0,
+        28.0,
+        16.0
+      ],
+      "volume_mm3": 2768.36,
+      "status": "PASS"
+    },
+    {
+      "id": "P089",
+      "name": "BB0_TopWasher",
+      "component": "後上橫樑 #1 (BB0) · 頂板向 Ø9×1mm 平墊圈",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        9.0,
+        8.997,
+        1.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P090",
+      "name": "BB0_Up_M4x8",
+      "component": "後上橫樑 #1 (BB0) · 底部向上 M4×8 內六角螺絲（鎖頂板盲牙）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        7.0,
+        6.998,
+        11.5
+      ],
+      "volume_mm3": 221.8,
+      "status": "PASS"
+    },
+    {
+      "id": "P091",
+      "name": "BB0_SquareNutBar",
+      "component": "後上橫樑 #1 (BB0) · 上止口預埋雙孔方螺母條（20×14×4mm, M4×2）",
+      "material": "黃銅／陽極鋁",
+      "dimensions_mm": [
+        20.0,
+        4.0,
+        14.0
+      ],
+      "volume_mm3": 1051.58,
+      "status": "PASS"
+    },
+    {
+      "id": "P092",
+      "name": "BB0_SideWasher0",
+      "component": "後上橫樑 #1 (BB0) · 水平向 Ø9×1mm 平墊圈 #1",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        8.997,
+        1.0,
+        9.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P093",
+      "name": "BB0_Side_M4x14_0",
+      "component": "後上橫樑 #1 (BB0) · 水平向 M4×14 螺絲 #1（穿 6mm 木肩入方螺母條）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        6.998,
+        17.0,
+        7.0
+      ],
+      "volume_mm3": 279.37,
+      "status": "PASS"
+    },
+    {
+      "id": "P094",
+      "name": "BB0_SideWasher1",
+      "component": "後上橫樑 #1 (BB0) · 水平向 Ø9×1mm 平墊圈 #2",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        8.997,
+        1.0,
+        9.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P095",
+      "name": "BB0_Side_M4x14_1",
+      "component": "後上橫樑 #1 (BB0) · 水平向 M4×14 螺絲 #2（穿 6mm 木肩入方螺母條）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        6.998,
+        17.0,
+        7.0
+      ],
+      "volume_mm3": 279.37,
+      "status": "PASS"
+    },
+    {
+      "id": "P096",
+      "name": "BB1_Bracket",
+      "component": "後上橫樑 #2 (BB1) · 3mm L 型隱藏支架（緊湊高16mm）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        24.0,
+        28.0,
+        16.0
+      ],
+      "volume_mm3": 2768.36,
+      "status": "PASS"
+    },
+    {
+      "id": "P097",
+      "name": "BB1_TopWasher",
+      "component": "後上橫樑 #2 (BB1) · 頂板向 Ø9×1mm 平墊圈",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        9.0,
+        8.997,
+        1.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P098",
+      "name": "BB1_Up_M4x8",
+      "component": "後上橫樑 #2 (BB1) · 底部向上 M4×8 內六角螺絲（鎖頂板盲牙）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        7.0,
+        6.998,
+        11.5
+      ],
+      "volume_mm3": 221.8,
+      "status": "PASS"
+    },
+    {
+      "id": "P099",
+      "name": "BB1_SquareNutBar",
+      "component": "後上橫樑 #2 (BB1) · 上止口預埋雙孔方螺母條（20×14×4mm, M4×2）",
+      "material": "黃銅／陽極鋁",
+      "dimensions_mm": [
+        20.0,
+        4.0,
+        14.0
+      ],
+      "volume_mm3": 1051.58,
+      "status": "PASS"
+    },
+    {
+      "id": "P100",
+      "name": "BB1_SideWasher0",
+      "component": "後上橫樑 #2 (BB1) · 水平向 Ø9×1mm 平墊圈 #1",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        8.997,
+        1.0,
+        9.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P101",
+      "name": "BB1_Side_M4x14_0",
+      "component": "後上橫樑 #2 (BB1) · 水平向 M4×14 螺絲 #1（穿 6mm 木肩入方螺母條）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        6.998,
+        17.0,
+        7.0
+      ],
+      "volume_mm3": 279.37,
+      "status": "PASS"
+    },
+    {
+      "id": "P102",
+      "name": "BB1_SideWasher1",
+      "component": "後上橫樑 #2 (BB1) · 水平向 Ø9×1mm 平墊圈 #2",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        8.997,
+        1.0,
+        9.0
+      ],
+      "volume_mm3": 48.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P103",
+      "name": "BB1_Side_M4x14_1",
+      "component": "後上橫樑 #2 (BB1) · 水平向 M4×14 螺絲 #2（穿 6mm 木肩入方螺母條）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        6.998,
+        17.0,
+        7.0
+      ],
+      "volume_mm3": 279.37,
+      "status": "PASS"
+    },
+    {
+      "id": "P104",
+      "name": "F_00_Washer",
+      "component": "前面板固定點 #1 · Ø7×1mm 平墊圈（承壓於 16mm 木肩）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        6.998,
+        1.0,
+        7.0
+      ],
+      "volume_mm3": 29.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P105",
+      "name": "F_00_M3x20",
+      "component": "前面板固定點 #1 · M3×20 機內螺絲（穿 16mm 木肩入盲牙 3mm）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        5.598,
+        22.2,
+        5.6
+      ],
+      "volume_mm3": 191.38,
+      "status": "PASS"
+    },
+    {
+      "id": "P106",
+      "name": "F_01_Washer",
+      "component": "前面板固定點 #2 · Ø7×1mm 平墊圈（承壓於 16mm 木肩）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        6.998,
+        1.0,
+        7.0
+      ],
+      "volume_mm3": 29.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P107",
+      "name": "F_01_M3x20",
+      "component": "前面板固定點 #2 · M3×20 機內螺絲（穿 16mm 木肩入盲牙 3mm）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        5.598,
+        22.2,
+        5.6
+      ],
+      "volume_mm3": 191.38,
+      "status": "PASS"
+    },
+    {
+      "id": "P108",
+      "name": "F_02_Washer",
+      "component": "前面板固定點 #3 · Ø7×1mm 平墊圈（承壓於 16mm 木肩）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        6.998,
+        1.0,
+        7.0
+      ],
+      "volume_mm3": 29.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P109",
+      "name": "F_02_M3x20",
+      "component": "前面板固定點 #3 · M3×20 機內螺絲（穿 16mm 木肩入盲牙 3mm）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        5.598,
+        22.2,
+        5.6
+      ],
+      "volume_mm3": 191.38,
+      "status": "PASS"
+    },
+    {
+      "id": "P110",
+      "name": "F_03_Washer",
+      "component": "前面板固定點 #4 · Ø7×1mm 平墊圈（承壓於 16mm 木肩）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        6.998,
+        1.0,
+        7.0
+      ],
+      "volume_mm3": 29.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P111",
+      "name": "F_03_M3x20",
+      "component": "前面板固定點 #4 · M3×20 機內螺絲（穿 16mm 木肩入盲牙 3mm）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        5.598,
+        22.2,
+        5.6
+      ],
+      "volume_mm3": 191.38,
+      "status": "PASS"
+    },
+    {
+      "id": "P112",
+      "name": "F_04_Washer",
+      "component": "前面板固定點 #5 · Ø7×1mm 平墊圈（承壓於 16mm 木肩）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        6.998,
+        1.0,
+        7.0
+      ],
+      "volume_mm3": 29.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P113",
+      "name": "F_04_M3x20",
+      "component": "前面板固定點 #5 · M3×20 機內螺絲（穿 16mm 木肩入盲牙 3mm）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        5.598,
+        22.2,
+        5.6
+      ],
+      "volume_mm3": 191.38,
+      "status": "PASS"
+    },
+    {
+      "id": "P114",
+      "name": "F_05_Washer",
+      "component": "前面板固定點 #6 · Ø7×1mm 平墊圈（承壓於 16mm 木肩）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        6.998,
+        1.0,
+        7.0
+      ],
+      "volume_mm3": 29.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P115",
+      "name": "F_05_M3x20",
+      "component": "前面板固定點 #6 · M3×20 機內螺絲（穿 16mm 木肩入盲牙 3mm）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        5.598,
+        22.2,
+        5.6
+      ],
+      "volume_mm3": 191.38,
+      "status": "PASS"
+    },
+    {
+      "id": "P116",
+      "name": "R_00_Washer",
+      "component": "後面板固定點 #1 · Ø7×1mm 平墊圈（承壓於 16mm 木肩）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        6.998,
+        1.0,
+        7.0
+      ],
+      "volume_mm3": 29.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P117",
+      "name": "R_00_M3x20",
+      "component": "後面板固定點 #1 · M3×20 機內螺絲（穿 16mm 木肩入盲牙 3mm）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        5.598,
+        22.2,
+        5.6
+      ],
+      "volume_mm3": 191.38,
+      "status": "PASS"
+    },
+    {
+      "id": "P118",
+      "name": "R_01_Washer",
+      "component": "後面板固定點 #2 · Ø7×1mm 平墊圈（承壓於 16mm 木肩）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        6.998,
+        1.0,
+        7.0
+      ],
+      "volume_mm3": 29.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P119",
+      "name": "R_01_M3x20",
+      "component": "後面板固定點 #2 · M3×20 機內螺絲（穿 16mm 木肩入盲牙 3mm）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        5.598,
+        22.2,
+        5.6
+      ],
+      "volume_mm3": 191.38,
+      "status": "PASS"
+    },
+    {
+      "id": "P120",
+      "name": "R_02_Washer",
+      "component": "後面板固定點 #3 · Ø7×1mm 平墊圈（承壓於 16mm 木肩）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        6.998,
+        1.0,
+        7.0
+      ],
+      "volume_mm3": 29.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P121",
+      "name": "R_02_M3x20",
+      "component": "後面板固定點 #3 · M3×20 機內螺絲（穿 16mm 木肩入盲牙 3mm）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        5.598,
+        22.2,
+        5.6
+      ],
+      "volume_mm3": 191.38,
+      "status": "PASS"
+    },
+    {
+      "id": "P122",
+      "name": "R_03_Washer",
+      "component": "後面板固定點 #4 · Ø7×1mm 平墊圈（承壓於 16mm 木肩）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        6.998,
+        1.0,
+        7.0
+      ],
+      "volume_mm3": 29.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P123",
+      "name": "R_03_M3x20",
+      "component": "後面板固定點 #4 · M3×20 機內螺絲（穿 16mm 木肩入盲牙 3mm）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        5.598,
+        22.2,
+        5.6
+      ],
+      "volume_mm3": 191.38,
+      "status": "PASS"
+    },
+    {
+      "id": "P124",
+      "name": "R_04_Washer",
+      "component": "後面板固定點 #5 · Ø7×1mm 平墊圈（承壓於 16mm 木肩）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        6.998,
+        1.0,
+        7.0
+      ],
+      "volume_mm3": 29.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P125",
+      "name": "R_04_M3x20",
+      "component": "後面板固定點 #5 · M3×20 機內螺絲（穿 16mm 木肩入盲牙 3mm）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        5.598,
+        22.2,
+        5.6
+      ],
+      "volume_mm3": 191.38,
+      "status": "PASS"
+    },
+    {
+      "id": "P126",
+      "name": "R_05_Washer",
+      "component": "後面板固定點 #6 · Ø7×1mm 平墊圈（承壓於 16mm 木肩）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        6.998,
+        1.0,
+        7.0
+      ],
+      "volume_mm3": 29.41,
+      "status": "PASS"
+    },
+    {
+      "id": "P127",
+      "name": "R_05_M3x20",
+      "component": "後面板固定點 #6 · M3×20 機內螺絲（穿 16mm 木肩入盲牙 3mm）",
+      "material": "不鏽鋼五金",
+      "dimensions_mm": [
+        5.598,
+        22.2,
+        5.6
+      ],
+      "volume_mm3": 191.38,
+      "status": "PASS"
+    }
+  ],
+  "group_mesh_counts": {
+    "緬甸柚木主框 (W01–W04)": 4,
+    "金屬頂板與浮凸面板 (A01–A03)": 3,
+    "底部車削金屬腳墊 (F01–F04)": 4,
+    "內角實木補強柱 (CB01–CB04)": 4,
+    "黑胡桃 45° 雙羽鍵 (SP01–SP08)": 8,
+    "左右側隱藏支架與預埋方螺母 (6組)": 48,
+    "前後上橫樑隱藏支架與預埋方螺母 (4組)": 32,
+    "前後面板內鎖螺絲組 (M3×20)": 24
+  },
+  "hidden_top_bracket_assemblies": 10,
+  "embedded_square_nut_bars": 10,
+  "corner_splines": 8,
+  "corner_reinforcement_blocks": 4,
+  "source_sha256": "b95cb6fa3469d89a676d91147ea13b127a9b8e4b694710ac7071c8cd444209a1",
+  "limitation": "Checks prove 100% geometric agreement between FreeCAD B-rep solids, STEP assembly, exported 3D DXF, and CSV bounds; all dimensions remain [ASSUMED]/[TO VERIFY] concept drafts (L0/L1 HOLD)."
+}

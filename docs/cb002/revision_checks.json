@@ -1,0 +1,13 @@
+{
+  "revision": "D05",
+  "window_mm": [
+    404.0,
+    48.0
+  ],
+  "panel_rebate_depth_mm": 4.0,
+  "panel_protrusion_mm": 2.0,
+  "wood_shoulder_thickness_mm": 16.0,
+  "all_4_walls_square_nut_bars": 10,
+  "corner_splines": 8,
+  "corner_blocks": 4
+}

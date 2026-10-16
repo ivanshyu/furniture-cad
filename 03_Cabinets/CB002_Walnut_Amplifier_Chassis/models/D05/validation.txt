@@ -1,0 +1,12 @@
+D05 high-fidelity concept validation — Burmese Teak + Black Walnut Splines + 10-Point All-Wall Square Nut Bars + Protruding Panels (CONCEPT — NOT FOR MANUFACTURE)
+127 valid positive-volume solids; STEP readback verified (127 solids).
+45-deg mitered Burmese Teak rails, 8 Black Walnut corner splines (14x14x5), 4 internal corner glue blocks, protruding plates, feet and 10 L-brackets: zero volumetric interference.
+404x48 inner wiring aperture (+20% taller for ALPS RK50 & meters) is 100% clear through remaining 16mm wood; six full washer-bearing wood shoulders retained per frame.
+Front & rear 6mm panels recessed 4.0mm into wood rebate and protrude 2.0mm proud of wood face with perimeter chamfer.
+10 drop-in dual-M4 square nut bars (6 on Left/Right + 4 on Front/Rear top rails per S04) seated in top-rabbet blind mortises with 6.0mm solid wood shoulder and zero collision.
+Stepped two-tier top plate highest 0.5mm full slab verified: zero top-surface holes; wood top rim (Z=90) and bottom (Z=0) have zero exposed holes.
+Ten vertical Ø8mm tool approach cylinders from bottom clear wood/plates/brackets/feet/corner-blocks.
+Top M4x8 (10x): washer 1 + bracket 3 + blind thread engagement 4; drill-bottom margin > 6mm.
+Side & Front/Rear M4x14 (20x): washer 1 + bracket 3 + wood shoulder 6.0 + drop-in square nut bar engagement 4.
+Front/rear M3x20 (12x): washer 1 + wood shoulder 16 + panel blind engagement 3.
+All dimensions are [ASSUMED]/[TO VERIFY] drafts. No structural, thermal, electrical or manufacturing release.
